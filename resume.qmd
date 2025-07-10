@@ -1,10 +1,9 @@
 ---
 layout: cv
-title: Isaac Newtons's CV
+title: Jacob Walker's CV
 ---
-# Isaac Newton
-Physicist, Mathematician, Cambridge professor.
-
+# Jacob Walker
+Student And Data Operations
 <div id="webaddress">
 <a href="isaac@applesdofall.org">isaac@applesdofall.org</a>
 | <a href="http://en.wikipedia.org/wiki/Isaac_Newton">My wikipedia page</a>
@@ -13,16 +12,16 @@ Physicist, Mathematician, Cambridge professor.
 
 ## Currently
 
-Standing on the shoulders of giants
+A Student At Brigham Young University - Idaho studying Financial Economics
 
 ### Specialized in
 
-Laws of motion, gravitation, minting coins, disliking [Robert Hooke](http://en.wikipedia.org/wiki/Robert_Hooke)
+R, Python, SQL, Microsoft Office Suite, HORIZON Banking System
 
 
 ### Research interests
 
-Cooling, power series, optics, alchemy, planetary motions, apples.
+Financial Analytics and Investments, Economics
 
 
 ## Education
