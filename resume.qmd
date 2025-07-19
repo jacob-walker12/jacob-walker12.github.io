@@ -5,84 +5,71 @@ title: Jacob Walker's CV
 # Jacob Walker
 Student And Data Operations
 <div id="webaddress">
-<a href="isaac@applesdofall.org">isaac@applesdofall.org</a>
-| <a href="http://en.wikipedia.org/wiki/Isaac_Newton">My wikipedia page</a>
-</div>
 
+*[LinkedIn](https://www.linkedin.com/in/jacob-walker-a4a69130b/)*
 
-## Currently
+---
 
-A Student At Brigham Young University - Idaho studying Financial Economics
+## Education:
 
-### Specialized in
+**Brigham Young University – Idaho – Rexburg, ID, Jan. 2024 – Present**  
+*Bachelor of Science in Financial Economics | GPA 3.93*  
+Expected Graduation Date: July 2027
 
-R, Python, SQL, Microsoft Office Suite, HORIZON Banking System
+**Chemeketa Community College – Salem, OR, Sept. 2019 – April 2021**
 
+---
 
-### Research interests
+## Experience:
 
-Financial Analytics and Investments, Economics
+**Bank of Commerce: Data Operator/Fraud Specialist - January 2024–Present**
 
+- Maximized efficiency of the end-of-day bank operations by creating a list of all end-of-day operations, saving the bank more than 30 minutes each night.
 
-## Education
+- Collaborated with management to provide organizational oversight and guidance by creating a one-page guide and checklist, increasing proficiency in fraud detection between coworkers.
 
-`1654-1660`
-__The King's School, Grantham.__
+- Analyzed the data of over 500 checks per day while ensuring key bank processes are completed at the indicated times.
 
-`June 1661 - now`
-__Trinity College, Cambridge__
+**Solitude Landscaping: Crew Lead/Translator - March 2023– January 2024**
 
-- Sizar
+- Supported management by increasing communication and understanding between crew leads by acting as a direct translator for the tie in the Spanish language.
 
-`1667 - death`
-__Trinity College, Cambridge__
+- Managed and trained 10+ personnel.
 
-- Fellow
+- Implemented the use of data collectors to maximize the efficiency of crew routes and track time between stops.
 
+- Improved weekly service efficiency by creating pruning and cutting schedules, increasing efficiency by 10%.
 
+---
 
-## Awards
+## Volunteer Service:
 
-`2012`
-President, *Royal Society*, London, UK
+**Missionary for the Church of Jesus Christ of Latter-Day Saints – January 2021 – February 2023**
 
-Associate, *French Academy of Science*, Paris, France
+- Learned and became fluent proficient in speaking and writing in the Spanish language within 3 months.
 
+- Oversaw 15+ missionary companionships and organized special trainings and councils.
 
+- Trained two new missionaries in the Spanish language.
 
-## Publications
+- Practiced budgeting personal finances with the allotted bi-monthly budget given.
 
-<!-- A list is also available [online](http://scholar.google.co.uk/citations?user=LTOTl0YAAAAJ) -->
+**Volunteer Counselor for Amity Elementary School**  
+**Varsity Captain for Amity High-School Cross Country Team**
 
-### Journals
+---
 
-`1669`
-Newton Sir I, De analysi per æquationes numero terminorum infinitas. 
+## Relevant Skills:
 
-`1669`
-Lectiones opticæ.
-
-etc. etc. etc.
-
-### Patents
-
-`2012`
-Infinitesimal calculus for solutions to physics problems, [SMBC](http://www.techdirt.com/articles/20121011/09312820678/if-patents-had-been-around-time-newton.shtml) patent 001
-
-
-## Occupation
-
-`1600`
-__Royal Mint__, London
-
-- Warden
-- Minted coins
-
-`1600`
-__Lucasian professor of Mathematics__, Cambridge University
+- Certified in the Spanish language through *TrueNorth*: Score 7.2  
+- Proficient with Microsoft Office Suite  
+- Proficient operating knowledge of the HORIZON banking system
+- Proficient in SQL
+- Proficient in R
+- Proficient in Python
 
 
 
 <!-- ### Footer
 
-Last updated: May 2013 -->
+Last updated: May 2024 -->
