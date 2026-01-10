@@ -434,7 +434,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Part 2: Load the dataset into a Pandas dataframe.</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/netflix_titles.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:483}}" data-outputid="96ddf22f-f789-426b-87e4-d2284eb63ce7" data-execution_count="4">
+<div id="cell-6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:672}}" data-outputid="96ddf22f-f789-426b-87e4-d2284eb63ce7" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Then, explore the data by seeing what the first few rows look like.</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
@@ -1800,10 +1800,31 @@ ax = employees[ ['job','salary'] ].plot().box()
 ax.set_title("Salaries by Job Title")
 ax.set_ylabel("Annual salary in thousands of $USD")
 ax.set_xlabel("Job title")</code></pre>
-<div id="cell-26" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;vscode&quot;,&quot;value&quot;:{&quot;languageId&quot;:&quot;python&quot;}}" data-execution_count="12">
+<div id="cell-26" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:604}}" data-outputid="65e687f1-1c4a-4cc8-9994-8aaf550e60b3" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use pandas' built in plotting functions to create a count plot comparing the count of each movie rating</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This will be a little trickier than the other libraries, but one hint is that the pandas value_counts() function</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># actually returns a dataframe.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># actually returns a dataframe.</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>rating_counts <span class="op">=</span> df_filtered[<span class="st">"rating"</span>].value_counts()</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">6</span>))</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> rating_counts.plot(kind<span class="op">=</span><span class="st">"bar"</span>)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Rating Counts for Movies"</span>)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Movie Rating"</span>)</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Number of Movies"</span>)</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Exploration_01_files/figure-html/cell-13-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -1811,6 +1832,7 @@ ax.set_xlabel("Job title")</code></pre>
 <h1>Part 5: Interpretation and Conclusions</h1>
 <p>Now that you’ve seen the data, what is your conclusion? Is the watchdog group correct that Netflix has more movies for adults than for children? Are there any caveats you’d include in your analysis?</p>
 <p>Write your summary here:</p>
+<p>My conclusion is that Netflix does have more movies made for adults than children. This is based off the assumption of where I draw my own personal line for what is a film made for “adults”. While not all PG-13 movies are made entirley for adults, I feel that more mature content is included in them to help entertain adults, and therefore I make the assumption that PG-13 is included with films for adults.</p>
 <section id="above-and-beyond" class="level2">
 <h2 class="anchored" data-anchor-id="above-and-beyond">🌟 Above and Beyond 🌟</h2>
 <p>After reviewing your findings, the watchdog group would like some additional questions answered:</p>
@@ -1818,6 +1840,33 @@ ax.set_xlabel("Job title")</code></pre>
 <li><p>How are things affected if you include the “made for TV movies” that have been assigned <a href="https://en.wikipedia.org/wiki/Television_content_rating_system#United_States">TV ratings</a> in your analysis, but still exclude unrated movies?</p></li>
 <li><p>They would also like to see a separate report that includes only TV shows.</p></li>
 <li><p>For an upcoming community meeting, the group would like to present a simple chart showing “For Kids” and “For Adults” categories. The easiest way to accomplish this would be to <a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/10_text_data.html">create a new column in your data frame that maps</a> each rating to the appropriate “For Kids” or “For Adults” label, then create a new visualization based on that column.</p></li>
+</ol>
+<div id="cell-30" class="cell" data-outputid="84bc043a-b21f-4b88-b194-8351a1e7dc24" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:641}}" data-execution_count="30">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>all_ratings <span class="op">=</span> [<span class="st">"NC-17"</span>, <span class="st">"TV-Y7-FV"</span>, <span class="st">"G"</span>, <span class="st">"TV-Y"</span>, <span class="st">"TV-Y7"</span>, <span class="st">"TV-G"</span>, <span class="st">"PG"</span>, <span class="st">"PG-13"</span>, <span class="st">"TV-PG"</span>, <span class="st">"R"</span>, <span class="st">"TV-14"</span>, <span class="st">"TV-MA"</span>]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>df_ratedmovies <span class="op">=</span> df_movies[df_movies[<span class="st">"rating"</span>].isin(all_ratings)]</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>df_ratedmovies.head()</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>df_ratedmovies[<span class="st">"rating"</span>].value_counts()</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>allrating_counts <span class="op">=</span> df_ratedmovies[<span class="st">"rating"</span>].value_counts()</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">9</span>,<span class="dv">6</span>))</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> allrating_counts.plot(kind <span class="op">=</span> <span class="st">"bar"</span>)</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Rating Counts For All Movies"</span>)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Movie Count"</span>)</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Rating"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="30">
+<pre><code>Text(0.5, 0, 'Rating')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Exploration_01_files/figure-html/cell-14-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Even with movies that are rated for TV included, it is clear that Netlix has much more content for Adults than they do for kids.</li>
 </ol>
 
 
