@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Jacob Walker - Data Science Portfolio</title>
+<title>module01-assessment – Jacob Walker - Data Science Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -344,7 +344,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#submission" id="toc-submission" class="nav-link active" data-scroll-target="#submission">Submission</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   <li><a href="#problem-group-1" id="toc-problem-group-1" class="nav-link" data-scroll-target="#problem-group-1">Problem Group 1</a>
   <ul class="collapse">
   <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
@@ -360,32 +362,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
   </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Introduction</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
+<p><a href="https://colab.research.google.com/github/jacob-walker12/jacob-walker12.github.io/blob/main/notebooks/module01-assessment.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
 <p>This assignment will test how well you’re able to perform various data science-related tasks.</p>
 <p>Each Problem Group below will center around a particular dataset that you have worked with before.</p>
 <p>To ensure you receive full credit for a question, make sure you demonstrate the appropriate pandas, altair, or other commands as requested in the provided code blocks.</p>
@@ -405,13 +395,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="question-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
 <p>Load the dataset into a Pandas data frame and determine what data type is used to store the <code>release_year</code> feature.</p>
-<div id="cell-4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:483}}" data-outputid="88da45ec-3d05-46c7-8183-b786c366e0b4" data-execution_count="31">
+<div id="cell-4" class="cell" data-outputid="7ec0cc7d-04e4-4e0b-d07c-987dd6d5c3eb" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:483}}" data-execution_count="38">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/netflix_titles.csv"</span>)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="31">
-<div id="df-0c72af29-6f0c-4226-a696-80ed6ef3e561" class="colab-df-container">
+<div class="cell-output cell-output-display" data-execution_count="38">
+<div id="df-b4a6e764-5c5f-4bee-891d-b68055a00bca" class="colab-df-container">
     <div>
 
 
@@ -516,7 +506,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-0c72af29-6f0c-4226-a696-80ed6ef3e561')" title="Convert this dataframe to an interactive table." style="display:none;">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b4a6e764-5c5f-4bee-891d-b68055a00bca')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
     <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
@@ -566,12 +556,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
     <script>
       const buttonEl =
-        document.querySelector('#df-0c72af29-6f0c-4226-a696-80ed6ef3e561 button.colab-df-convert');
+        document.querySelector('#df-b4a6e764-5c5f-4bee-891d-b68055a00bca button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-0c72af29-6f0c-4226-a696-80ed6ef3e561');
+        const element = document.querySelector('#df-b4a6e764-5c5f-4bee-891d-b68055a00bca');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -595,8 +585,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-5" class="cell" data-outputid="7ce0dd0d-b4ea-4487-be3f-63ec2b0a0373" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="33">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cell-5" class="cell" data-outputid="fa579c1d-59e9-4f11-d031-57271948c41c" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="39">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 6234 entries, 0 to 6233
@@ -623,10 +614,10 @@ memory usage: 584.6+ KB</code></pre>
 <section id="question-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
 <p>Filter your dataset so it contains only <code>TV Shows</code>. How many of those TV Shows were rated <code>TV-Y7</code>?</p>
-<div id="cell-7" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="310a9ade-3f1d-4b7c-c758-d8ee8b6ae0bc" data-execution_count="35">
+<div id="cell-7" class="cell" data-outputid="a67e7b26-abec-4b4e-a8b4-27cc7094806d" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="40">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df_tv <span class="op">=</span> df[df[<span class="st">"type"</span>] <span class="op">==</span> <span class="st">"TV Show"</span>]</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>(df_tv[<span class="st">"rating"</span>] <span class="op">==</span> <span class="st">"TV-Y7"</span>).<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="35">
+<div class="cell-output cell-output-display" data-execution_count="40">
 <pre><code>np.int64(100)</code></pre>
 </div>
 </div>
@@ -634,10 +625,10 @@ memory usage: 584.6+ KB</code></pre>
 <section id="question-3" class="level3">
 <h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
 <p>Further filter your dataset so it only contains TV Shows released between the years 2000 and 2009 inclusive. How many of <em>those</em> shows were rated <code>TV-Y7</code>?</p>
-<div id="cell-9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="c01b80fd-9333-4db4-c2aa-79cc40a20524" data-execution_count="36">
+<div id="cell-9" class="cell" data-outputid="16dcb634-75e1-4368-a319-f2b357753c4b" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="41">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df_2000s <span class="op">=</span> df_tv[(df_tv[<span class="st">"release_year"</span>] <span class="op">&gt;=</span> <span class="dv">2000</span>) <span class="op">&amp;</span> (df_tv[<span class="st">"release_year"</span>] <span class="op">&lt;=</span> <span class="dv">2009</span>)]</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>(df_2000s[<span class="st">"rating"</span>] <span class="op">==</span> <span class="st">"TV-Y7"</span>).<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="36">
+<div class="cell-output cell-output-display" data-execution_count="41">
 <pre><code>np.int64(4)</code></pre>
 </div>
 </div>
@@ -649,11 +640,11 @@ memory usage: 584.6+ KB</code></pre>
 <section id="question-4" class="level3">
 <h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
 <p>After importing the dataset into a pandas data frame, determine the median amount of <code>protein</code> in cereal brands manufactured by Kelloggs. (<code>mfr</code> code “K”)</p>
-<div id="cell-12" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="311c659d-a723-4519-ac74-2a9a4c604814" data-execution_count="12">
+<div id="cell-12" class="cell" data-outputid="56722440-5dfa-48ee-83bb-8c2c10e65c1b" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-execution_count="42">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df_cereal <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/cereal.csv"</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>df_cereal</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<div id="df-2b4b4921-21d2-495c-8b19-a148db73f9e1" class="colab-df-container">
+<div class="cell-output cell-output-display" data-execution_count="42">
+<div id="df-067ac8de-7dab-4891-8e3d-a9ddc3edc1e5" class="colab-df-container">
     <div>
 
 
@@ -897,7 +888,7 @@ memory usage: 584.6+ KB</code></pre>
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-2b4b4921-21d2-495c-8b19-a148db73f9e1')" title="Convert this dataframe to an interactive table." style="display:none;">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-067ac8de-7dab-4891-8e3d-a9ddc3edc1e5')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
     <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
@@ -947,12 +938,12 @@ memory usage: 584.6+ KB</code></pre>
 
     <script>
       const buttonEl =
-        document.querySelector('#df-2b4b4921-21d2-495c-8b19-a148db73f9e1 button.colab-df-convert');
+        document.querySelector('#df-067ac8de-7dab-4891-8e3d-a9ddc3edc1e5 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-2b4b4921-21d2-495c-8b19-a148db73f9e1');
+        const element = document.querySelector('#df-067ac8de-7dab-4891-8e3d-a9ddc3edc1e5');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -972,7 +963,7 @@ memory usage: 584.6+ KB</code></pre>
   </div>
 
 
-  <div id="id_c083442d-dbf9-450c-8afa-818dd746c59e">
+  <div id="id_b3bb8cc1-a3d9-42d2-8810-486d6c3d40bd">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -1013,7 +1004,7 @@ memory usage: 584.6+ KB</code></pre>
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_c083442d-dbf9-450c-8afa-818dd746c59e button.colab-df-generate');
+        document.querySelector('#id_b3bb8cc1-a3d9-42d2-8810-486d6c3d40bd button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -1028,10 +1019,10 @@ memory usage: 584.6+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-13" class="cell" data-outputid="6037ae97-09d9-45d9-e534-c41c9a809199" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="37">
+<div id="cell-13" class="cell" data-outputid="1b622d37-433d-41f4-becb-386b12393efe" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="43">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>median_protein <span class="op">=</span> <span class="bu">round</span>(df_cereal[<span class="st">"protein"</span>].median(),<span class="dv">2</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>median_protein</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="37">
+<div class="cell-output cell-output-display" data-execution_count="43">
 <pre><code>3.0</code></pre>
 </div>
 </div>
@@ -1042,11 +1033,11 @@ memory usage: 584.6+ KB</code></pre>
 <pre><code>healthiness = (protein + fiber) / sugar</code></pre>
 <p>Create a new <code>healthiness</code> column populated with values based on the above formula.</p>
 <p>Then, determine the median healthiness value for only General Mills cereals (<code>mfr</code> = “G”), rounded to two decimal places.</p>
-<div id="cell-15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:223}}" data-outputid="904c5384-bace-4b96-803f-51656b769e1e" data-execution_count="17">
+<div id="cell-15" class="cell" data-outputid="93498bf7-8379-4def-8a3a-6a8487d98f18" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:223}}" data-execution_count="44">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df_cereal[<span class="st">"healthiness"</span>] <span class="op">=</span> ((df_cereal[<span class="st">"protein"</span>] <span class="op">+</span> df_cereal[<span class="st">"fiber"</span>])<span class="op">/</span> df_cereal[<span class="st">"sugars"</span>])</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>df_cereal.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="17">
-<div id="df-e933f53d-4559-45b5-bdcf-0a3800f18682" class="colab-df-container">
+<div class="cell-output cell-output-display" data-execution_count="44">
+<div id="df-28f811fb-c9d8-461e-8263-70d5bd049d16" class="colab-df-container">
     <div>
 
 
@@ -1181,7 +1172,7 @@ memory usage: 584.6+ KB</code></pre>
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-e933f53d-4559-45b5-bdcf-0a3800f18682')" title="Convert this dataframe to an interactive table." style="display:none;">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-28f811fb-c9d8-461e-8263-70d5bd049d16')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
     <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
@@ -1231,12 +1222,12 @@ memory usage: 584.6+ KB</code></pre>
 
     <script>
       const buttonEl =
-        document.querySelector('#df-e933f53d-4559-45b5-bdcf-0a3800f18682 button.colab-df-convert');
+        document.querySelector('#df-28f811fb-c9d8-461e-8263-70d5bd049d16 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-e933f53d-4559-45b5-bdcf-0a3800f18682');
+        const element = document.querySelector('#df-28f811fb-c9d8-461e-8263-70d5bd049d16');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1260,11 +1251,10 @@ memory usage: 584.6+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-16" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="886ba868-0e30-4311-d860-6449f837f150" data-execution_count="21">
+<div id="cell-16" class="cell" data-outputid="b18ceff4-0f55-424c-89b8-04dcd63f7ee3" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="45">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>median_healthiness <span class="op">=</span> <span class="bu">round</span>((df_cereal[df_cereal[<span class="st">"mfr"</span>] <span class="op">==</span> <span class="st">"G"</span>][<span class="st">"healthiness"</span>].median()),<span class="dv">2</span>)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>median_healthiness</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="21">
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>median_healthiness</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="45">
 <pre><code>0.47</code></pre>
 </div>
 </div>
@@ -1280,12 +1270,12 @@ memory usage: 584.6+ KB</code></pre>
 <pre><code>Surname, Given names</code></pre>
 <p>For example, if a passenger’s <code>Name</code> is <code>Braund, Mr. Owen Harris</code>, the <code>NameGroup</code> column should contain the value <code>b</code>.</p>
 <p>Then count how many passengers have a <code>NameGroup</code> value of <code>k</code>.</p>
-<div id="cell-19" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:493}}" data-outputid="3e4f2d5b-f34e-4245-edaa-2f1b7eca5cf5" data-execution_count="27">
+<div id="cell-19" class="cell" data-outputid="b131f419-5ee3-43ed-9a74-195d129cd979" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:493}}" data-execution_count="46">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df_titanic <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/titanic.csv"</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>df_titanic[<span class="st">"NameGroup"</span>] <span class="op">=</span> df_titanic[<span class="st">"Name"</span>].<span class="bu">str</span>.split(<span class="st">","</span>).<span class="bu">str</span>[<span class="dv">0</span>].<span class="bu">str</span>[<span class="dv">0</span>].<span class="bu">str</span>.lower()</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>df_titanic</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="27">
-<div id="df-319a0ccb-9743-455f-8a62-91161df2976f" class="colab-df-container">
+<div class="cell-output cell-output-display" data-execution_count="46">
+<div id="df-2f7843c9-45df-4e03-9ffe-168011258493" class="colab-df-container">
     <div>
 
 
@@ -1493,7 +1483,7 @@ memory usage: 584.6+ KB</code></pre>
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-319a0ccb-9743-455f-8a62-91161df2976f')" title="Convert this dataframe to an interactive table." style="display:none;">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-2f7843c9-45df-4e03-9ffe-168011258493')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
     <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
@@ -1543,12 +1533,12 @@ memory usage: 584.6+ KB</code></pre>
 
     <script>
       const buttonEl =
-        document.querySelector('#df-319a0ccb-9743-455f-8a62-91161df2976f button.colab-df-convert');
+        document.querySelector('#df-2f7843c9-45df-4e03-9ffe-168011258493 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-319a0ccb-9743-455f-8a62-91161df2976f');
+        const element = document.querySelector('#df-2f7843c9-45df-4e03-9ffe-168011258493');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1568,7 +1558,7 @@ memory usage: 584.6+ KB</code></pre>
   </div>
 
 
-  <div id="id_58ceb746-a4c6-4adc-9f1d-908bd017dbf4">
+  <div id="id_ca4b1de0-9122-4975-9a02-2fdc7601e16c">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -1609,7 +1599,7 @@ memory usage: 584.6+ KB</code></pre>
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_58ceb746-a4c6-4adc-9f1d-908bd017dbf4 button.colab-df-generate');
+        document.querySelector('#id_ca4b1de0-9122-4975-9a02-2fdc7601e16c button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -1624,14 +1614,15 @@ memory usage: 584.6+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-20" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="121465ae-da54-49a3-d830-6150f2f1d3d6" data-execution_count="28">
+<div id="cell-20" class="cell" data-outputid="89d8c730-2515-4388-d575-8c1c72b6d42a" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="47">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>(df_titanic[<span class="st">"NameGroup"</span>] <span class="op">==</span> <span class="st">"k"</span>).<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="28">
+<div class="cell-output cell-output-display" data-execution_count="47">
 <pre><code>np.int64(28)</code></pre>
 </div>
 </div>
 
 
+</section>
 </section>
 </section>
 
