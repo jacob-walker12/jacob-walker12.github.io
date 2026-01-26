@@ -33,554 +33,39 @@
     ]
   },
   {
-    "objectID": "notebooks/Exploration_01.html",
-    "href": "notebooks/Exploration_01.html",
-    "title": "Data Exploration 01",
-    "section": "",
-    "text": "A consumer watchdog group wants to see if Netflix has more movies for adults or children.\nUsing a dataset containing metadata for all of the movies Netflix had available on their platform in 2019, we’ll use the MPAA movie rating system to determine if they are correct."
+    "objectID": "notebooks/Exploration_02.html#part-1-import-pandas-and-load-the-data",
+    "href": "notebooks/Exploration_02.html#part-1-import-pandas-and-load-the-data",
+    "title": "Data Exploration 02",
+    "section": "Part 1: Import Pandas and load the data",
+    "text": "Part 1: Import Pandas and load the data\nRemember to import Pandas the conventional way. If you’ve forgotten how, you may want to review Data Exploration 01.\nThe dataset for this exploration is stored at the following url:\nhttps://raw.githubusercontent.com/byui-cse/cse450-course/master/data/cereal.csv\nThere are lots of ways to load data into your workspace. The easiest way in this case is to ask Pandas to do it for you.\n\nInitial Data Analysis\nOnce you’ve loaded the data, it’s a good idea to poke around a little bit to find out what you’re dealing with.\nSome questions you might ask include:\n\nWhat does the data look like?\nWhat kind of data is in each column?\nDo any of the columns have missing values?\n\n\n# Part 1: Enter your code below to import Pandas according to the\n# conventional method. Then load the dataset into a Pandas dataframe.\nimport pandas as pd\n# Write any code needed to explore the data by seeing what the first few\n# rows look like. Then display a technical summary of the data to determine\n# the data types of each column, and which columns have missing data.\ndf = pd.read_csv(\"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/cereal.csv\")\n\n\ndf\n\n\n    \n\n\n\n\n\n\nname\nmfr\ntype\ncalories\nprotein\nfat\nsodium\nfiber\ncarbo\nsugars\npotass\nvitamins\nshelf\nweight\ncups\nrating\n\n\n\n\n0\n100% Bran\nN\nC\n70\n4\n1\n130\n10.0\n5.0\n6\n280\n25\n3\n1.0\n0.33\n68.402973\n\n\n1\n100% Natural Bran\nQ\nC\n120\n3\n5\n15\n2.0\n8.0\n8\n135\n0\n3\n1.0\n1.00\n33.983679\n\n\n2\nAll-Bran\nK\nC\n70\n4\n1\n260\n9.0\n7.0\n5\n320\n25\n3\n1.0\n0.33\n59.425505\n\n\n3\nAll-Bran with Extra Fiber\nK\nC\n50\n4\n0\n140\n14.0\n8.0\n0\n330\n25\n3\n1.0\n0.50\n93.704912\n\n\n4\nAlmond Delight\nR\nC\n110\n2\n2\n200\n1.0\n14.0\n8\n-1\n25\n3\n1.0\n0.75\n34.384843\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n72\nTriples\nG\nC\n110\n2\n1\n250\n0.0\n21.0\n3\n60\n25\n3\n1.0\n0.75\n39.106174\n\n\n73\nTrix\nG\nC\n110\n1\n1\n140\n0.0\n13.0\n12\n25\n25\n2\n1.0\n1.00\n27.753301\n\n\n74\nWheat Chex\nR\nC\n100\n3\n1\n230\n3.0\n17.0\n3\n115\n25\n1\n1.0\n0.67\n49.787445\n\n\n75\nWheaties\nG\nC\n100\n3\n1\n200\n3.0\n17.0\n3\n110\n25\n1\n1.0\n1.00\n51.592193\n\n\n76\nWheaties Honey Gold\nG\nC\n110\n2\n1\n200\n1.0\n16.0\n8\n60\n25\n1\n1.0\n0.75\n36.187559\n\n\n\n\n77 rows × 16 columns"
   },
   {
-    "objectID": "notebooks/Exploration_01.html#mpaa-movie-ratings",
-    "href": "notebooks/Exploration_01.html#mpaa-movie-ratings",
-    "title": "Data Exploration 01",
-    "section": "MPAA Movie Ratings:",
-    "text": "MPAA Movie Ratings:\n\nG: All ages admitted.\nPG: Some material may not be suitable for children.\nPG-13: Some material may be inappropriate for children under 13.\nR: Under 17 requires accompanying parent or adult guardian\nNC-17: No One 17 and Under Admitted\n\nMost people would consider G and PG as ratings suitable for children. However, not everyone would agree that a PG-13 movie is necssarily a children’s movie. It is up to you to decide how to handle this."
+    "objectID": "notebooks/Exploration_02.html#part-2-calculate-summary-statistics",
+    "href": "notebooks/Exploration_02.html#part-2-calculate-summary-statistics",
+    "title": "Data Exploration 02",
+    "section": "Part 2: Calculate Summary Statistics",
+    "text": "Part 2: Calculate Summary Statistics\nThe marketing team has determined that when choosing a cereal, consumers are most interested in calories, sugars, fiber, fat, and protein.\nFirst, let’s calcuate some summary statistics for these categories across the entire dataset. We’re particularly intrested in the mean, median, standard deviation, min, and max values.\nThere are multiple ways to accomplish this.\n\n# Part 2: Enter your code below to calculate summary statistics for the\n# calories, sugars, fiber, fat, and protein features.\n\ndf[['calories', 'sugars', 'fiber', 'fat', 'protein']].describe()\n\n\n    \n\n\n\n\n\n\ncalories\nsugars\nfiber\nfat\nprotein\n\n\n\n\ncount\n77.000000\n77.000000\n77.000000\n77.000000\n77.000000\n\n\nmean\n106.883117\n6.922078\n2.151948\n1.012987\n2.545455\n\n\nstd\n19.484119\n4.444885\n2.383364\n1.006473\n1.094790\n\n\nmin\n50.000000\n-1.000000\n0.000000\n0.000000\n1.000000\n\n\n25%\n100.000000\n3.000000\n1.000000\n0.000000\n2.000000\n\n\n50%\n110.000000\n7.000000\n2.000000\n1.000000\n3.000000\n\n\n75%\n110.000000\n11.000000\n3.000000\n2.000000\n3.000000\n\n\nmax\n160.000000\n15.000000\n14.000000\n5.000000\n6.000000"
   },
   {
-    "objectID": "notebooks/Exploration_01.html#part-1-import-pandas",
-    "href": "notebooks/Exploration_01.html#part-1-import-pandas",
-    "title": "Data Exploration 01",
-    "section": "Part 1: Import Pandas",
-    "text": "Part 1: Import Pandas\nThe pandas library is a python library used for data analysis and manipulation. It will provide the core functionality for most of what you do in the data exploration and preprocessing stages of most machine learning projects.\nPlease see this Getting Started Guide for information on the conventional way to import Pandas into your project, as well as other helpful tips for common Pandas tasks.\n\n# Part 1: Enter the code below to import Pandas according to the\n# conventional method.\nimport pandas as pd"
+    "objectID": "notebooks/Exploration_02.html#part-3-transform-data",
+    "href": "notebooks/Exploration_02.html#part-3-transform-data",
+    "title": "Data Exploration 02",
+    "section": "Part 3: Transform Data",
+    "text": "Part 3: Transform Data\nTo make analysis easier, you want to convert the manufacturer codes used in the dataset to the manufacturer names.\nFirst, display the count of each manufacturer code value used in the dataset (found in the mfr column).\nThen, create a new column with the appropriate manufacturer name for each entry, using this mapping:\nA = American Home Food Products\nG = General Mills\nK = Kelloggs\nN = Nabisco\nP = Post\nQ = Quaker Oats\nR = Ralston Purina\n\nNote: While the tutorial linked above uses the replace function, using the map function instead can often be much faster and more memory efficient, especially for large datasets.\n\n\n# Display the count of values for the manufacturer code (\"mfr\" column), then\n# create a new column containing the appropriate manufacturer names.\ndf['mfr'].value_counts()\nmfr_map = {\n    \"A\": \"American Home Food Products\",\n    \"G\": \"General Mills\",\n    \"K\": \"Kelloggs\",\n    \"N\": \"Nabisco\",\n    \"P\": \"Post\",\n    \"Q\": \"Quaker Oats\",\n    \"R\": \"Ralston Purina\"\n}\ndf[\"manufacturer\"] = df[\"mfr\"].map(mfr_map)\ndf[[\"mfr\", \"manufacturer\"]]\n\n\n    \n\n\n\n\n\n\nmfr\nmanufacturer\n\n\n\n\n0\nN\nNabisco\n\n\n1\nQ\nQuaker Oats\n\n\n2\nK\nKelloggs\n\n\n3\nK\nKelloggs\n\n\n4\nR\nRalston Purina\n\n\n...\n...\n...\n\n\n72\nG\nGeneral Mills\n\n\n73\nG\nGeneral Mills\n\n\n74\nR\nRalston Purina\n\n\n75\nG\nGeneral Mills\n\n\n76\nG\nGeneral Mills\n\n\n\n\n77 rows × 2 columns"
   },
   {
-    "objectID": "notebooks/Exploration_01.html#part-2-load-the-data",
-    "href": "notebooks/Exploration_01.html#part-2-load-the-data",
-    "title": "Data Exploration 01",
-    "section": "Part 2: Load the data",
-    "text": "Part 2: Load the data\nThe dataset for this exploration is stored at the following url:\nhttps://raw.githubusercontent.com/byui-cse/cse450-course/master/data/netflix_titles.csv\nThere are lots of ways to load data into your workspace. The easiest way in this case is to ask Pandas to do it for you.\n\nInitial Data Analysis\nOnce you’ve loaded the data, it’s a good idea to poke around a little bit to find out what you’re dealing with.\nSome questions you might ask include:\n\nWhat does the data look like?\nWhat kind of data is in each column?\nDo any of the columns have missing values?\n\n\n# Part 2: Load the dataset into a Pandas dataframe.\ndf = pd.read_csv(\"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/netflix_titles.csv\")\n\n\n# Then, explore the data by seeing what the first few rows look like.\ndf.head()\n\n\n    \n\n\n\n\n\n\nshow_id\ntype\ntitle\ndirector\ncast\ncountry\ndate_added\nrelease_year\nrating\nduration\nlisted_in\ndescription\n\n\n\n\n0\n81145628\nMovie\nNorm of the North: King Sized Adventure\nRichard Finn, Tim Maltby\nAlan Marriott, Andrew Toth, Brian Dobson, Cole...\nUnited States, India, South Korea, China\nSeptember 9, 2019\n2019\nTV-PG\n90 min\nChildren & Family Movies, Comedies\nBefore planning an awesome wedding for his gra...\n\n\n1\n80117401\nMovie\nJandino: Whatever it Takes\nNaN\nJandino Asporaat\nUnited Kingdom\nSeptember 9, 2016\n2016\nTV-MA\n94 min\nStand-Up Comedy\nJandino Asporaat riffs on the challenges of ra...\n\n\n2\n70234439\nTV Show\nTransformers Prime\nNaN\nPeter Cullen, Sumalee Montano, Frank Welker, J...\nUnited States\nSeptember 8, 2018\n2013\nTV-Y7-FV\n1 Season\nKids' TV\nWith the help of three human allies, the Autob...\n\n\n3\n80058654\nTV Show\nTransformers: Robots in Disguise\nNaN\nWill Friedle, Darren Criss, Constance Zimmer, ...\nUnited States\nSeptember 8, 2018\n2016\nTV-Y7\n1 Season\nKids' TV\nWhen a prison ship crash unleashes hundreds of...\n\n\n4\n80125979\nMovie\n#realityhigh\nFernando Lebrija\nNesta Cooper, Kate Walsh, John Michael Higgins...\nUnited States\nSeptember 8, 2017\n2017\nTV-14\n99 min\nComedies\nWhen nerdy high schooler Dani finally attracts...\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n      \n\n\n    \n        \n    \n\n      \n\n\n\n      \n    \n\n    \n  \n\n\n\n# Next, display a technical summary of the data to determine the data types of each column, and which columns have missing data.\n\ndf.describe()\n\n\n    \n\n\n\n\n\n\nshow_id\nrelease_year\n\n\n\n\ncount\n6.234000e+03\n6234.00000\n\n\nmean\n7.670368e+07\n2013.35932\n\n\nstd\n1.094296e+07\n8.81162\n\n\nmin\n2.477470e+05\n1925.00000\n\n\n25%\n8.003580e+07\n2013.00000\n\n\n50%\n8.016337e+07\n2016.00000\n\n\n75%\n8.024489e+07\n2018.00000\n\n\nmax\n8.123573e+07\n2020.00000"
-  },
-  {
-    "objectID": "notebooks/Exploration_01.html#part-3-filter-the-data",
-    "href": "notebooks/Exploration_01.html#part-3-filter-the-data",
-    "title": "Data Exploration 01",
-    "section": "Part 3: Filter the Data",
-    "text": "Part 3: Filter the Data\nSince we’re just interested in movies, we’ll need to filter out anything that isn’t a movie for our analysis. The type feature contains this information.\nOnce we have the subset, we should see how many rows it contains. There are a variety of ways to get the length of a data frame.\n\n# Use pandas's filtering abilitites to select the subset of data\n# that represents movies, then calculate how many rows are in the filtered data.\ndf_movies = df[df[\"type\"] == \"Movie\"]\ndf_movies\n\n\n    \n\n\n\n\n\n\nshow_id\ntype\ntitle\ndirector\ncast\ncountry\ndate_added\nrelease_year\nrating\nduration\nlisted_in\ndescription\n\n\n\n\n0\n81145628\nMovie\nNorm of the North: King Sized Adventure\nRichard Finn, Tim Maltby\nAlan Marriott, Andrew Toth, Brian Dobson, Cole...\nUnited States, India, South Korea, China\nSeptember 9, 2019\n2019\nTV-PG\n90 min\nChildren & Family Movies, Comedies\nBefore planning an awesome wedding for his gra...\n\n\n1\n80117401\nMovie\nJandino: Whatever it Takes\nNaN\nJandino Asporaat\nUnited Kingdom\nSeptember 9, 2016\n2016\nTV-MA\n94 min\nStand-Up Comedy\nJandino Asporaat riffs on the challenges of ra...\n\n\n4\n80125979\nMovie\n#realityhigh\nFernando Lebrija\nNesta Cooper, Kate Walsh, John Michael Higgins...\nUnited States\nSeptember 8, 2017\n2017\nTV-14\n99 min\nComedies\nWhen nerdy high schooler Dani finally attracts...\n\n\n6\n70304989\nMovie\nAutomata\nGabe Ibáñez\nAntonio Banderas, Dylan McDermott, Melanie Gri...\nBulgaria, United States, Spain, Canada\nSeptember 8, 2017\n2014\nR\n110 min\nInternational Movies, Sci-Fi & Fantasy, Thrillers\nIn a dystopian future, an insurance adjuster f...\n\n\n7\n80164077\nMovie\nFabrizio Copano: Solo pienso en mi\nRodrigo Toro, Francisco Schultz\nFabrizio Copano\nChile\nSeptember 8, 2017\n2017\nTV-MA\n60 min\nStand-Up Comedy\nFabrizio Copano takes audience participation t...\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n5577\n80085438\nMovie\nFrank and Cindy\nG.J. Echternkamp\nNaN\nUnited States\nApril 1, 2016\n2007\nTV-MA\n70 min\nDocumentaries\nFrank was a rising pop star when he married Ci...\n\n\n5578\n80085439\nMovie\nFrank and Cindy\nG.J. Echternkamp\nRene Russo, Oliver Platt, Johnny Simmons, Jane...\nUnited States\nApril 1, 2016\n2015\nR\n102 min\nComedies, Dramas, Independent Movies\nA student filmmaker vengefully turns his camer...\n\n\n5579\n80011846\nMovie\nIverson\nZatella Beatty\nAllen Iverson\nUnited States\nApril 1, 2016\n2014\nNR\n88 min\nDocumentaries, Sports Movies\nThis unfiltered documentary follows the rocky ...\n\n\n5580\n80064521\nMovie\nJeremy Scott: The People's Designer\nVlad Yudin\nJeremy Scott\nUnited States\nApril 1, 2016\n2015\nPG-13\n109 min\nDocumentaries\nThe journey of fashion designer Jeremy Scott f...\n\n\n6231\n80116008\nMovie\nLittle Baby Bum: Nursery Rhyme Friends\nNaN\nNaN\nNaN\nNaN\n2016\nNaN\n60 min\nMovies\nNursery rhymes and original music for children...\n\n\n\n\n4265 rows × 12 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n      \n\n\n    \n        \n    \n\n      \n\n\n\n      \n    \n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\nMPAA Ratings\nNow that we have only movies, let’s get a quick count of the values being used in the rating feature.\n\n# Determine the number of records for each value of the \"rating\" feature.\n# Remember to count the values in your subset only, not in the original dataframe.\ndf_movies[\"rating\"].unique()\ndf_movies[\"rating\"].value_counts()\n\n\n\n\n\n\n\n\ncount\n\n\nrating\n\n\n\n\n\nTV-MA\n1348\n\n\nTV-14\n1038\n\n\nR\n506\n\n\nTV-PG\n432\n\n\nPG-13\n286\n\n\nNR\n202\n\n\nPG\n183\n\n\nTV-G\n80\n\n\nTV-Y7\n69\n\n\nTV-Y\n41\n\n\nG\n36\n\n\nTV-Y7-FV\n27\n\n\nUR\n7\n\n\nNC-17\n2\n\n\n\n\ndtype: int64\n\n\n\n\nMore Filtering\nThere are apparently some “made for TV” movies in the list that don’t fit the MPAA rating scheme.\nLet’s filter some more to just see movies rated with the standard MPAA ratings of G, PG, PG-13, R, and NC-17.\n\n# Filter the list of movies to select a new subset containing only movies with\n# a standard MPAA rating. Calculate how many rows are in this new set, and\n# then see which ratings appear most often.\nmovie_ratings = [\"G\", \"PG\", \"PG-13\", \"R\", \"NC-17\"]\ndf_filtered = df_movies[df_movies[\"rating\"].isin(movie_ratings)]\ndf_filtered.head()\ndf_filtered[\"rating\"].value_counts()\n\n\n\n\n\n\n\n\ncount\n\n\nrating\n\n\n\n\n\nR\n506\n\n\nPG-13\n286\n\n\nPG\n183\n\n\nG\n36\n\n\nNC-17\n2\n\n\n\n\ndtype: int64"
-  },
-  {
-    "objectID": "notebooks/Exploration_01.html#part-4-visualization",
-    "href": "notebooks/Exploration_01.html#part-4-visualization",
-    "title": "Data Exploration 01",
+    "objectID": "notebooks/Exploration_02.html#part-4-visualization",
+    "href": "notebooks/Exploration_02.html#part-4-visualization",
+    "title": "Data Exploration 02",
     "section": "Part 4: Visualization",
-    "text": "Part 4: Visualization\nNow that we have explored and preprocessed our data, let’s create a visualization to summarize our findings.\n\nExploration vs Presentation\nBroadly speaking, there are two types of visualizations: * Barebones visualizations you might use to get a quick, visual understanding of the data while you’re trying to decide how it all fits together. * Presentation-quality visualizations that you would include in a report or presentation for management or other stakeholders.\n\n\nVisualization Tools\nThere are many different visualization tools availble. In the sections below, we’ll explore the three most common. Each of these libraries has strengths and weaknesses.\nIt is probably a good idea for you to become familiar with each one, and then become proficient at whichever one you like the best.\n\n\nAltair\nThe Altair visualization library provides a large variety of very easy to use statistical charting tools.\nAltair uses a declarative language to build up charts piece by piece.\nAssume we have a pandas dataframe called employees, with three columns: name, job, salary.\n# Make a box plot style categorical plot showing the distribution of salaries for each job:\nalt.Chart(employees).mark_boxplot().encode(\n    x='job',\n    y='salary'\n)\n\n# Make a box plot style categorical plot, and customize the results\nalt.Chart(employees).mark_boxplot().encode(\n    alt.X('job', title='Job title'),\n    alt.Y('salary', title='Annual salary in thousands of $USD')\n).properties(\n  title='Salaries by Job Title'\n)\nLike with Pandas, there is a conventional way to import Altair into your projects.\n\n# Import the Altair library the conventional way.\nimport altair as alt\n\nLet’s create a barchart showing the count of each movie rating by using Altair’s aggregation capabilities.\nIn this example, we see the x axis being set to a feature called a, and the y axis set to the average() of a feature called b.\nIn our case, we want the x axis to be set to rating and the y axis to be the count() of rating.\n\n# Use Altair to create a bar chart comparing the count of each movie rating\nalt.Chart(df_filtered).mark_bar().encode(\n    alt.X('rating').title(\"Movie Ratings\"),\n    alt.Y('count(rating)').title(\"Count of Movies\")\n)\n\n\n\n\n\n\n\n\n\nSeaborn\nWhile Altair uses a “declarative” syntax for building charts piece by piece, the Seaborn library provides a large variety of pre-made charts for common statistical needs.\nThese charts are divided into different categories. Each category has a high-level interface you can use for simplicity, and then a specific function for each chart that you can use if you need more control over how the chart looks.\nSeaborn uses matplotlib for its drawing, and the chart-specific functions each return a matplitlib axes object if you need additional customization.\nFor example, there are several different types of categorical plots in seaborn: bar plots, box plots, point plots, count plots, swarm plots, etc…\nEach of these plots can be accessed using the catplot function.\nAssume we have a pandas dataframe called employees, with three columns: name, job, salary.\n# Make a box plot style categorical plot showing the distribution of salaries for each job:\nsns.catplot(data=employees, x='job', y='salary', kind='box')\n\n# Make a swarm plot style categorical plot\nsns.catplot(data=employees, x='job', y='salary', kind='swarm')\nAlternatively, you can use the plot specific functions to give yourself more control over the output by using matplotlib functions:\n# Make a box plot style categorical plot, and customize the results\nimport matplotlib.pyplot as plt\n\nplt.figure(figsize=(12, 9))\nax = sns.boxplot(data=employees, x='job', y='salary')\nax.set_title(\"Salaries by Job Title\")\nax.set_ylabel(\"Annual salary in thousands of $USD\")\nax.set_xlabel(\"Job title\")\nLike with Pandas, there is a conventional way to import Seaborn into your projects.\nOptionally, you may wish to set some default chart aesthetics by setting the chart style.\n\n# Import the seaborn library the conventional way. Then optionally configure\n# the default chart style.\nimport seaborn as sns\nsns.set_theme(style=\"darkgrid\")\n\nSince the rating column uses categorical data, we need to use Seaborn’s categorical visualizations.\nIn particular, we want a “count plot” that will display a count of movie ratings.\n\n# Use seaborn to create a count plot comparing the count of each movie rating\nsns.catplot(\n    data=df_filtered, y=\"rating\", hue=\"rating\", kind=\"count\",\n    palette=\"pastel\", edgecolor=\".6\",\n)\n\n\n\n\n\n\n\n\n\n\nPandas built-in plotting\nIn addition to libraries like Altair and Seaborn, Pandas has some built in charting functionality.\nWhile not as sophisticated as some of the other options, it is often good enough for quick visualizations.\nJust like with seaborn’s plotting functions, the pandas plotting functions return matplotlib axes objects, which can be further customized.\nAssume we have a pandas dataframe called employees, with three columns: name, job, salary.\n# Make a box plot style categorical plot showing the distribution of salaries for each job:\nemployees[ ['job','salary'] ].plot.box()\n\n# Make a box plot style categorical plot, and customize the results\nimport matplotlib.pyplot as plt\n\nplt.figure(figsize=(12, 9))\nax = employees[ ['job','salary'] ].plot().box()\nax.set_title(\"Salaries by Job Title\")\nax.set_ylabel(\"Annual salary in thousands of $USD\")\nax.set_xlabel(\"Job title\")\n\n# Use pandas' built in plotting functions to create a count plot comparing the count of each movie rating\n# This will be a little trickier than the other libraries, but one hint is that the pandas value_counts() function\n# actually returns a dataframe.\n\nimport matplotlib.pyplot as plt\n\nrating_counts = df_filtered[\"rating\"].value_counts()\n\nplt.figure(figsize=(9, 6))\n\nax = rating_counts.plot(kind=\"bar\")\n\nax.set_title(\"Rating Counts for Movies\")\nax.set_xlabel(\"Movie Rating\")\nax.set_ylabel(\"Number of Movies\")\n\nplt.show()"
+    "text": "Part 4: Visualization\nLet’s do some more data exploration visually.\nImport your visualization library of choice and set any needed configuration options.\n\n# Import your visualization library\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.set_theme(style=\"darkgrid\")\n\n\nSugar Distribution\nMarketing tells us that their surveys have revealed that sugar content is the number one concern of consumers when choosing cereal.\nThey would like to see the following visualizations:\n\nA histogram plot of the sugar content in all cereals.\nA scatter plot showing the relationship between sugar and calories.\nA box plot showing the distribution of sugar content by manufacturer.\n\n\n# Create the three visualzations requested by the the marketing team\n# Chart 1\nsns.histplot(data=df, x=\"sugars\")\nplt.show()\n\n\n\n\n\n\n\n\n\n# Chart 2\nsns.scatterplot(\n    data = df,\n    x = \"calories\",\n    y = \"sugars\"\n)\nplt.show()\n\n\n\n\n\n\n\n\n\n# Chart 3\nsns.boxplot(data = df, x = \"manufacturer\",y = \"sugars\")\nplt.xticks(rotation = 45)\nplt.show()"
   },
   {
-    "objectID": "notebooks/Exploration_01.html#above-and-beyond",
-    "href": "notebooks/Exploration_01.html#above-and-beyond",
-    "title": "Data Exploration 01",
+    "objectID": "notebooks/Exploration_02.html#above-and-beyond",
+    "href": "notebooks/Exploration_02.html#above-and-beyond",
+    "title": "Data Exploration 02",
     "section": "🌟 Above and Beyond 🌟",
-    "text": "🌟 Above and Beyond 🌟\nAfter reviewing your findings, the watchdog group would like some additional questions answered:\n\nHow are things affected if you include the “made for TV movies” that have been assigned TV ratings in your analysis, but still exclude unrated movies?\nThey would also like to see a separate report that includes only TV shows.\nFor an upcoming community meeting, the group would like to present a simple chart showing “For Kids” and “For Adults” categories. The easiest way to accomplish this would be to create a new column in your data frame that maps each rating to the appropriate “For Kids” or “For Adults” label, then create a new visualization based on that column.\n\n\nall_ratings = [\"NC-17\", \"TV-Y7-FV\", \"G\", \"TV-Y\", \"TV-Y7\", \"TV-G\", \"PG\", \"PG-13\", \"TV-PG\", \"R\", \"TV-14\", \"TV-MA\"]\n\ndf_ratedmovies = df_movies[df_movies[\"rating\"].isin(all_ratings)]\ndf_ratedmovies.head()\ndf_ratedmovies[\"rating\"].value_counts()\n\nallrating_counts = df_ratedmovies[\"rating\"].value_counts()\nplt.figure(figsize = (9,6))\nax = allrating_counts.plot(kind = \"bar\")\nax.set_title(\"Rating Counts For All Movies\")\nax.set_ylabel(\"Movie Count\")\nax.set_xlabel(\"Rating\")\n\nText(0.5, 0, 'Rating')\n\n\n\n\n\n\n\n\n\n\nEven with movies that are rated for TV included, it is clear that Netlix has much more content for Adults than they do for kids."
-  },
-  {
-    "objectID": "notebooks/module01-assessment.html#submission",
-    "href": "notebooks/module01-assessment.html#submission",
-    "title": "Introduction",
-    "section": "Submission",
-    "text": "Submission\nEach problem group asks a series of questions. This assignment consists of two submissions:\n\nAfter completing the questions below, open the Module 01 Assessment Quiz in Canvas and enter your answers to these questions there.\nAfter completing and submitting the quiz, save this Colab notebook as a GitHub Gist (You’ll need to create a GitHub account for this), by selecting Save a copy as a GitHub Gist from the File menu above.\nIn Canvas, open the Module 01 Assessment GitHub Gist assignment and paste the GitHub Gist URL for this notebook. Then submit that assignment."
-  },
-  {
-    "objectID": "notebooks/module01-assessment.html#problem-group-1",
-    "href": "notebooks/module01-assessment.html#problem-group-1",
-    "title": "Introduction",
-    "section": "Problem Group 1",
-    "text": "Problem Group 1\nFor the questions in this group, you’ll work with the Netflix Movies Dataset found at this url: https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/netflix_titles.csv\n\nQuestion 1\nLoad the dataset into a Pandas data frame and determine what data type is used to store the release_year feature.\n\nimport pandas as pd\n\ndf = pd.read_csv(\"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/netflix_titles.csv\")\ndf.head()\n\n\n    \n\n\n\n\n\n\nshow_id\ntype\ntitle\ndirector\ncast\ncountry\ndate_added\nrelease_year\nrating\nduration\nlisted_in\ndescription\n\n\n\n\n0\n81145628\nMovie\nNorm of the North: King Sized Adventure\nRichard Finn, Tim Maltby\nAlan Marriott, Andrew Toth, Brian Dobson, Cole...\nUnited States, India, South Korea, China\nSeptember 9, 2019\n2019\nTV-PG\n90 min\nChildren & Family Movies, Comedies\nBefore planning an awesome wedding for his gra...\n\n\n1\n80117401\nMovie\nJandino: Whatever it Takes\nNaN\nJandino Asporaat\nUnited Kingdom\nSeptember 9, 2016\n2016\nTV-MA\n94 min\nStand-Up Comedy\nJandino Asporaat riffs on the challenges of ra...\n\n\n2\n70234439\nTV Show\nTransformers Prime\nNaN\nPeter Cullen, Sumalee Montano, Frank Welker, J...\nUnited States\nSeptember 8, 2018\n2013\nTV-Y7-FV\n1 Season\nKids' TV\nWith the help of three human allies, the Autob...\n\n\n3\n80058654\nTV Show\nTransformers: Robots in Disguise\nNaN\nWill Friedle, Darren Criss, Constance Zimmer, ...\nUnited States\nSeptember 8, 2018\n2016\nTV-Y7\n1 Season\nKids' TV\nWhen a prison ship crash unleashes hundreds of...\n\n\n4\n80125979\nMovie\n#realityhigh\nFernando Lebrija\nNesta Cooper, Kate Walsh, John Michael Higgins...\nUnited States\nSeptember 8, 2017\n2017\nTV-14\n99 min\nComedies\nWhen nerdy high schooler Dani finally attracts...\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n  \n\n\n\n\ndf.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 6234 entries, 0 to 6233\nData columns (total 12 columns):\n #   Column        Non-Null Count  Dtype \n---  ------        --------------  ----- \n 0   show_id       6234 non-null   int64 \n 1   type          6234 non-null   object\n 2   title         6234 non-null   object\n 3   director      4265 non-null   object\n 4   cast          5664 non-null   object\n 5   country       5758 non-null   object\n 6   date_added    6223 non-null   object\n 7   release_year  6234 non-null   int64 \n 8   rating        6224 non-null   object\n 9   duration      6234 non-null   object\n 10  listed_in     6234 non-null   object\n 11  description   6234 non-null   object\ndtypes: int64(2), object(10)\nmemory usage: 584.6+ KB\n\n\n\n\nQuestion 2\nFilter your dataset so it contains only TV Shows. How many of those TV Shows were rated TV-Y7?\n\ndf_tv = df[df[\"type\"] == \"TV Show\"]\n(df_tv[\"rating\"] == \"TV-Y7\").sum()\n\nnp.int64(100)\n\n\n\n\nQuestion 3\nFurther filter your dataset so it only contains TV Shows released between the years 2000 and 2009 inclusive. How many of those shows were rated TV-Y7?\n\ndf_2000s = df_tv[(df_tv[\"release_year\"] &gt;= 2000) & (df_tv[\"release_year\"] &lt;= 2009)]\n(df_2000s[\"rating\"] == \"TV-Y7\").sum()\n\nnp.int64(4)"
-  },
-  {
-    "objectID": "notebooks/module01-assessment.html#problem-group-2",
-    "href": "notebooks/module01-assessment.html#problem-group-2",
-    "title": "Introduction",
-    "section": "Problem Group 2",
-    "text": "Problem Group 2\nFor the questions in this group, you’ll work with the Cereal Dataset found at this url: https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/cereal.csv\n\nQuestion 4\nAfter importing the dataset into a pandas data frame, determine the median amount of protein in cereal brands manufactured by Kelloggs. (mfr code “K”)\n\ndf_cereal = pd.read_csv(\"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/cereal.csv\")\ndf_cereal\n\n\n    \n\n\n\n\n\n\nname\nmfr\ntype\ncalories\nprotein\nfat\nsodium\nfiber\ncarbo\nsugars\npotass\nvitamins\nshelf\nweight\ncups\nrating\n\n\n\n\n0\n100% Bran\nN\nC\n70\n4\n1\n130\n10.0\n5.0\n6\n280\n25\n3\n1.0\n0.33\n68.402973\n\n\n1\n100% Natural Bran\nQ\nC\n120\n3\n5\n15\n2.0\n8.0\n8\n135\n0\n3\n1.0\n1.00\n33.983679\n\n\n2\nAll-Bran\nK\nC\n70\n4\n1\n260\n9.0\n7.0\n5\n320\n25\n3\n1.0\n0.33\n59.425505\n\n\n3\nAll-Bran with Extra Fiber\nK\nC\n50\n4\n0\n140\n14.0\n8.0\n0\n330\n25\n3\n1.0\n0.50\n93.704912\n\n\n4\nAlmond Delight\nR\nC\n110\n2\n2\n200\n1.0\n14.0\n8\n-1\n25\n3\n1.0\n0.75\n34.384843\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n72\nTriples\nG\nC\n110\n2\n1\n250\n0.0\n21.0\n3\n60\n25\n3\n1.0\n0.75\n39.106174\n\n\n73\nTrix\nG\nC\n110\n1\n1\n140\n0.0\n13.0\n12\n25\n25\n2\n1.0\n1.00\n27.753301\n\n\n74\nWheat Chex\nR\nC\n100\n3\n1\n230\n3.0\n17.0\n3\n115\n25\n1\n1.0\n0.67\n49.787445\n\n\n75\nWheaties\nG\nC\n100\n3\n1\n200\n3.0\n17.0\n3\n110\n25\n1\n1.0\n1.00\n51.592193\n\n\n76\nWheaties Honey Gold\nG\nC\n110\n2\n1\n200\n1.0\n16.0\n8\n60\n25\n1\n1.0\n0.75\n36.187559\n\n\n\n\n77 rows × 16 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\nmedian_protein = round(df_cereal[\"protein\"].median(),2)\nmedian_protein\n\n3.0\n\n\n\n\nQuestion 5\nIn order to comply with new government regulations, all cereals must now come with a “Healthiness” rating. This rating is calculated based on this formula:\nhealthiness = (protein + fiber) / sugar\nCreate a new healthiness column populated with values based on the above formula.\nThen, determine the median healthiness value for only General Mills cereals (mfr = “G”), rounded to two decimal places.\n\ndf_cereal[\"healthiness\"] = ((df_cereal[\"protein\"] + df_cereal[\"fiber\"])/ df_cereal[\"sugars\"])\ndf_cereal.head()\n\n\n    \n\n\n\n\n\n\nname\nmfr\ntype\ncalories\nprotein\nfat\nsodium\nfiber\ncarbo\nsugars\npotass\nvitamins\nshelf\nweight\ncups\nrating\nhealthiness\n\n\n\n\n0\n100% Bran\nN\nC\n70\n4\n1\n130\n10.0\n5.0\n6\n280\n25\n3\n1.0\n0.33\n68.402973\n2.333333\n\n\n1\n100% Natural Bran\nQ\nC\n120\n3\n5\n15\n2.0\n8.0\n8\n135\n0\n3\n1.0\n1.00\n33.983679\n0.625000\n\n\n2\nAll-Bran\nK\nC\n70\n4\n1\n260\n9.0\n7.0\n5\n320\n25\n3\n1.0\n0.33\n59.425505\n2.600000\n\n\n3\nAll-Bran with Extra Fiber\nK\nC\n50\n4\n0\n140\n14.0\n8.0\n0\n330\n25\n3\n1.0\n0.50\n93.704912\ninf\n\n\n4\nAlmond Delight\nR\nC\n110\n2\n2\n200\n1.0\n14.0\n8\n-1\n25\n3\n1.0\n0.75\n34.384843\n0.375000\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n  \n\n\n\nmedian_healthiness = round((df_cereal[df_cereal[\"mfr\"] == \"G\"][\"healthiness\"].median()),2)\nmedian_healthiness\n\n0.47"
-  },
-  {
-    "objectID": "notebooks/module01-assessment.html#problem-group-3",
-    "href": "notebooks/module01-assessment.html#problem-group-3",
-    "title": "Introduction",
-    "section": "Problem Group 3",
-    "text": "Problem Group 3\nFor the questions in this group, you’ll work with the Titanic Dataset found at this url: https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/titanic.csv\n\nQuestion 6\nAfter loading the dataset into a pandas DataFrame, create a new column called NameGroup that contains the first letter of the passenger’s surname in lower case.\nNote that in the dataset, passenger’s names are provided in the Name column and are listed as:\nSurname, Given names\nFor example, if a passenger’s Name is Braund, Mr. Owen Harris, the NameGroup column should contain the value b.\nThen count how many passengers have a NameGroup value of k.\n\ndf_titanic = pd.read_csv(\"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/titanic.csv\")\ndf_titanic[\"NameGroup\"] = df_titanic[\"Name\"].str.split(\",\").str[0].str[0].str.lower()\ndf_titanic\n\n\n    \n\n\n\n\n\n\nPassengerId\nSurvived\nPclass\nName\nSex\nAge\nSibSp\nParch\nTicket\nFare\nCabin\nEmbarked\nNameGroup\n\n\n\n\n0\n1\nNo\n3\nBraund, Mr. Owen Harris\nmale\n22.0\n1\n0\nA/5 21171\n7.2500\nNaN\nS\nb\n\n\n1\n2\nYes\n1\nCumings, Mrs. John Bradley (Florence Briggs Th...\nfemale\n38.0\n1\n0\nPC 17599\n71.2833\nC85\nC\nc\n\n\n2\n3\nYes\n3\nHeikkinen, Miss. Laina\nfemale\n26.0\n0\n0\nSTON/O2. 3101282\n7.9250\nNaN\nS\nh\n\n\n3\n4\nYes\n1\nFutrelle, Mrs. Jacques Heath (Lily May Peel)\nfemale\n35.0\n1\n0\n113803\n53.1000\nC123\nS\nf\n\n\n4\n5\nNo\n3\nAllen, Mr. William Henry\nmale\n35.0\n0\n0\n373450\n8.0500\nNaN\nS\na\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n886\n887\nNo\n2\nMontvila, Rev. Juozas\nmale\n27.0\n0\n0\n211536\n13.0000\nNaN\nS\nm\n\n\n887\n888\nYes\n1\nGraham, Miss. Margaret Edith\nfemale\n19.0\n0\n0\n112053\n30.0000\nB42\nS\ng\n\n\n888\n889\nNo\n3\nJohnston, Miss. Catherine Helen \"Carrie\"\nfemale\nNaN\n1\n2\nW./C. 6607\n23.4500\nNaN\nS\nj\n\n\n889\n890\nYes\n1\nBehr, Mr. Karl Howell\nmale\n26.0\n0\n0\n111369\n30.0000\nC148\nC\nb\n\n\n890\n891\nNo\n3\nDooley, Mr. Patrick\nmale\n32.0\n0\n0\n370376\n7.7500\nNaN\nQ\nd\n\n\n\n\n891 rows × 13 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\n(df_titanic[\"NameGroup\"] == \"k\").sum()\n\nnp.int64(28)"
-  },
-  {
-    "objectID": "Cleansing_Exploration/project5.html",
-    "href": "Cleansing_Exploration/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Exploration/project4.html",
-    "href": "Cleansing_Exploration/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Exploration/project3.html",
-    "href": "Cleansing_Exploration/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "cleansing.html",
-    "href": "cleansing.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Data Cleansing"
-    ]
-  },
-  {
-    "objectID": "cleansing.html#title-2-header",
-    "href": "cleansing.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Data Cleansing"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Projects/project1.html",
-    "href": "Cleansing_Projects/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Data Cleansing",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Projects/project2.html",
-    "href": "Cleansing_Projects/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Data Cleansing",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "Story_Telling/project5.html",
-    "href": "Story_Telling/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
-      "Project 5"
-    ]
-  },
-  {
-    "objectID": "Story_Telling/project4.html",
-    "href": "Story_Telling/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
-      "Project 4"
-    ]
-  },
-  {
-    "objectID": "Story_Telling/project3.html",
-    "href": "Story_Telling/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
-      "Project 3"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "index.html#title-2-header",
-    "href": "index.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "Machine_Learning/project1.html",
-    "href": "Machine_Learning/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "Machine_Learning/project2.html",
-    "href": "Machine_Learning/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "ml.html",
-    "href": "ml.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Machine Learning"
-    ]
-  },
-  {
-    "objectID": "ml.html#title-2-header",
-    "href": "ml.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Machine Learning"
-    ]
-  },
-  {
-    "objectID": "story_telling.html",
-    "href": "story_telling.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Story Telling"
-    ]
-  },
-  {
-    "objectID": "story_telling.html#title-2-header",
-    "href": "story_telling.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Story Telling"
-    ]
-  },
-  {
-    "objectID": "Competition/project5.html",
-    "href": "Competition/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 5"
-    ]
-  },
-  {
-    "objectID": "Competition/project4.html",
-    "href": "Competition/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 4"
-    ]
-  },
-  {
-    "objectID": "Competition/project3.html",
-    "href": "Competition/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 3"
-    ]
-  },
-  {
-    "objectID": "Competition/project2.html",
-    "href": "Competition/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "Competition/project1.html",
-    "href": "Competition/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "competition.html",
-    "href": "competition.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Competition"
-    ]
-  },
-  {
-    "objectID": "competition.html#title-2-header",
-    "href": "competition.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Competition"
-    ]
-  },
-  {
-    "objectID": "exploration.html",
-    "href": "exploration.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Data Exploration"
-    ]
-  },
-  {
-    "objectID": "exploration.html#title-2-header",
-    "href": "exploration.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Data Exploration"
-    ]
-  },
-  {
-    "objectID": "Machine_Learning/project3.html",
-    "href": "Machine_Learning/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 3"
-    ]
-  },
-  {
-    "objectID": "Machine_Learning/project4.html",
-    "href": "Machine_Learning/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 4"
-    ]
-  },
-  {
-    "objectID": "Machine_Learning/project5.html",
-    "href": "Machine_Learning/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 5"
-    ]
-  },
-  {
-    "objectID": "resume.html",
-    "href": "resume.html",
-    "title": "Jacob Walker’s CV",
-    "section": "",
-    "text": "Student And Data Operations\n\nLinkedIn\n\n\n\nBrigham Young University – Idaho – Rexburg, ID, Jan. 2024 – Present\nBachelor of Science in Financial Economics | GPA 3.93\nExpected Graduation Date: July 2027\nChemeketa Community College – Salem, OR, Sept. 2019 – April 2021\n\n\n\n\nBank of Commerce: Data Operator/Fraud Specialist - January 2024–Present\n\nMaximized efficiency of the end-of-day bank operations by creating a list of all end-of-day operations, saving the bank more than 30 minutes each night.\nCollaborated with management to provide organizational oversight and guidance by creating a one-page guide and checklist, increasing proficiency in fraud detection between coworkers.\nAnalyzed the data of over 500 checks per day while ensuring key bank processes are completed at the indicated times.\n\nSolitude Landscaping: Crew Lead/Translator - March 2023– January 2024\n\nSupported management by increasing communication and understanding between crew leads by acting as a direct translator for the tie in the Spanish language.\nManaged and trained 10+ personnel.\nImplemented the use of data collectors to maximize the efficiency of crew routes and track time between stops.\nImproved weekly service efficiency by creating pruning and cutting schedules, increasing efficiency by 10%.\n\n\n\n\n\nMissionary for the Church of Jesus Christ of Latter-Day Saints – January 2021 – February 2023\n\nLearned and became fluent proficient in speaking and writing in the Spanish language within 3 months.\nOversaw 15+ missionary companionships and organized special trainings and councils.\nTrained two new missionaries in the Spanish language.\nPracticed budgeting personal finances with the allotted bi-monthly budget given.\n\nVolunteer Counselor for Amity Elementary School\nVarsity Captain for Amity High-School Cross Country Team\n\n\n\n\n\nCertified in the Spanish language through TrueNorth: Score 7.2\n\nProficient with Microsoft Office Suite\n\nProficient operating knowledge of the HORIZON banking system\nProficient in SQL\nProficient in R\nProficient in Python"
-  },
-  {
-    "objectID": "resume.html#education",
-    "href": "resume.html#education",
-    "title": "Jacob Walker’s CV",
-    "section": "",
-    "text": "Brigham Young University – Idaho – Rexburg, ID, Jan. 2024 – Present\nBachelor of Science in Financial Economics | GPA 3.93\nExpected Graduation Date: July 2027\nChemeketa Community College – Salem, OR, Sept. 2019 – April 2021"
-  },
-  {
-    "objectID": "resume.html#experience",
-    "href": "resume.html#experience",
-    "title": "Jacob Walker’s CV",
-    "section": "",
-    "text": "Bank of Commerce: Data Operator/Fraud Specialist - January 2024–Present\n\nMaximized efficiency of the end-of-day bank operations by creating a list of all end-of-day operations, saving the bank more than 30 minutes each night.\nCollaborated with management to provide organizational oversight and guidance by creating a one-page guide and checklist, increasing proficiency in fraud detection between coworkers.\nAnalyzed the data of over 500 checks per day while ensuring key bank processes are completed at the indicated times.\n\nSolitude Landscaping: Crew Lead/Translator - March 2023– January 2024\n\nSupported management by increasing communication and understanding between crew leads by acting as a direct translator for the tie in the Spanish language.\nManaged and trained 10+ personnel.\nImplemented the use of data collectors to maximize the efficiency of crew routes and track time between stops.\nImproved weekly service efficiency by creating pruning and cutting schedules, increasing efficiency by 10%."
-  },
-  {
-    "objectID": "resume.html#volunteer-service",
-    "href": "resume.html#volunteer-service",
-    "title": "Jacob Walker’s CV",
-    "section": "",
-    "text": "Missionary for the Church of Jesus Christ of Latter-Day Saints – January 2021 – February 2023\n\nLearned and became fluent proficient in speaking and writing in the Spanish language within 3 months.\nOversaw 15+ missionary companionships and organized special trainings and councils.\nTrained two new missionaries in the Spanish language.\nPracticed budgeting personal finances with the allotted bi-monthly budget given.\n\nVolunteer Counselor for Amity Elementary School\nVarsity Captain for Amity High-School Cross Country Team"
-  },
-  {
-    "objectID": "resume.html#relevant-skills",
-    "href": "resume.html#relevant-skills",
-    "title": "Jacob Walker’s CV",
-    "section": "",
-    "text": "Certified in the Spanish language through TrueNorth: Score 7.2\n\nProficient with Microsoft Office Suite\n\nProficient operating knowledge of the HORIZON banking system\nProficient in SQL\nProficient in R\nProficient in Python"
-  },
-  {
-    "objectID": "Story_Telling/project2.html",
-    "href": "Story_Telling/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "Story_Telling/project1.html",
-    "href": "Story_Telling/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Projects/project3.html",
-    "href": "Cleansing_Projects/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Data Cleansing",
-      "Project 3"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Projects/project4.html",
-    "href": "Cleansing_Projects/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Data Cleansing",
-      "Project 4"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Projects/project5.html",
-    "href": "Cleansing_Projects/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Data Cleansing",
-      "Project 5"
-    ]
-  },
-  {
-    "objectID": "full_stack.html",
-    "href": "full_stack.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Full Stack"
-    ]
-  },
-  {
-    "objectID": "full_stack.html#title-2-header",
-    "href": "full_stack.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Full Stack"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Exploration/project2.html",
-    "href": "Cleansing_Exploration/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Exploration/project1.html",
-    "href": "Cleansing_Exploration/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "notebooks/Exploration_04.html",
-    "href": "notebooks/Exploration_04.html",
-    "title": "Data Exploration 04",
-    "section": "",
-    "text": "You’re working with a team of botanists to develop a flower classification system.\nYour assignment is to build a k-Nearest Neighbors model to classify flowers based on their petal and sepal sizes."
-  },
-  {
-    "objectID": "notebooks/Exploration_04.html#part-a-import-and-explore-the-data",
-    "href": "notebooks/Exploration_04.html#part-a-import-and-explore-the-data",
-    "title": "Data Exploration 04",
-    "section": "Part A: Import and Explore the data",
-    "text": "Part A: Import and Explore the data\nThe dataset for this exploration is stored at the following url:\nhttps://raw.githubusercontent.com/byui-cse/cse450-course/master/data/iris.csv\n\nInitial Data Analysis\nOnce you’ve loaded the data, it’s a good idea to poke around a little bit to find out what you’re dealing with.\nSome questions you might ask include:\n\nWhat does the data look like?\nWhat kind of data is in each column?\nDo any of the columns have missing values?\n\n\nimport pandas as pd\ndf = pd.read_csv(\"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/iris.csv\")\ndf\n\n\n    \n\n\n\n\n\n\nsepal_length\nsepal_width\npetal_length\npetal_width\nspecies\n\n\n\n\n0\n5.1\n3.5\n1.4\n0.2\nIris-setosa\n\n\n1\n4.9\n3.0\n1.4\n0.2\nIris-setosa\n\n\n2\n4.7\n3.2\n1.3\n0.2\nIris-setosa\n\n\n3\n4.6\n3.1\n1.5\n0.2\nIris-setosa\n\n\n4\n5.0\n3.6\n1.4\n0.2\nIris-setosa\n\n\n...\n...\n...\n...\n...\n...\n\n\n145\n6.7\n3.0\n5.2\n2.3\nIris-virginica\n\n\n146\n6.3\n2.5\n5.0\n1.9\nIris-virginica\n\n\n147\n6.5\n3.0\n5.2\n2.0\nIris-virginica\n\n\n148\n6.2\n3.4\n5.4\n2.3\nIris-virginica\n\n\n149\n5.9\n3.0\n5.1\n1.8\nIris-virginica\n\n\n\n\n150 rows × 5 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\ndf.describe()\n\n\n    \n\n\n\n\n\n\nsepal_length\nsepal_width\npetal_length\npetal_width\n\n\n\n\ncount\n150.000000\n150.000000\n150.000000\n150.000000\n\n\nmean\n5.843333\n3.054000\n3.758667\n1.198667\n\n\nstd\n0.828066\n0.433594\n1.764420\n0.763161\n\n\nmin\n4.300000\n2.000000\n1.000000\n0.100000\n\n\n25%\n5.100000\n2.800000\n1.600000\n0.300000\n\n\n50%\n5.800000\n3.000000\n4.350000\n1.300000\n\n\n75%\n6.400000\n3.300000\n5.100000\n1.800000\n\n\nmax\n7.900000\n4.400000\n6.900000\n2.500000\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n  \n\n\n\ndf.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 150 entries, 0 to 149\nData columns (total 5 columns):\n #   Column        Non-Null Count  Dtype  \n---  ------        --------------  -----  \n 0   sepal_length  150 non-null    float64\n 1   sepal_width   150 non-null    float64\n 2   petal_length  150 non-null    float64\n 3   petal_width   150 non-null    float64\n 4   species       150 non-null    object \ndtypes: float64(4), object(1)\nmemory usage: 6.0+ KB"
-  },
-  {
-    "objectID": "notebooks/Exploration_04.html#part-b-visualize-the-data",
-    "href": "notebooks/Exploration_04.html#part-b-visualize-the-data",
-    "title": "Data Exploration 04",
-    "section": "Part B: Visualize the Data",
-    "text": "Part B: Visualize the Data\nUse your preferred visualization library to create a scatterplot showing petal length vs petal width. You should plot each flower species as a different color on the scatter plot.\n\nfrom plotnine import *\n\n(\n\n ggplot(df, aes(x = \"petal_length\", y = \"petal_width\", color = \"species\"))+\n    geom_point()+\n    theme_bw()\n)"
-  },
-  {
-    "objectID": "notebooks/Exploration_04.html#part-c-prepare-the-data-for-machine-learning",
-    "href": "notebooks/Exploration_04.html#part-c-prepare-the-data-for-machine-learning",
-    "title": "Data Exploration 04",
-    "section": "Part C: Prepare the Data for Machine Learning",
-    "text": "Part C: Prepare the Data for Machine Learning\nData preparation (sometimes called “data wrangling” or “data munging”) is where you’ll usually spend the bulk of your time when working on machine learning problems. Only rarely is data already in the optimal form for a given algorithm.\nOften we have to deal with missing values, normalize the data, and perform both simple and complex feature engineering to get the data into the form we need.\nOnce the data is in the correct form, we can then randomize the data and split it into training and test datasets (and sometimes an additional validation dataset).\n\nMachine Learning Steps\nAlmost universally, regardless of which algorithm or type of task we’re performing, building and evaluating a machine learning model with sklearn follows these steps:\n\nPerform any data preprocessing needed.\nPartition the data into features and targets.\nSplit the data into training and test sets (and sometimes a third validation set).\nCreate a configure whichever sklearn model object we’re using.\nTrain the model using its “fit” method.\nTest the model using its “predict” method.\nUse a model evaluation metric to see how well the model performs.\n\nIf the model isn’t performing well, we will repeat one or more of the above steps (sometimes all of them).\nOnce the model is performing adequately, we’ll deploy it for use as part of some larger system.\nFor now, let’s assume that this dataset is in the form we need, and we’ll skip to step 2, partitioning the data.\n\n\nStep 2. Partition the Data into Features and Targets\nFirst, we’ll create a dataframe called “X” containing the features of the data we want to use to make our predictions. In this case, that will be the sepal_length, sepal_width, petal_length, and petal_width features.\n(The name “X” isn’t special, but uppercase X is the conventional name for our feature dataset, because that’s what statisticians use to refer to a matrix of independent variables)\n\n# Create a new dataframe called X that contians the features we're going\n# to use to make predictions\n\nX = df[[\"sepal_length\", \"sepal_width\", \"petal_length\", \"petal_width\"]]\n\nNext we’ll create a dataframe called “y” containing the target variable, or the set of values we want to predict. In this case, that will be species.\n(Once again, the name “y” isn’t special, but lowercase y is the conventional name for a list of targets, because that’s what statisticians use to refer to a vector of dependent variables)\n\n# Create a new dataframe called y that contians the target we're\n# trying to predict\n\ny = df[\"species\"]\n\n\n\nStep 3. Split the data into training and test sets.\nNow that we have our data divided into features (X) and target values (y), we’ll split each of these into a training set and a test set.\nWe’ll use the training sets to “train” our model how to make predictions.\nWe’ll then use our test sets to test how well our model has learned from the training data.\nWhile we could use a bunch of python code to do this step, the sklearn library has lots of built-in functions to handle common data manipulations related to machine learning.\nFor this step, we’ll use the train_test_split() function.\n\n# Import and use the train_test_split() function to split the X and y\n# dataframes into training and test sets.\n#\n# The training data should contain 80% of the samples and\n# the test data should contain 20% of the samples.\n\nimport numpy as np\nfrom sklearn.model_selection import train_test_split\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.20, random_state=42)\n\nAfter creating the training and test splits, output the head() of each one and notice how they row numbers have been randomized.\nAlso notice that X_train and y_train’s row numbers match up, as do X_test and y_test’s row numbers.\n\nX_train.head()\n\n\n    \n\n\n\n\n\n\nsepal_length\nsepal_width\npetal_length\npetal_width\n\n\n\n\n22\n4.6\n3.6\n1.0\n0.2\n\n\n15\n5.7\n4.4\n1.5\n0.4\n\n\n65\n6.7\n3.1\n4.4\n1.4\n\n\n11\n4.8\n3.4\n1.6\n0.2\n\n\n42\n4.4\n3.2\n1.3\n0.2\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n  \n\n\n\ny_train.head()\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n22\nIris-setosa\n\n\n15\nIris-setosa\n\n\n65\nIris-versicolor\n\n\n11\nIris-setosa\n\n\n42\nIris-setosa\n\n\n\n\ndtype: object"
-  },
-  {
-    "objectID": "notebooks/Exploration_04.html#part-d-create-and-train-a-model",
-    "href": "notebooks/Exploration_04.html#part-d-create-and-train-a-model",
-    "title": "Data Exploration 04",
-    "section": "Part D: Create and Train a Model",
-    "text": "Part D: Create and Train a Model\nWe’re going to create a model based on the k-Nearest Neighbors algorithm.\nSince this is a classification task, (we’re trying to classify which species a given flower belongs to), we’ll use sklearn’s KNeighborsClassifer.\n\nStep 4. Create and configure the model\nWe start by importing the information about the model we want to create. In python, this information is called a class.\nThe KNeighborsClassifier class contains all of the information python needs to create a kNN Classifier.\nOnce we’ve imported the class, we’ll create an instance of the class using this syntax:\nwhatever = ClassName( parameter_one = value, parameter_two = something_else, etc...)\nIn our case, the class name is KNeighborsClassifer. It doesn’t matter what we call the variable that holds the instance, but one popular convention is to call classifier instances clf, so that’s what you’ll see in the sklearn documentation.\nThe only parameter we want to configure is the n_neighbors parameter, which controls the value of k in the kNN algorithm.\n\n# Import the KNeighborsClassifier class from sklearn\n# Note that it's in the neighbors submodule. See the example code in the\n# documentation for details on how to import it\n\nfrom sklearn.neighbors import KNeighborsClassifier\n\n\n# Create an instance of the model, configuring it to use the 3 nearest neighbors\n# store the instance in a variable\n\nneigh = KNeighborsClassifier(n_neighbors=3)\n\n\n\nStep 5: Train the model\nNext we’ll train the model. We do this by providing it with the training data we split off from the dataset in step 3.\nThe model “learns” how to associate the feature values (X) with the targets (y). The exact process it uses to learn how to do this depends on which algorithm we’re using.\nSometimes, this is called “fitting the data to the model”, so in sklearn, we perform this step using the fit() method.\n\n# Call the \"fit\" method of the classifier instance we created in step 4.\n# Pass it the X_train and y_train data so that it can learn to make predictions\n\nmymodel = neigh.fit(X_train, y_train)"
-  },
-  {
-    "objectID": "notebooks/Exploration_04.html#part-e-make-predictions-and-evaluate-the-model",
-    "href": "notebooks/Exploration_04.html#part-e-make-predictions-and-evaluate-the-model",
-    "title": "Data Exploration 04",
-    "section": "Part E: Make Predictions and Evaluate the Model",
-    "text": "Part E: Make Predictions and Evaluate the Model\nNow that the model has been created and trained, we can use it to make predictions. Since this is a classification model, when we give it a set of features, it tells us what the most likely target value is.\nIn this case, we tell the model “here are the values for petal width, petal length, sepal width, and sepal length for a particular flower” The model then tells us which species is the most likely for that flower.\nWhen testing how well our model works, we’ll use the test data we split off earlier. It contains the measurements for several flowers, along with their species.\n\nStep 6: Make Predictions on Test Data\nWe’ll give the measurements of each flower to the model and have it predict their species. We’ll then compare those predictions to the known values to determine how accurate our model is.\nSince this is a classification model, there are two different methods we can use to make predictions:\n\npredict(), which returns the most likely prediction for each sample.\npredict_proba() which returns a list of probabilities for each sample. The probabilities tell us how confident the model is that the corresponding sample belongs to a particular class.\n\n\n# Use the predict() method to get a list of predictions for the samples in our\n# test data. Then output those predictions\ny_pred = neigh.predict(X_test)\n\ny_pred\n\narray(['Iris-versicolor', 'Iris-setosa', 'Iris-virginica',\n       'Iris-versicolor', 'Iris-versicolor', 'Iris-setosa',\n       'Iris-versicolor', 'Iris-virginica', 'Iris-versicolor',\n       'Iris-versicolor', 'Iris-virginica', 'Iris-setosa', 'Iris-setosa',\n       'Iris-setosa', 'Iris-setosa', 'Iris-versicolor', 'Iris-virginica',\n       'Iris-versicolor', 'Iris-versicolor', 'Iris-virginica',\n       'Iris-setosa', 'Iris-virginica', 'Iris-setosa', 'Iris-virginica',\n       'Iris-virginica', 'Iris-virginica', 'Iris-virginica',\n       'Iris-virginica', 'Iris-setosa', 'Iris-setosa'], dtype=object)\n\n\n\n# Just a quick comparison with y_test to see if they match up\ny_test == y_pred\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n73\nTrue\n\n\n18\nTrue\n\n\n118\nTrue\n\n\n78\nTrue\n\n\n76\nTrue\n\n\n31\nTrue\n\n\n64\nTrue\n\n\n141\nTrue\n\n\n68\nTrue\n\n\n82\nTrue\n\n\n110\nTrue\n\n\n12\nTrue\n\n\n36\nTrue\n\n\n9\nTrue\n\n\n19\nTrue\n\n\n56\nTrue\n\n\n104\nTrue\n\n\n69\nTrue\n\n\n55\nTrue\n\n\n132\nTrue\n\n\n29\nTrue\n\n\n127\nTrue\n\n\n26\nTrue\n\n\n128\nTrue\n\n\n131\nTrue\n\n\n145\nTrue\n\n\n108\nTrue\n\n\n143\nTrue\n\n\n45\nTrue\n\n\n30\nTrue\n\n\n\n\ndtype: bool\n\n\n\n\nStep 7: Evaluate the Model\nThere are several metrics we can use to determine how well our model is performing.\nMost of them are in the sklearn.metrics library.\nMost of the sklearn metric function work using the same pattern. We import the function, then give it a list of the true values for our test data, and a list of the values the model predicted for our test data. The metric then outputs the value. How we interpret that value will depend on the exact problem we’re solving, the qualities of our data, and the particular metric we’re using.\n\nAccuracy\nSince this is a multiclass classification problem (“multiclass” means we have more than two options we’re choosing from), we can get a quick estimate from the accuracy_score() function, which tells us the percent of correct predictions made by the model.\n\n# Import the accuracy_score function and use it to determine\n# how accurate the models predictions were for our test data\n\nfrom sklearn.metrics import accuracy_score\naccuracy_score(y_test, y_pred)\n\n1.0\n\n\n\n\nConfusion Matrix\nWhile the accuracy score tells us a little about the model’s performance, it doesn’t tell us much.\nFor example, we know how often the model was correct, but we don’t know when it was wrong or why.\nWe can get this information from the confusion_matrix function.\n\n# Import the confusion_matrix function and use it to generate a confusion\n# matrix of our model results.\n\nfrom sklearn.metrics import confusion_matrix\nmymatrix = confusion_matrix(y_test, y_pred)\nmymatrix\n\n\n\nConfusion Matrix Plot\nIt’s easier to see the results of the confusion matrix if we plot the results. One way to do this is with Seaborn’s heatmap function.\nThis function works a little bit differently than the others. It takes as parameters your model instance, and then options for making the chart display the way you want, and outputs a confusion matrix showing how well the model did in predicting the target values.\nYou’ll notice that in many cases (including this one), the numbers in the confusion matrix will be the same as the results you see from the confusion_matrix() function above, but the plot makes it easier to interpret the results.\nWhen using the confusion matrix, you may find that the default color mapping is difficult to read. The “Blues” mapping is a popular choice.\n\n# Create a Seaborn heatmap\nimport seaborn as sns\n\nsns.heatmap(mymatrix, annot=True, fmt=\".1f\")"
-  },
-  {
-    "objectID": "notebooks/Exploration_04.html#above-and-beyond",
-    "href": "notebooks/Exploration_04.html#above-and-beyond",
-    "title": "Data Exploration 04",
-    "section": "🌟 Above and Beyond 🌟",
-    "text": "🌟 Above and Beyond 🌟\nOnce you’ve complted the basics, try to complete one or more of the following tasks:\n\nSee if you can get better results from your model through some data preprocessing, such as normalization.\nOften, using too many features can give poor results. Can you get better performance using a subset of the features instead of all four?\nAre there other ways you could visualize your model results?"
+    "text": "🌟 Above and Beyond 🌟\nThe marketing team is pleased with what you’ve accomplished so far. They have a meeting with top cereal executives in the morning, and they’d like you to do as many of the following additional tasks as you have time for:\n\nWeight Watchers used to have an older points system that used this formula: (calories / 50) + (fat / 12) - (fiber / 5), but only the first 4 grams of fiber were included in the calculation. For comparison’s sake, create an additional column with the calculation for the old points system.\nMarketing really likes the boxplot of the sugar content for each cereal, they’d like similar plots for calories and fat, but using different color schemes for each chart.\n\n\n# Above and Beyond Task 1\nfiber_cap = df['fiber'].clip(upper=4)\ndf['old_ww_points'] = ((df['calories']/50) + (df['fat']/12) - (fiber_cap/5)).round().astype(int)\ndf\n\n\n    \n\n\n\n\n\n\nname\nmfr\ntype\ncalories\nprotein\nfat\nsodium\nfiber\ncarbo\nsugars\npotass\nvitamins\nshelf\nweight\ncups\nrating\nmanufacturer\nww_points\nold_ww_points\n\n\n\n\n0\n100% Bran\nN\nC\n70\n4\n1\n130\n10.0\n5.0\n6\n280\n25\n3\n1.0\n0.33\n68.402973\nNabisco\n4\n1\n\n\n1\n100% Natural Bran\nQ\nC\n120\n3\n5\n15\n2.0\n8.0\n8\n135\n0\n3\n1.0\n1.00\n33.983679\nQuaker Oats\n6\n2\n\n\n2\nAll-Bran\nK\nC\n70\n4\n1\n260\n9.0\n7.0\n5\n320\n25\n3\n1.0\n0.33\n59.425505\nKelloggs\n3\n1\n\n\n3\nAll-Bran with Extra Fiber\nK\nC\n50\n4\n0\n140\n14.0\n8.0\n0\n330\n25\n3\n1.0\n0.50\n93.704912\nKelloggs\n2\n0\n\n\n4\nAlmond Delight\nR\nC\n110\n2\n2\n200\n1.0\n14.0\n8\n-1\n25\n3\n1.0\n0.75\n34.384843\nRalston Purina\n5\n2\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n72\nTriples\nG\nC\n110\n2\n1\n250\n0.0\n21.0\n3\n60\n25\n3\n1.0\n0.75\n39.106174\nGeneral Mills\n4\n2\n\n\n73\nTrix\nG\nC\n110\n1\n1\n140\n0.0\n13.0\n12\n25\n25\n2\n1.0\n1.00\n27.753301\nGeneral Mills\n5\n2\n\n\n74\nWheat Chex\nR\nC\n100\n3\n1\n230\n3.0\n17.0\n3\n115\n25\n1\n1.0\n0.67\n49.787445\nRalston Purina\n4\n1\n\n\n75\nWheaties\nG\nC\n100\n3\n1\n200\n3.0\n17.0\n3\n110\n25\n1\n1.0\n1.00\n51.592193\nGeneral Mills\n4\n1\n\n\n76\nWheaties Honey Gold\nG\nC\n110\n2\n1\n200\n1.0\n16.0\n8\n60\n25\n1\n1.0\n0.75\n36.187559\nGeneral Mills\n5\n2\n\n\n\n\n77 rows × 19 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\n# Above and Beyond Task 2.1 : Calories\nsns.boxplot(data = df, x = \"manufacturer\", y = \"calories\", color = \"red\")\nplt.xticks(rotation = 45)\nplt.show()\n\n\n\n\n\n\n\n\n\n# Above and Beyond Task 2.2 : Fat\nsns.boxplot(data = df, x = \"manufacturer\",y = \"fat\", color = \"green\")\nplt.xticks(rotation = 45)\nplt.show()"
   },
   {
     "objectID": "notebooks/Exploration_03.html",
@@ -639,39 +124,561 @@
     "text": "🌟 Above and Beyond 🌟\n\nThere appears to be a lot of different variations of similar titles. (such as abbreviations for Miss and Mademoiselle).\nScan through the different titles to see which titles can be consolidated, then use what you know about data manipulation to simplify the distribution.\nOnce you’ve finished, check the visualizations again to see if that made any difference.\nThe museum curator has room for a couple of nice visualizations for the exhibit. Create additional visualizations that are suitable for public display.\n\n\n# Above and Beyond 1\n\ndf[\"Title\"] = df[\"Title\"].replace({\n    \"Mlle\": \"Miss\",\n    \"Ms\": \"Miss\",\n    \"Mme\": \"Mrs\"\n})\n\n\n(ggplot(df, aes(x=\"Title\", fill=\"Survived\"))+\n      geom_bar(position=\"dodge\")+\n      labs(title=\"Survival distribution by Title\",\n        x=\"Passenger Sex\",\n        y=\"Proportion\",\n        fill=\"Survived\")+\n      theme_minimal()+\n      theme(axis_text_x=element_text(rotation=45))\n)"
   },
   {
-    "objectID": "notebooks/Exploration_02.html#part-1-import-pandas-and-load-the-data",
-    "href": "notebooks/Exploration_02.html#part-1-import-pandas-and-load-the-data",
-    "title": "Data Exploration 02",
-    "section": "Part 1: Import Pandas and load the data",
-    "text": "Part 1: Import Pandas and load the data\nRemember to import Pandas the conventional way. If you’ve forgotten how, you may want to review Data Exploration 01.\nThe dataset for this exploration is stored at the following url:\nhttps://raw.githubusercontent.com/byui-cse/cse450-course/master/data/cereal.csv\nThere are lots of ways to load data into your workspace. The easiest way in this case is to ask Pandas to do it for you.\n\nInitial Data Analysis\nOnce you’ve loaded the data, it’s a good idea to poke around a little bit to find out what you’re dealing with.\nSome questions you might ask include:\n\nWhat does the data look like?\nWhat kind of data is in each column?\nDo any of the columns have missing values?\n\n\n# Part 1: Enter your code below to import Pandas according to the\n# conventional method. Then load the dataset into a Pandas dataframe.\nimport pandas as pd\n# Write any code needed to explore the data by seeing what the first few\n# rows look like. Then display a technical summary of the data to determine\n# the data types of each column, and which columns have missing data.\ndf = pd.read_csv(\"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/cereal.csv\")\n\n\ndf\n\n\n    \n\n\n\n\n\n\nname\nmfr\ntype\ncalories\nprotein\nfat\nsodium\nfiber\ncarbo\nsugars\npotass\nvitamins\nshelf\nweight\ncups\nrating\n\n\n\n\n0\n100% Bran\nN\nC\n70\n4\n1\n130\n10.0\n5.0\n6\n280\n25\n3\n1.0\n0.33\n68.402973\n\n\n1\n100% Natural Bran\nQ\nC\n120\n3\n5\n15\n2.0\n8.0\n8\n135\n0\n3\n1.0\n1.00\n33.983679\n\n\n2\nAll-Bran\nK\nC\n70\n4\n1\n260\n9.0\n7.0\n5\n320\n25\n3\n1.0\n0.33\n59.425505\n\n\n3\nAll-Bran with Extra Fiber\nK\nC\n50\n4\n0\n140\n14.0\n8.0\n0\n330\n25\n3\n1.0\n0.50\n93.704912\n\n\n4\nAlmond Delight\nR\nC\n110\n2\n2\n200\n1.0\n14.0\n8\n-1\n25\n3\n1.0\n0.75\n34.384843\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n72\nTriples\nG\nC\n110\n2\n1\n250\n0.0\n21.0\n3\n60\n25\n3\n1.0\n0.75\n39.106174\n\n\n73\nTrix\nG\nC\n110\n1\n1\n140\n0.0\n13.0\n12\n25\n25\n2\n1.0\n1.00\n27.753301\n\n\n74\nWheat Chex\nR\nC\n100\n3\n1\n230\n3.0\n17.0\n3\n115\n25\n1\n1.0\n0.67\n49.787445\n\n\n75\nWheaties\nG\nC\n100\n3\n1\n200\n3.0\n17.0\n3\n110\n25\n1\n1.0\n1.00\n51.592193\n\n\n76\nWheaties Honey Gold\nG\nC\n110\n2\n1\n200\n1.0\n16.0\n8\n60\n25\n1\n1.0\n0.75\n36.187559\n\n\n\n\n77 rows × 16 columns"
+    "objectID": "notebooks/Exploration_04.html",
+    "href": "notebooks/Exploration_04.html",
+    "title": "Data Exploration 04",
+    "section": "",
+    "text": "You’re working with a team of botanists to develop a flower classification system.\nYour assignment is to build a k-Nearest Neighbors model to classify flowers based on their petal and sepal sizes."
   },
   {
-    "objectID": "notebooks/Exploration_02.html#part-2-calculate-summary-statistics",
-    "href": "notebooks/Exploration_02.html#part-2-calculate-summary-statistics",
-    "title": "Data Exploration 02",
-    "section": "Part 2: Calculate Summary Statistics",
-    "text": "Part 2: Calculate Summary Statistics\nThe marketing team has determined that when choosing a cereal, consumers are most interested in calories, sugars, fiber, fat, and protein.\nFirst, let’s calcuate some summary statistics for these categories across the entire dataset. We’re particularly intrested in the mean, median, standard deviation, min, and max values.\nThere are multiple ways to accomplish this.\n\n# Part 2: Enter your code below to calculate summary statistics for the\n# calories, sugars, fiber, fat, and protein features.\n\ndf[['calories', 'sugars', 'fiber', 'fat', 'protein']].describe()\n\n\n    \n\n\n\n\n\n\ncalories\nsugars\nfiber\nfat\nprotein\n\n\n\n\ncount\n77.000000\n77.000000\n77.000000\n77.000000\n77.000000\n\n\nmean\n106.883117\n6.922078\n2.151948\n1.012987\n2.545455\n\n\nstd\n19.484119\n4.444885\n2.383364\n1.006473\n1.094790\n\n\nmin\n50.000000\n-1.000000\n0.000000\n0.000000\n1.000000\n\n\n25%\n100.000000\n3.000000\n1.000000\n0.000000\n2.000000\n\n\n50%\n110.000000\n7.000000\n2.000000\n1.000000\n3.000000\n\n\n75%\n110.000000\n11.000000\n3.000000\n2.000000\n3.000000\n\n\nmax\n160.000000\n15.000000\n14.000000\n5.000000\n6.000000"
+    "objectID": "notebooks/Exploration_04.html#part-a-import-and-explore-the-data",
+    "href": "notebooks/Exploration_04.html#part-a-import-and-explore-the-data",
+    "title": "Data Exploration 04",
+    "section": "Part A: Import and Explore the data",
+    "text": "Part A: Import and Explore the data\nThe dataset for this exploration is stored at the following url:\nhttps://raw.githubusercontent.com/byui-cse/cse450-course/master/data/iris.csv\n\nInitial Data Analysis\nOnce you’ve loaded the data, it’s a good idea to poke around a little bit to find out what you’re dealing with.\nSome questions you might ask include:\n\nWhat does the data look like?\nWhat kind of data is in each column?\nDo any of the columns have missing values?\n\n\nimport pandas as pd\ndf = pd.read_csv(\"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/iris.csv\")\ndf\n\n\n    \n\n\n\n\n\n\nsepal_length\nsepal_width\npetal_length\npetal_width\nspecies\n\n\n\n\n0\n5.1\n3.5\n1.4\n0.2\nIris-setosa\n\n\n1\n4.9\n3.0\n1.4\n0.2\nIris-setosa\n\n\n2\n4.7\n3.2\n1.3\n0.2\nIris-setosa\n\n\n3\n4.6\n3.1\n1.5\n0.2\nIris-setosa\n\n\n4\n5.0\n3.6\n1.4\n0.2\nIris-setosa\n\n\n...\n...\n...\n...\n...\n...\n\n\n145\n6.7\n3.0\n5.2\n2.3\nIris-virginica\n\n\n146\n6.3\n2.5\n5.0\n1.9\nIris-virginica\n\n\n147\n6.5\n3.0\n5.2\n2.0\nIris-virginica\n\n\n148\n6.2\n3.4\n5.4\n2.3\nIris-virginica\n\n\n149\n5.9\n3.0\n5.1\n1.8\nIris-virginica\n\n\n\n\n150 rows × 5 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\ndf.describe()\n\n\n    \n\n\n\n\n\n\nsepal_length\nsepal_width\npetal_length\npetal_width\n\n\n\n\ncount\n150.000000\n150.000000\n150.000000\n150.000000\n\n\nmean\n5.843333\n3.054000\n3.758667\n1.198667\n\n\nstd\n0.828066\n0.433594\n1.764420\n0.763161\n\n\nmin\n4.300000\n2.000000\n1.000000\n0.100000\n\n\n25%\n5.100000\n2.800000\n1.600000\n0.300000\n\n\n50%\n5.800000\n3.000000\n4.350000\n1.300000\n\n\n75%\n6.400000\n3.300000\n5.100000\n1.800000\n\n\nmax\n7.900000\n4.400000\n6.900000\n2.500000\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n  \n\n\n\ndf.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 150 entries, 0 to 149\nData columns (total 5 columns):\n #   Column        Non-Null Count  Dtype  \n---  ------        --------------  -----  \n 0   sepal_length  150 non-null    float64\n 1   sepal_width   150 non-null    float64\n 2   petal_length  150 non-null    float64\n 3   petal_width   150 non-null    float64\n 4   species       150 non-null    object \ndtypes: float64(4), object(1)\nmemory usage: 6.0+ KB"
   },
   {
-    "objectID": "notebooks/Exploration_02.html#part-3-transform-data",
-    "href": "notebooks/Exploration_02.html#part-3-transform-data",
-    "title": "Data Exploration 02",
-    "section": "Part 3: Transform Data",
-    "text": "Part 3: Transform Data\nTo make analysis easier, you want to convert the manufacturer codes used in the dataset to the manufacturer names.\nFirst, display the count of each manufacturer code value used in the dataset (found in the mfr column).\nThen, create a new column with the appropriate manufacturer name for each entry, using this mapping:\nA = American Home Food Products\nG = General Mills\nK = Kelloggs\nN = Nabisco\nP = Post\nQ = Quaker Oats\nR = Ralston Purina\n\nNote: While the tutorial linked above uses the replace function, using the map function instead can often be much faster and more memory efficient, especially for large datasets.\n\n\n# Display the count of values for the manufacturer code (\"mfr\" column), then\n# create a new column containing the appropriate manufacturer names.\ndf['mfr'].value_counts()\nmfr_map = {\n    \"A\": \"American Home Food Products\",\n    \"G\": \"General Mills\",\n    \"K\": \"Kelloggs\",\n    \"N\": \"Nabisco\",\n    \"P\": \"Post\",\n    \"Q\": \"Quaker Oats\",\n    \"R\": \"Ralston Purina\"\n}\ndf[\"manufacturer\"] = df[\"mfr\"].map(mfr_map)\ndf[[\"mfr\", \"manufacturer\"]]\n\n\n    \n\n\n\n\n\n\nmfr\nmanufacturer\n\n\n\n\n0\nN\nNabisco\n\n\n1\nQ\nQuaker Oats\n\n\n2\nK\nKelloggs\n\n\n3\nK\nKelloggs\n\n\n4\nR\nRalston Purina\n\n\n...\n...\n...\n\n\n72\nG\nGeneral Mills\n\n\n73\nG\nGeneral Mills\n\n\n74\nR\nRalston Purina\n\n\n75\nG\nGeneral Mills\n\n\n76\nG\nGeneral Mills\n\n\n\n\n77 rows × 2 columns"
+    "objectID": "notebooks/Exploration_04.html#part-b-visualize-the-data",
+    "href": "notebooks/Exploration_04.html#part-b-visualize-the-data",
+    "title": "Data Exploration 04",
+    "section": "Part B: Visualize the Data",
+    "text": "Part B: Visualize the Data\nUse your preferred visualization library to create a scatterplot showing petal length vs petal width. You should plot each flower species as a different color on the scatter plot.\n\nfrom plotnine import *\n\n(\n\n ggplot(df, aes(x = \"petal_length\", y = \"petal_width\", color = \"species\"))+\n    geom_point()+\n    theme_bw()\n)"
   },
   {
-    "objectID": "notebooks/Exploration_02.html#part-4-visualization",
-    "href": "notebooks/Exploration_02.html#part-4-visualization",
-    "title": "Data Exploration 02",
-    "section": "Part 4: Visualization",
-    "text": "Part 4: Visualization\nLet’s do some more data exploration visually.\nImport your visualization library of choice and set any needed configuration options.\n\n# Import your visualization library\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.set_theme(style=\"darkgrid\")\n\n\nSugar Distribution\nMarketing tells us that their surveys have revealed that sugar content is the number one concern of consumers when choosing cereal.\nThey would like to see the following visualizations:\n\nA histogram plot of the sugar content in all cereals.\nA scatter plot showing the relationship between sugar and calories.\nA box plot showing the distribution of sugar content by manufacturer.\n\n\n# Create the three visualzations requested by the the marketing team\n# Chart 1\nsns.histplot(data=df, x=\"sugars\")\nplt.show()\n\n\n\n\n\n\n\n\n\n# Chart 2\nsns.scatterplot(\n    data = df,\n    x = \"calories\",\n    y = \"sugars\"\n)\nplt.show()\n\n\n\n\n\n\n\n\n\n# Chart 3\nsns.boxplot(data = df, x = \"manufacturer\",y = \"sugars\")\nplt.xticks(rotation = 45)\nplt.show()"
+    "objectID": "notebooks/Exploration_04.html#part-c-prepare-the-data-for-machine-learning",
+    "href": "notebooks/Exploration_04.html#part-c-prepare-the-data-for-machine-learning",
+    "title": "Data Exploration 04",
+    "section": "Part C: Prepare the Data for Machine Learning",
+    "text": "Part C: Prepare the Data for Machine Learning\nData preparation (sometimes called “data wrangling” or “data munging”) is where you’ll usually spend the bulk of your time when working on machine learning problems. Only rarely is data already in the optimal form for a given algorithm.\nOften we have to deal with missing values, normalize the data, and perform both simple and complex feature engineering to get the data into the form we need.\nOnce the data is in the correct form, we can then randomize the data and split it into training and test datasets (and sometimes an additional validation dataset).\n\nMachine Learning Steps\nAlmost universally, regardless of which algorithm or type of task we’re performing, building and evaluating a machine learning model with sklearn follows these steps:\n\nPerform any data preprocessing needed.\nPartition the data into features and targets.\nSplit the data into training and test sets (and sometimes a third validation set).\nCreate a configure whichever sklearn model object we’re using.\nTrain the model using its “fit” method.\nTest the model using its “predict” method.\nUse a model evaluation metric to see how well the model performs.\n\nIf the model isn’t performing well, we will repeat one or more of the above steps (sometimes all of them).\nOnce the model is performing adequately, we’ll deploy it for use as part of some larger system.\nFor now, let’s assume that this dataset is in the form we need, and we’ll skip to step 2, partitioning the data.\n\n\nStep 2. Partition the Data into Features and Targets\nFirst, we’ll create a dataframe called “X” containing the features of the data we want to use to make our predictions. In this case, that will be the sepal_length, sepal_width, petal_length, and petal_width features.\n(The name “X” isn’t special, but uppercase X is the conventional name for our feature dataset, because that’s what statisticians use to refer to a matrix of independent variables)\n\n# Create a new dataframe called X that contians the features we're going\n# to use to make predictions\n\nX = df[[\"sepal_length\", \"sepal_width\", \"petal_length\", \"petal_width\"]]\n\nNext we’ll create a dataframe called “y” containing the target variable, or the set of values we want to predict. In this case, that will be species.\n(Once again, the name “y” isn’t special, but lowercase y is the conventional name for a list of targets, because that’s what statisticians use to refer to a vector of dependent variables)\n\n# Create a new dataframe called y that contians the target we're\n# trying to predict\n\ny = df[\"species\"]\n\n\n\nStep 3. Split the data into training and test sets.\nNow that we have our data divided into features (X) and target values (y), we’ll split each of these into a training set and a test set.\nWe’ll use the training sets to “train” our model how to make predictions.\nWe’ll then use our test sets to test how well our model has learned from the training data.\nWhile we could use a bunch of python code to do this step, the sklearn library has lots of built-in functions to handle common data manipulations related to machine learning.\nFor this step, we’ll use the train_test_split() function.\n\n# Import and use the train_test_split() function to split the X and y\n# dataframes into training and test sets.\n#\n# The training data should contain 80% of the samples and\n# the test data should contain 20% of the samples.\n\nimport numpy as np\nfrom sklearn.model_selection import train_test_split\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.20, random_state=42)\n\nAfter creating the training and test splits, output the head() of each one and notice how they row numbers have been randomized.\nAlso notice that X_train and y_train’s row numbers match up, as do X_test and y_test’s row numbers.\n\nX_train.head()\n\n\n    \n\n\n\n\n\n\nsepal_length\nsepal_width\npetal_length\npetal_width\n\n\n\n\n22\n4.6\n3.6\n1.0\n0.2\n\n\n15\n5.7\n4.4\n1.5\n0.4\n\n\n65\n6.7\n3.1\n4.4\n1.4\n\n\n11\n4.8\n3.4\n1.6\n0.2\n\n\n42\n4.4\n3.2\n1.3\n0.2\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n  \n\n\n\ny_train.head()\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n22\nIris-setosa\n\n\n15\nIris-setosa\n\n\n65\nIris-versicolor\n\n\n11\nIris-setosa\n\n\n42\nIris-setosa\n\n\n\n\ndtype: object"
   },
   {
-    "objectID": "notebooks/Exploration_02.html#above-and-beyond",
-    "href": "notebooks/Exploration_02.html#above-and-beyond",
-    "title": "Data Exploration 02",
+    "objectID": "notebooks/Exploration_04.html#part-d-create-and-train-a-model",
+    "href": "notebooks/Exploration_04.html#part-d-create-and-train-a-model",
+    "title": "Data Exploration 04",
+    "section": "Part D: Create and Train a Model",
+    "text": "Part D: Create and Train a Model\nWe’re going to create a model based on the k-Nearest Neighbors algorithm.\nSince this is a classification task, (we’re trying to classify which species a given flower belongs to), we’ll use sklearn’s KNeighborsClassifer.\n\nStep 4. Create and configure the model\nWe start by importing the information about the model we want to create. In python, this information is called a class.\nThe KNeighborsClassifier class contains all of the information python needs to create a kNN Classifier.\nOnce we’ve imported the class, we’ll create an instance of the class using this syntax:\nwhatever = ClassName( parameter_one = value, parameter_two = something_else, etc...)\nIn our case, the class name is KNeighborsClassifer. It doesn’t matter what we call the variable that holds the instance, but one popular convention is to call classifier instances clf, so that’s what you’ll see in the sklearn documentation.\nThe only parameter we want to configure is the n_neighbors parameter, which controls the value of k in the kNN algorithm.\n\n# Import the KNeighborsClassifier class from sklearn\n# Note that it's in the neighbors submodule. See the example code in the\n# documentation for details on how to import it\n\nfrom sklearn.neighbors import KNeighborsClassifier\n\n\n# Create an instance of the model, configuring it to use the 3 nearest neighbors\n# store the instance in a variable\n\nneigh = KNeighborsClassifier(n_neighbors=3)\n\n\n\nStep 5: Train the model\nNext we’ll train the model. We do this by providing it with the training data we split off from the dataset in step 3.\nThe model “learns” how to associate the feature values (X) with the targets (y). The exact process it uses to learn how to do this depends on which algorithm we’re using.\nSometimes, this is called “fitting the data to the model”, so in sklearn, we perform this step using the fit() method.\n\n# Call the \"fit\" method of the classifier instance we created in step 4.\n# Pass it the X_train and y_train data so that it can learn to make predictions\n\nmymodel = neigh.fit(X_train, y_train)"
+  },
+  {
+    "objectID": "notebooks/Exploration_04.html#part-e-make-predictions-and-evaluate-the-model",
+    "href": "notebooks/Exploration_04.html#part-e-make-predictions-and-evaluate-the-model",
+    "title": "Data Exploration 04",
+    "section": "Part E: Make Predictions and Evaluate the Model",
+    "text": "Part E: Make Predictions and Evaluate the Model\nNow that the model has been created and trained, we can use it to make predictions. Since this is a classification model, when we give it a set of features, it tells us what the most likely target value is.\nIn this case, we tell the model “here are the values for petal width, petal length, sepal width, and sepal length for a particular flower” The model then tells us which species is the most likely for that flower.\nWhen testing how well our model works, we’ll use the test data we split off earlier. It contains the measurements for several flowers, along with their species.\n\nStep 6: Make Predictions on Test Data\nWe’ll give the measurements of each flower to the model and have it predict their species. We’ll then compare those predictions to the known values to determine how accurate our model is.\nSince this is a classification model, there are two different methods we can use to make predictions:\n\npredict(), which returns the most likely prediction for each sample.\npredict_proba() which returns a list of probabilities for each sample. The probabilities tell us how confident the model is that the corresponding sample belongs to a particular class.\n\n\n# Use the predict() method to get a list of predictions for the samples in our\n# test data. Then output those predictions\ny_pred = neigh.predict(X_test)\n\ny_pred\n\narray(['Iris-versicolor', 'Iris-setosa', 'Iris-virginica',\n       'Iris-versicolor', 'Iris-versicolor', 'Iris-setosa',\n       'Iris-versicolor', 'Iris-virginica', 'Iris-versicolor',\n       'Iris-versicolor', 'Iris-virginica', 'Iris-setosa', 'Iris-setosa',\n       'Iris-setosa', 'Iris-setosa', 'Iris-versicolor', 'Iris-virginica',\n       'Iris-versicolor', 'Iris-versicolor', 'Iris-virginica',\n       'Iris-setosa', 'Iris-virginica', 'Iris-setosa', 'Iris-virginica',\n       'Iris-virginica', 'Iris-virginica', 'Iris-virginica',\n       'Iris-virginica', 'Iris-setosa', 'Iris-setosa'], dtype=object)\n\n\n\n# Just a quick comparison with y_test to see if they match up\ny_test == y_pred\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n73\nTrue\n\n\n18\nTrue\n\n\n118\nTrue\n\n\n78\nTrue\n\n\n76\nTrue\n\n\n31\nTrue\n\n\n64\nTrue\n\n\n141\nTrue\n\n\n68\nTrue\n\n\n82\nTrue\n\n\n110\nTrue\n\n\n12\nTrue\n\n\n36\nTrue\n\n\n9\nTrue\n\n\n19\nTrue\n\n\n56\nTrue\n\n\n104\nTrue\n\n\n69\nTrue\n\n\n55\nTrue\n\n\n132\nTrue\n\n\n29\nTrue\n\n\n127\nTrue\n\n\n26\nTrue\n\n\n128\nTrue\n\n\n131\nTrue\n\n\n145\nTrue\n\n\n108\nTrue\n\n\n143\nTrue\n\n\n45\nTrue\n\n\n30\nTrue\n\n\n\n\ndtype: bool\n\n\n\n\nStep 7: Evaluate the Model\nThere are several metrics we can use to determine how well our model is performing.\nMost of them are in the sklearn.metrics library.\nMost of the sklearn metric function work using the same pattern. We import the function, then give it a list of the true values for our test data, and a list of the values the model predicted for our test data. The metric then outputs the value. How we interpret that value will depend on the exact problem we’re solving, the qualities of our data, and the particular metric we’re using.\n\nAccuracy\nSince this is a multiclass classification problem (“multiclass” means we have more than two options we’re choosing from), we can get a quick estimate from the accuracy_score() function, which tells us the percent of correct predictions made by the model.\n\n# Import the accuracy_score function and use it to determine\n# how accurate the models predictions were for our test data\n\nfrom sklearn.metrics import accuracy_score\naccuracy_score(y_test, y_pred)\n\n1.0\n\n\n\n\nConfusion Matrix\nWhile the accuracy score tells us a little about the model’s performance, it doesn’t tell us much.\nFor example, we know how often the model was correct, but we don’t know when it was wrong or why.\nWe can get this information from the confusion_matrix function.\n\n# Import the confusion_matrix function and use it to generate a confusion\n# matrix of our model results.\n\nfrom sklearn.metrics import confusion_matrix\nmymatrix = confusion_matrix(y_test, y_pred)\nmymatrix\n\n\n\nConfusion Matrix Plot\nIt’s easier to see the results of the confusion matrix if we plot the results. One way to do this is with Seaborn’s heatmap function.\nThis function works a little bit differently than the others. It takes as parameters your model instance, and then options for making the chart display the way you want, and outputs a confusion matrix showing how well the model did in predicting the target values.\nYou’ll notice that in many cases (including this one), the numbers in the confusion matrix will be the same as the results you see from the confusion_matrix() function above, but the plot makes it easier to interpret the results.\nWhen using the confusion matrix, you may find that the default color mapping is difficult to read. The “Blues” mapping is a popular choice.\n\n# Create a Seaborn heatmap\nimport seaborn as sns\n\nsns.heatmap(mymatrix, annot=True, fmt=\".1f\")"
+  },
+  {
+    "objectID": "notebooks/Exploration_04.html#above-and-beyond",
+    "href": "notebooks/Exploration_04.html#above-and-beyond",
+    "title": "Data Exploration 04",
     "section": "🌟 Above and Beyond 🌟",
-    "text": "🌟 Above and Beyond 🌟\nThe marketing team is pleased with what you’ve accomplished so far. They have a meeting with top cereal executives in the morning, and they’d like you to do as many of the following additional tasks as you have time for:\n\nWeight Watchers used to have an older points system that used this formula: (calories / 50) + (fat / 12) - (fiber / 5), but only the first 4 grams of fiber were included in the calculation. For comparison’s sake, create an additional column with the calculation for the old points system.\nMarketing really likes the boxplot of the sugar content for each cereal, they’d like similar plots for calories and fat, but using different color schemes for each chart.\n\n\n# Above and Beyond Task 1\nfiber_cap = df['fiber'].clip(upper=4)\ndf['old_ww_points'] = ((df['calories']/50) + (df['fat']/12) - (fiber_cap/5)).round().astype(int)\ndf\n\n\n    \n\n\n\n\n\n\nname\nmfr\ntype\ncalories\nprotein\nfat\nsodium\nfiber\ncarbo\nsugars\npotass\nvitamins\nshelf\nweight\ncups\nrating\nmanufacturer\nww_points\nold_ww_points\n\n\n\n\n0\n100% Bran\nN\nC\n70\n4\n1\n130\n10.0\n5.0\n6\n280\n25\n3\n1.0\n0.33\n68.402973\nNabisco\n4\n1\n\n\n1\n100% Natural Bran\nQ\nC\n120\n3\n5\n15\n2.0\n8.0\n8\n135\n0\n3\n1.0\n1.00\n33.983679\nQuaker Oats\n6\n2\n\n\n2\nAll-Bran\nK\nC\n70\n4\n1\n260\n9.0\n7.0\n5\n320\n25\n3\n1.0\n0.33\n59.425505\nKelloggs\n3\n1\n\n\n3\nAll-Bran with Extra Fiber\nK\nC\n50\n4\n0\n140\n14.0\n8.0\n0\n330\n25\n3\n1.0\n0.50\n93.704912\nKelloggs\n2\n0\n\n\n4\nAlmond Delight\nR\nC\n110\n2\n2\n200\n1.0\n14.0\n8\n-1\n25\n3\n1.0\n0.75\n34.384843\nRalston Purina\n5\n2\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n72\nTriples\nG\nC\n110\n2\n1\n250\n0.0\n21.0\n3\n60\n25\n3\n1.0\n0.75\n39.106174\nGeneral Mills\n4\n2\n\n\n73\nTrix\nG\nC\n110\n1\n1\n140\n0.0\n13.0\n12\n25\n25\n2\n1.0\n1.00\n27.753301\nGeneral Mills\n5\n2\n\n\n74\nWheat Chex\nR\nC\n100\n3\n1\n230\n3.0\n17.0\n3\n115\n25\n1\n1.0\n0.67\n49.787445\nRalston Purina\n4\n1\n\n\n75\nWheaties\nG\nC\n100\n3\n1\n200\n3.0\n17.0\n3\n110\n25\n1\n1.0\n1.00\n51.592193\nGeneral Mills\n4\n1\n\n\n76\nWheaties Honey Gold\nG\nC\n110\n2\n1\n200\n1.0\n16.0\n8\n60\n25\n1\n1.0\n0.75\n36.187559\nGeneral Mills\n5\n2\n\n\n\n\n77 rows × 19 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\n# Above and Beyond Task 2.1 : Calories\nsns.boxplot(data = df, x = \"manufacturer\", y = \"calories\", color = \"red\")\nplt.xticks(rotation = 45)\nplt.show()\n\n\n\n\n\n\n\n\n\n# Above and Beyond Task 2.2 : Fat\nsns.boxplot(data = df, x = \"manufacturer\",y = \"fat\", color = \"green\")\nplt.xticks(rotation = 45)\nplt.show()"
+    "text": "🌟 Above and Beyond 🌟\nOnce you’ve complted the basics, try to complete one or more of the following tasks:\n\nSee if you can get better results from your model through some data preprocessing, such as normalization.\nOften, using too many features can give poor results. Can you get better performance using a subset of the features instead of all four?\nAre there other ways you could visualize your model results?"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project1.html",
+    "href": "Cleansing_Exploration/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project2.html",
+    "href": "Cleansing_Exploration/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "full_stack.html",
+    "href": "full_stack.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Full Stack"
+    ]
+  },
+  {
+    "objectID": "full_stack.html#title-2-header",
+    "href": "full_stack.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Full Stack"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html",
+    "href": "Cleansing_Projects/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 5"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html",
+    "href": "Cleansing_Projects/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html",
+    "href": "Cleansing_Projects/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "Story_Telling/project1.html",
+    "href": "Story_Telling/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Story Telling",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Story_Telling/project2.html",
+    "href": "Story_Telling/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Story Telling",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Jacob Walker’s CV",
+    "section": "",
+    "text": "Student And Data Operations\n\nLinkedIn\n\n\n\nBrigham Young University – Idaho – Rexburg, ID, Jan. 2024 – Present\nBachelor of Science in Financial Economics | GPA 3.93\nExpected Graduation Date: July 2027\nChemeketa Community College – Salem, OR, Sept. 2019 – April 2021\n\n\n\n\nBank of Commerce: Data Operator/Fraud Specialist - January 2024–Present\n\nMaximized efficiency of the end-of-day bank operations by creating a list of all end-of-day operations, saving the bank more than 30 minutes each night.\nCollaborated with management to provide organizational oversight and guidance by creating a one-page guide and checklist, increasing proficiency in fraud detection between coworkers.\nAnalyzed the data of over 500 checks per day while ensuring key bank processes are completed at the indicated times.\n\nSolitude Landscaping: Crew Lead/Translator - March 2023– January 2024\n\nSupported management by increasing communication and understanding between crew leads by acting as a direct translator for the tie in the Spanish language.\nManaged and trained 10+ personnel.\nImplemented the use of data collectors to maximize the efficiency of crew routes and track time between stops.\nImproved weekly service efficiency by creating pruning and cutting schedules, increasing efficiency by 10%.\n\n\n\n\n\nMissionary for the Church of Jesus Christ of Latter-Day Saints – January 2021 – February 2023\n\nLearned and became fluent proficient in speaking and writing in the Spanish language within 3 months.\nOversaw 15+ missionary companionships and organized special trainings and councils.\nTrained two new missionaries in the Spanish language.\nPracticed budgeting personal finances with the allotted bi-monthly budget given.\n\nVolunteer Counselor for Amity Elementary School\nVarsity Captain for Amity High-School Cross Country Team\n\n\n\n\n\nCertified in the Spanish language through TrueNorth: Score 7.2\n\nProficient with Microsoft Office Suite\n\nProficient operating knowledge of the HORIZON banking system\nProficient in SQL\nProficient in R\nProficient in Python"
+  },
+  {
+    "objectID": "resume.html#education",
+    "href": "resume.html#education",
+    "title": "Jacob Walker’s CV",
+    "section": "",
+    "text": "Brigham Young University – Idaho – Rexburg, ID, Jan. 2024 – Present\nBachelor of Science in Financial Economics | GPA 3.93\nExpected Graduation Date: July 2027\nChemeketa Community College – Salem, OR, Sept. 2019 – April 2021"
+  },
+  {
+    "objectID": "resume.html#experience",
+    "href": "resume.html#experience",
+    "title": "Jacob Walker’s CV",
+    "section": "",
+    "text": "Bank of Commerce: Data Operator/Fraud Specialist - January 2024–Present\n\nMaximized efficiency of the end-of-day bank operations by creating a list of all end-of-day operations, saving the bank more than 30 minutes each night.\nCollaborated with management to provide organizational oversight and guidance by creating a one-page guide and checklist, increasing proficiency in fraud detection between coworkers.\nAnalyzed the data of over 500 checks per day while ensuring key bank processes are completed at the indicated times.\n\nSolitude Landscaping: Crew Lead/Translator - March 2023– January 2024\n\nSupported management by increasing communication and understanding between crew leads by acting as a direct translator for the tie in the Spanish language.\nManaged and trained 10+ personnel.\nImplemented the use of data collectors to maximize the efficiency of crew routes and track time between stops.\nImproved weekly service efficiency by creating pruning and cutting schedules, increasing efficiency by 10%."
+  },
+  {
+    "objectID": "resume.html#volunteer-service",
+    "href": "resume.html#volunteer-service",
+    "title": "Jacob Walker’s CV",
+    "section": "",
+    "text": "Missionary for the Church of Jesus Christ of Latter-Day Saints – January 2021 – February 2023\n\nLearned and became fluent proficient in speaking and writing in the Spanish language within 3 months.\nOversaw 15+ missionary companionships and organized special trainings and councils.\nTrained two new missionaries in the Spanish language.\nPracticed budgeting personal finances with the allotted bi-monthly budget given.\n\nVolunteer Counselor for Amity Elementary School\nVarsity Captain for Amity High-School Cross Country Team"
+  },
+  {
+    "objectID": "resume.html#relevant-skills",
+    "href": "resume.html#relevant-skills",
+    "title": "Jacob Walker’s CV",
+    "section": "",
+    "text": "Certified in the Spanish language through TrueNorth: Score 7.2\n\nProficient with Microsoft Office Suite\n\nProficient operating knowledge of the HORIZON banking system\nProficient in SQL\nProficient in R\nProficient in Python"
+  },
+  {
+    "objectID": "Machine_Learning/project5.html",
+    "href": "Machine_Learning/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Machine Learning",
+      "Project 5"
+    ]
+  },
+  {
+    "objectID": "Machine_Learning/project4.html",
+    "href": "Machine_Learning/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Machine Learning",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "Machine_Learning/project3.html",
+    "href": "Machine_Learning/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Machine Learning",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "exploration.html",
+    "href": "exploration.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Data Exploration"
+    ]
+  },
+  {
+    "objectID": "exploration.html#title-2-header",
+    "href": "exploration.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Data Exploration"
+    ]
+  },
+  {
+    "objectID": "competition.html",
+    "href": "competition.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Competition"
+    ]
+  },
+  {
+    "objectID": "competition.html#title-2-header",
+    "href": "competition.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Competition"
+    ]
+  },
+  {
+    "objectID": "Competition/project1.html",
+    "href": "Competition/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Competition",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Competition/project2.html",
+    "href": "Competition/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Competition",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Competition/project3.html",
+    "href": "Competition/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Competition",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "Competition/project4.html",
+    "href": "Competition/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Competition",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "Competition/project5.html",
+    "href": "Competition/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Competition",
+      "Project 5"
+    ]
+  },
+  {
+    "objectID": "story_telling.html",
+    "href": "story_telling.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Story Telling"
+    ]
+  },
+  {
+    "objectID": "story_telling.html#title-2-header",
+    "href": "story_telling.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Story Telling"
+    ]
+  },
+  {
+    "objectID": "ml.html",
+    "href": "ml.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "objectID": "ml.html#title-2-header",
+    "href": "ml.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "objectID": "Machine_Learning/project2.html",
+    "href": "Machine_Learning/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Machine Learning",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Machine_Learning/project1.html",
+    "href": "Machine_Learning/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Machine Learning",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "index.html#title-2-header",
+    "href": "index.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "Story_Telling/project3.html",
+    "href": "Story_Telling/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Story Telling",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "Story_Telling/project4.html",
+    "href": "Story_Telling/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Story Telling",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "Story_Telling/project5.html",
+    "href": "Story_Telling/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Story Telling",
+      "Project 5"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html",
+    "href": "Cleansing_Projects/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html",
+    "href": "Cleansing_Projects/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "cleansing.html",
+    "href": "cleansing.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Data Cleansing"
+    ]
+  },
+  {
+    "objectID": "cleansing.html#title-2-header",
+    "href": "cleansing.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Data Cleansing"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Exploration/project3.html",
+    "href": "Cleansing_Exploration/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project4.html",
+    "href": "Cleansing_Exploration/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project5.html",
+    "href": "Cleansing_Exploration/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "notebooks/module01-assessment.html#submission",
+    "href": "notebooks/module01-assessment.html#submission",
+    "title": "Introduction",
+    "section": "Submission",
+    "text": "Submission\nEach problem group asks a series of questions. This assignment consists of two submissions:\n\nAfter completing the questions below, open the Module 01 Assessment Quiz in Canvas and enter your answers to these questions there.\nAfter completing and submitting the quiz, save this Colab notebook as a GitHub Gist (You’ll need to create a GitHub account for this), by selecting Save a copy as a GitHub Gist from the File menu above.\nIn Canvas, open the Module 01 Assessment GitHub Gist assignment and paste the GitHub Gist URL for this notebook. Then submit that assignment."
+  },
+  {
+    "objectID": "notebooks/module01-assessment.html#problem-group-1",
+    "href": "notebooks/module01-assessment.html#problem-group-1",
+    "title": "Introduction",
+    "section": "Problem Group 1",
+    "text": "Problem Group 1\nFor the questions in this group, you’ll work with the Netflix Movies Dataset found at this url: https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/netflix_titles.csv\n\nQuestion 1\nLoad the dataset into a Pandas data frame and determine what data type is used to store the release_year feature.\n\nimport pandas as pd\n\ndf = pd.read_csv(\"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/netflix_titles.csv\")\ndf.head()\n\n\n    \n\n\n\n\n\n\nshow_id\ntype\ntitle\ndirector\ncast\ncountry\ndate_added\nrelease_year\nrating\nduration\nlisted_in\ndescription\n\n\n\n\n0\n81145628\nMovie\nNorm of the North: King Sized Adventure\nRichard Finn, Tim Maltby\nAlan Marriott, Andrew Toth, Brian Dobson, Cole...\nUnited States, India, South Korea, China\nSeptember 9, 2019\n2019\nTV-PG\n90 min\nChildren & Family Movies, Comedies\nBefore planning an awesome wedding for his gra...\n\n\n1\n80117401\nMovie\nJandino: Whatever it Takes\nNaN\nJandino Asporaat\nUnited Kingdom\nSeptember 9, 2016\n2016\nTV-MA\n94 min\nStand-Up Comedy\nJandino Asporaat riffs on the challenges of ra...\n\n\n2\n70234439\nTV Show\nTransformers Prime\nNaN\nPeter Cullen, Sumalee Montano, Frank Welker, J...\nUnited States\nSeptember 8, 2018\n2013\nTV-Y7-FV\n1 Season\nKids' TV\nWith the help of three human allies, the Autob...\n\n\n3\n80058654\nTV Show\nTransformers: Robots in Disguise\nNaN\nWill Friedle, Darren Criss, Constance Zimmer, ...\nUnited States\nSeptember 8, 2018\n2016\nTV-Y7\n1 Season\nKids' TV\nWhen a prison ship crash unleashes hundreds of...\n\n\n4\n80125979\nMovie\n#realityhigh\nFernando Lebrija\nNesta Cooper, Kate Walsh, John Michael Higgins...\nUnited States\nSeptember 8, 2017\n2017\nTV-14\n99 min\nComedies\nWhen nerdy high schooler Dani finally attracts...\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n  \n\n\n\n\ndf.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 6234 entries, 0 to 6233\nData columns (total 12 columns):\n #   Column        Non-Null Count  Dtype \n---  ------        --------------  ----- \n 0   show_id       6234 non-null   int64 \n 1   type          6234 non-null   object\n 2   title         6234 non-null   object\n 3   director      4265 non-null   object\n 4   cast          5664 non-null   object\n 5   country       5758 non-null   object\n 6   date_added    6223 non-null   object\n 7   release_year  6234 non-null   int64 \n 8   rating        6224 non-null   object\n 9   duration      6234 non-null   object\n 10  listed_in     6234 non-null   object\n 11  description   6234 non-null   object\ndtypes: int64(2), object(10)\nmemory usage: 584.6+ KB\n\n\n\n\nQuestion 2\nFilter your dataset so it contains only TV Shows. How many of those TV Shows were rated TV-Y7?\n\ndf_tv = df[df[\"type\"] == \"TV Show\"]\n(df_tv[\"rating\"] == \"TV-Y7\").sum()\n\nnp.int64(100)\n\n\n\n\nQuestion 3\nFurther filter your dataset so it only contains TV Shows released between the years 2000 and 2009 inclusive. How many of those shows were rated TV-Y7?\n\ndf_2000s = df_tv[(df_tv[\"release_year\"] &gt;= 2000) & (df_tv[\"release_year\"] &lt;= 2009)]\n(df_2000s[\"rating\"] == \"TV-Y7\").sum()\n\nnp.int64(4)"
+  },
+  {
+    "objectID": "notebooks/module01-assessment.html#problem-group-2",
+    "href": "notebooks/module01-assessment.html#problem-group-2",
+    "title": "Introduction",
+    "section": "Problem Group 2",
+    "text": "Problem Group 2\nFor the questions in this group, you’ll work with the Cereal Dataset found at this url: https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/cereal.csv\n\nQuestion 4\nAfter importing the dataset into a pandas data frame, determine the median amount of protein in cereal brands manufactured by Kelloggs. (mfr code “K”)\n\ndf_cereal = pd.read_csv(\"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/cereal.csv\")\ndf_cereal\n\n\n    \n\n\n\n\n\n\nname\nmfr\ntype\ncalories\nprotein\nfat\nsodium\nfiber\ncarbo\nsugars\npotass\nvitamins\nshelf\nweight\ncups\nrating\n\n\n\n\n0\n100% Bran\nN\nC\n70\n4\n1\n130\n10.0\n5.0\n6\n280\n25\n3\n1.0\n0.33\n68.402973\n\n\n1\n100% Natural Bran\nQ\nC\n120\n3\n5\n15\n2.0\n8.0\n8\n135\n0\n3\n1.0\n1.00\n33.983679\n\n\n2\nAll-Bran\nK\nC\n70\n4\n1\n260\n9.0\n7.0\n5\n320\n25\n3\n1.0\n0.33\n59.425505\n\n\n3\nAll-Bran with Extra Fiber\nK\nC\n50\n4\n0\n140\n14.0\n8.0\n0\n330\n25\n3\n1.0\n0.50\n93.704912\n\n\n4\nAlmond Delight\nR\nC\n110\n2\n2\n200\n1.0\n14.0\n8\n-1\n25\n3\n1.0\n0.75\n34.384843\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n72\nTriples\nG\nC\n110\n2\n1\n250\n0.0\n21.0\n3\n60\n25\n3\n1.0\n0.75\n39.106174\n\n\n73\nTrix\nG\nC\n110\n1\n1\n140\n0.0\n13.0\n12\n25\n25\n2\n1.0\n1.00\n27.753301\n\n\n74\nWheat Chex\nR\nC\n100\n3\n1\n230\n3.0\n17.0\n3\n115\n25\n1\n1.0\n0.67\n49.787445\n\n\n75\nWheaties\nG\nC\n100\n3\n1\n200\n3.0\n17.0\n3\n110\n25\n1\n1.0\n1.00\n51.592193\n\n\n76\nWheaties Honey Gold\nG\nC\n110\n2\n1\n200\n1.0\n16.0\n8\n60\n25\n1\n1.0\n0.75\n36.187559\n\n\n\n\n77 rows × 16 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\nmedian_protein = round(df_cereal[\"protein\"].median(),2)\nmedian_protein\n\n3.0\n\n\n\n\nQuestion 5\nIn order to comply with new government regulations, all cereals must now come with a “Healthiness” rating. This rating is calculated based on this formula:\nhealthiness = (protein + fiber) / sugar\nCreate a new healthiness column populated with values based on the above formula.\nThen, determine the median healthiness value for only General Mills cereals (mfr = “G”), rounded to two decimal places.\n\ndf_cereal[\"healthiness\"] = ((df_cereal[\"protein\"] + df_cereal[\"fiber\"])/ df_cereal[\"sugars\"])\ndf_cereal.head()\n\n\n    \n\n\n\n\n\n\nname\nmfr\ntype\ncalories\nprotein\nfat\nsodium\nfiber\ncarbo\nsugars\npotass\nvitamins\nshelf\nweight\ncups\nrating\nhealthiness\n\n\n\n\n0\n100% Bran\nN\nC\n70\n4\n1\n130\n10.0\n5.0\n6\n280\n25\n3\n1.0\n0.33\n68.402973\n2.333333\n\n\n1\n100% Natural Bran\nQ\nC\n120\n3\n5\n15\n2.0\n8.0\n8\n135\n0\n3\n1.0\n1.00\n33.983679\n0.625000\n\n\n2\nAll-Bran\nK\nC\n70\n4\n1\n260\n9.0\n7.0\n5\n320\n25\n3\n1.0\n0.33\n59.425505\n2.600000\n\n\n3\nAll-Bran with Extra Fiber\nK\nC\n50\n4\n0\n140\n14.0\n8.0\n0\n330\n25\n3\n1.0\n0.50\n93.704912\ninf\n\n\n4\nAlmond Delight\nR\nC\n110\n2\n2\n200\n1.0\n14.0\n8\n-1\n25\n3\n1.0\n0.75\n34.384843\n0.375000\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n  \n\n\n\nmedian_healthiness = round((df_cereal[df_cereal[\"mfr\"] == \"G\"][\"healthiness\"].median()),2)\nmedian_healthiness\n\n0.47"
+  },
+  {
+    "objectID": "notebooks/module01-assessment.html#problem-group-3",
+    "href": "notebooks/module01-assessment.html#problem-group-3",
+    "title": "Introduction",
+    "section": "Problem Group 3",
+    "text": "Problem Group 3\nFor the questions in this group, you’ll work with the Titanic Dataset found at this url: https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/titanic.csv\n\nQuestion 6\nAfter loading the dataset into a pandas DataFrame, create a new column called NameGroup that contains the first letter of the passenger’s surname in lower case.\nNote that in the dataset, passenger’s names are provided in the Name column and are listed as:\nSurname, Given names\nFor example, if a passenger’s Name is Braund, Mr. Owen Harris, the NameGroup column should contain the value b.\nThen count how many passengers have a NameGroup value of k.\n\ndf_titanic = pd.read_csv(\"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/titanic.csv\")\ndf_titanic[\"NameGroup\"] = df_titanic[\"Name\"].str.split(\",\").str[0].str[0].str.lower()\ndf_titanic\n\n\n    \n\n\n\n\n\n\nPassengerId\nSurvived\nPclass\nName\nSex\nAge\nSibSp\nParch\nTicket\nFare\nCabin\nEmbarked\nNameGroup\n\n\n\n\n0\n1\nNo\n3\nBraund, Mr. Owen Harris\nmale\n22.0\n1\n0\nA/5 21171\n7.2500\nNaN\nS\nb\n\n\n1\n2\nYes\n1\nCumings, Mrs. John Bradley (Florence Briggs Th...\nfemale\n38.0\n1\n0\nPC 17599\n71.2833\nC85\nC\nc\n\n\n2\n3\nYes\n3\nHeikkinen, Miss. Laina\nfemale\n26.0\n0\n0\nSTON/O2. 3101282\n7.9250\nNaN\nS\nh\n\n\n3\n4\nYes\n1\nFutrelle, Mrs. Jacques Heath (Lily May Peel)\nfemale\n35.0\n1\n0\n113803\n53.1000\nC123\nS\nf\n\n\n4\n5\nNo\n3\nAllen, Mr. William Henry\nmale\n35.0\n0\n0\n373450\n8.0500\nNaN\nS\na\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n886\n887\nNo\n2\nMontvila, Rev. Juozas\nmale\n27.0\n0\n0\n211536\n13.0000\nNaN\nS\nm\n\n\n887\n888\nYes\n1\nGraham, Miss. Margaret Edith\nfemale\n19.0\n0\n0\n112053\n30.0000\nB42\nS\ng\n\n\n888\n889\nNo\n3\nJohnston, Miss. Catherine Helen \"Carrie\"\nfemale\nNaN\n1\n2\nW./C. 6607\n23.4500\nNaN\nS\nj\n\n\n889\n890\nYes\n1\nBehr, Mr. Karl Howell\nmale\n26.0\n0\n0\n111369\n30.0000\nC148\nC\nb\n\n\n890\n891\nNo\n3\nDooley, Mr. Patrick\nmale\n32.0\n0\n0\n370376\n7.7500\nNaN\nQ\nd\n\n\n\n\n891 rows × 13 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\n(df_titanic[\"NameGroup\"] == \"k\").sum()\n\nnp.int64(28)"
+  },
+  {
+    "objectID": "notebooks/Exploration_01.html",
+    "href": "notebooks/Exploration_01.html",
+    "title": "Data Exploration 01",
+    "section": "",
+    "text": "A consumer watchdog group wants to see if Netflix has more movies for adults or children.\nUsing a dataset containing metadata for all of the movies Netflix had available on their platform in 2019, we’ll use the MPAA movie rating system to determine if they are correct."
+  },
+  {
+    "objectID": "notebooks/Exploration_01.html#mpaa-movie-ratings",
+    "href": "notebooks/Exploration_01.html#mpaa-movie-ratings",
+    "title": "Data Exploration 01",
+    "section": "MPAA Movie Ratings:",
+    "text": "MPAA Movie Ratings:\n\nG: All ages admitted.\nPG: Some material may not be suitable for children.\nPG-13: Some material may be inappropriate for children under 13.\nR: Under 17 requires accompanying parent or adult guardian\nNC-17: No One 17 and Under Admitted\n\nMost people would consider G and PG as ratings suitable for children. However, not everyone would agree that a PG-13 movie is necssarily a children’s movie. It is up to you to decide how to handle this."
+  },
+  {
+    "objectID": "notebooks/Exploration_01.html#part-1-import-pandas",
+    "href": "notebooks/Exploration_01.html#part-1-import-pandas",
+    "title": "Data Exploration 01",
+    "section": "Part 1: Import Pandas",
+    "text": "Part 1: Import Pandas\nThe pandas library is a python library used for data analysis and manipulation. It will provide the core functionality for most of what you do in the data exploration and preprocessing stages of most machine learning projects.\nPlease see this Getting Started Guide for information on the conventional way to import Pandas into your project, as well as other helpful tips for common Pandas tasks.\n\n# Part 1: Enter the code below to import Pandas according to the\n# conventional method.\nimport pandas as pd"
+  },
+  {
+    "objectID": "notebooks/Exploration_01.html#part-2-load-the-data",
+    "href": "notebooks/Exploration_01.html#part-2-load-the-data",
+    "title": "Data Exploration 01",
+    "section": "Part 2: Load the data",
+    "text": "Part 2: Load the data\nThe dataset for this exploration is stored at the following url:\nhttps://raw.githubusercontent.com/byui-cse/cse450-course/master/data/netflix_titles.csv\nThere are lots of ways to load data into your workspace. The easiest way in this case is to ask Pandas to do it for you.\n\nInitial Data Analysis\nOnce you’ve loaded the data, it’s a good idea to poke around a little bit to find out what you’re dealing with.\nSome questions you might ask include:\n\nWhat does the data look like?\nWhat kind of data is in each column?\nDo any of the columns have missing values?\n\n\n# Part 2: Load the dataset into a Pandas dataframe.\ndf = pd.read_csv(\"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/netflix_titles.csv\")\n\n\n# Then, explore the data by seeing what the first few rows look like.\ndf.head()\n\n\n    \n\n\n\n\n\n\nshow_id\ntype\ntitle\ndirector\ncast\ncountry\ndate_added\nrelease_year\nrating\nduration\nlisted_in\ndescription\n\n\n\n\n0\n81145628\nMovie\nNorm of the North: King Sized Adventure\nRichard Finn, Tim Maltby\nAlan Marriott, Andrew Toth, Brian Dobson, Cole...\nUnited States, India, South Korea, China\nSeptember 9, 2019\n2019\nTV-PG\n90 min\nChildren & Family Movies, Comedies\nBefore planning an awesome wedding for his gra...\n\n\n1\n80117401\nMovie\nJandino: Whatever it Takes\nNaN\nJandino Asporaat\nUnited Kingdom\nSeptember 9, 2016\n2016\nTV-MA\n94 min\nStand-Up Comedy\nJandino Asporaat riffs on the challenges of ra...\n\n\n2\n70234439\nTV Show\nTransformers Prime\nNaN\nPeter Cullen, Sumalee Montano, Frank Welker, J...\nUnited States\nSeptember 8, 2018\n2013\nTV-Y7-FV\n1 Season\nKids' TV\nWith the help of three human allies, the Autob...\n\n\n3\n80058654\nTV Show\nTransformers: Robots in Disguise\nNaN\nWill Friedle, Darren Criss, Constance Zimmer, ...\nUnited States\nSeptember 8, 2018\n2016\nTV-Y7\n1 Season\nKids' TV\nWhen a prison ship crash unleashes hundreds of...\n\n\n4\n80125979\nMovie\n#realityhigh\nFernando Lebrija\nNesta Cooper, Kate Walsh, John Michael Higgins...\nUnited States\nSeptember 8, 2017\n2017\nTV-14\n99 min\nComedies\nWhen nerdy high schooler Dani finally attracts...\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n      \n\n\n    \n        \n    \n\n      \n\n\n\n      \n    \n\n    \n  \n\n\n\n# Next, display a technical summary of the data to determine the data types of each column, and which columns have missing data.\n\ndf.describe()\n\n\n    \n\n\n\n\n\n\nshow_id\nrelease_year\n\n\n\n\ncount\n6.234000e+03\n6234.00000\n\n\nmean\n7.670368e+07\n2013.35932\n\n\nstd\n1.094296e+07\n8.81162\n\n\nmin\n2.477470e+05\n1925.00000\n\n\n25%\n8.003580e+07\n2013.00000\n\n\n50%\n8.016337e+07\n2016.00000\n\n\n75%\n8.024489e+07\n2018.00000\n\n\nmax\n8.123573e+07\n2020.00000"
+  },
+  {
+    "objectID": "notebooks/Exploration_01.html#part-3-filter-the-data",
+    "href": "notebooks/Exploration_01.html#part-3-filter-the-data",
+    "title": "Data Exploration 01",
+    "section": "Part 3: Filter the Data",
+    "text": "Part 3: Filter the Data\nSince we’re just interested in movies, we’ll need to filter out anything that isn’t a movie for our analysis. The type feature contains this information.\nOnce we have the subset, we should see how many rows it contains. There are a variety of ways to get the length of a data frame.\n\n# Use pandas's filtering abilitites to select the subset of data\n# that represents movies, then calculate how many rows are in the filtered data.\ndf_movies = df[df[\"type\"] == \"Movie\"]\ndf_movies\n\n\n    \n\n\n\n\n\n\nshow_id\ntype\ntitle\ndirector\ncast\ncountry\ndate_added\nrelease_year\nrating\nduration\nlisted_in\ndescription\n\n\n\n\n0\n81145628\nMovie\nNorm of the North: King Sized Adventure\nRichard Finn, Tim Maltby\nAlan Marriott, Andrew Toth, Brian Dobson, Cole...\nUnited States, India, South Korea, China\nSeptember 9, 2019\n2019\nTV-PG\n90 min\nChildren & Family Movies, Comedies\nBefore planning an awesome wedding for his gra...\n\n\n1\n80117401\nMovie\nJandino: Whatever it Takes\nNaN\nJandino Asporaat\nUnited Kingdom\nSeptember 9, 2016\n2016\nTV-MA\n94 min\nStand-Up Comedy\nJandino Asporaat riffs on the challenges of ra...\n\n\n4\n80125979\nMovie\n#realityhigh\nFernando Lebrija\nNesta Cooper, Kate Walsh, John Michael Higgins...\nUnited States\nSeptember 8, 2017\n2017\nTV-14\n99 min\nComedies\nWhen nerdy high schooler Dani finally attracts...\n\n\n6\n70304989\nMovie\nAutomata\nGabe Ibáñez\nAntonio Banderas, Dylan McDermott, Melanie Gri...\nBulgaria, United States, Spain, Canada\nSeptember 8, 2017\n2014\nR\n110 min\nInternational Movies, Sci-Fi & Fantasy, Thrillers\nIn a dystopian future, an insurance adjuster f...\n\n\n7\n80164077\nMovie\nFabrizio Copano: Solo pienso en mi\nRodrigo Toro, Francisco Schultz\nFabrizio Copano\nChile\nSeptember 8, 2017\n2017\nTV-MA\n60 min\nStand-Up Comedy\nFabrizio Copano takes audience participation t...\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n5577\n80085438\nMovie\nFrank and Cindy\nG.J. Echternkamp\nNaN\nUnited States\nApril 1, 2016\n2007\nTV-MA\n70 min\nDocumentaries\nFrank was a rising pop star when he married Ci...\n\n\n5578\n80085439\nMovie\nFrank and Cindy\nG.J. Echternkamp\nRene Russo, Oliver Platt, Johnny Simmons, Jane...\nUnited States\nApril 1, 2016\n2015\nR\n102 min\nComedies, Dramas, Independent Movies\nA student filmmaker vengefully turns his camer...\n\n\n5579\n80011846\nMovie\nIverson\nZatella Beatty\nAllen Iverson\nUnited States\nApril 1, 2016\n2014\nNR\n88 min\nDocumentaries, Sports Movies\nThis unfiltered documentary follows the rocky ...\n\n\n5580\n80064521\nMovie\nJeremy Scott: The People's Designer\nVlad Yudin\nJeremy Scott\nUnited States\nApril 1, 2016\n2015\nPG-13\n109 min\nDocumentaries\nThe journey of fashion designer Jeremy Scott f...\n\n\n6231\n80116008\nMovie\nLittle Baby Bum: Nursery Rhyme Friends\nNaN\nNaN\nNaN\nNaN\n2016\nNaN\n60 min\nMovies\nNursery rhymes and original music for children...\n\n\n\n\n4265 rows × 12 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n      \n\n\n    \n        \n    \n\n      \n\n\n\n      \n    \n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\nMPAA Ratings\nNow that we have only movies, let’s get a quick count of the values being used in the rating feature.\n\n# Determine the number of records for each value of the \"rating\" feature.\n# Remember to count the values in your subset only, not in the original dataframe.\ndf_movies[\"rating\"].unique()\ndf_movies[\"rating\"].value_counts()\n\n\n\n\n\n\n\n\ncount\n\n\nrating\n\n\n\n\n\nTV-MA\n1348\n\n\nTV-14\n1038\n\n\nR\n506\n\n\nTV-PG\n432\n\n\nPG-13\n286\n\n\nNR\n202\n\n\nPG\n183\n\n\nTV-G\n80\n\n\nTV-Y7\n69\n\n\nTV-Y\n41\n\n\nG\n36\n\n\nTV-Y7-FV\n27\n\n\nUR\n7\n\n\nNC-17\n2\n\n\n\n\ndtype: int64\n\n\n\n\nMore Filtering\nThere are apparently some “made for TV” movies in the list that don’t fit the MPAA rating scheme.\nLet’s filter some more to just see movies rated with the standard MPAA ratings of G, PG, PG-13, R, and NC-17.\n\n# Filter the list of movies to select a new subset containing only movies with\n# a standard MPAA rating. Calculate how many rows are in this new set, and\n# then see which ratings appear most often.\nmovie_ratings = [\"G\", \"PG\", \"PG-13\", \"R\", \"NC-17\"]\ndf_filtered = df_movies[df_movies[\"rating\"].isin(movie_ratings)]\ndf_filtered.head()\ndf_filtered[\"rating\"].value_counts()\n\n\n\n\n\n\n\n\ncount\n\n\nrating\n\n\n\n\n\nR\n506\n\n\nPG-13\n286\n\n\nPG\n183\n\n\nG\n36\n\n\nNC-17\n2\n\n\n\n\ndtype: int64"
+  },
+  {
+    "objectID": "notebooks/Exploration_01.html#part-4-visualization",
+    "href": "notebooks/Exploration_01.html#part-4-visualization",
+    "title": "Data Exploration 01",
+    "section": "Part 4: Visualization",
+    "text": "Part 4: Visualization\nNow that we have explored and preprocessed our data, let’s create a visualization to summarize our findings.\n\nExploration vs Presentation\nBroadly speaking, there are two types of visualizations: * Barebones visualizations you might use to get a quick, visual understanding of the data while you’re trying to decide how it all fits together. * Presentation-quality visualizations that you would include in a report or presentation for management or other stakeholders.\n\n\nVisualization Tools\nThere are many different visualization tools availble. In the sections below, we’ll explore the three most common. Each of these libraries has strengths and weaknesses.\nIt is probably a good idea for you to become familiar with each one, and then become proficient at whichever one you like the best.\n\n\nAltair\nThe Altair visualization library provides a large variety of very easy to use statistical charting tools.\nAltair uses a declarative language to build up charts piece by piece.\nAssume we have a pandas dataframe called employees, with three columns: name, job, salary.\n# Make a box plot style categorical plot showing the distribution of salaries for each job:\nalt.Chart(employees).mark_boxplot().encode(\n    x='job',\n    y='salary'\n)\n\n# Make a box plot style categorical plot, and customize the results\nalt.Chart(employees).mark_boxplot().encode(\n    alt.X('job', title='Job title'),\n    alt.Y('salary', title='Annual salary in thousands of $USD')\n).properties(\n  title='Salaries by Job Title'\n)\nLike with Pandas, there is a conventional way to import Altair into your projects.\n\n# Import the Altair library the conventional way.\nimport altair as alt\n\nLet’s create a barchart showing the count of each movie rating by using Altair’s aggregation capabilities.\nIn this example, we see the x axis being set to a feature called a, and the y axis set to the average() of a feature called b.\nIn our case, we want the x axis to be set to rating and the y axis to be the count() of rating.\n\n# Use Altair to create a bar chart comparing the count of each movie rating\nalt.Chart(df_filtered).mark_bar().encode(\n    alt.X('rating').title(\"Movie Ratings\"),\n    alt.Y('count(rating)').title(\"Count of Movies\")\n)\n\n\n\n\n\n\n\n\n\nSeaborn\nWhile Altair uses a “declarative” syntax for building charts piece by piece, the Seaborn library provides a large variety of pre-made charts for common statistical needs.\nThese charts are divided into different categories. Each category has a high-level interface you can use for simplicity, and then a specific function for each chart that you can use if you need more control over how the chart looks.\nSeaborn uses matplotlib for its drawing, and the chart-specific functions each return a matplitlib axes object if you need additional customization.\nFor example, there are several different types of categorical plots in seaborn: bar plots, box plots, point plots, count plots, swarm plots, etc…\nEach of these plots can be accessed using the catplot function.\nAssume we have a pandas dataframe called employees, with three columns: name, job, salary.\n# Make a box plot style categorical plot showing the distribution of salaries for each job:\nsns.catplot(data=employees, x='job', y='salary', kind='box')\n\n# Make a swarm plot style categorical plot\nsns.catplot(data=employees, x='job', y='salary', kind='swarm')\nAlternatively, you can use the plot specific functions to give yourself more control over the output by using matplotlib functions:\n# Make a box plot style categorical plot, and customize the results\nimport matplotlib.pyplot as plt\n\nplt.figure(figsize=(12, 9))\nax = sns.boxplot(data=employees, x='job', y='salary')\nax.set_title(\"Salaries by Job Title\")\nax.set_ylabel(\"Annual salary in thousands of $USD\")\nax.set_xlabel(\"Job title\")\nLike with Pandas, there is a conventional way to import Seaborn into your projects.\nOptionally, you may wish to set some default chart aesthetics by setting the chart style.\n\n# Import the seaborn library the conventional way. Then optionally configure\n# the default chart style.\nimport seaborn as sns\nsns.set_theme(style=\"darkgrid\")\n\nSince the rating column uses categorical data, we need to use Seaborn’s categorical visualizations.\nIn particular, we want a “count plot” that will display a count of movie ratings.\n\n# Use seaborn to create a count plot comparing the count of each movie rating\nsns.catplot(\n    data=df_filtered, y=\"rating\", hue=\"rating\", kind=\"count\",\n    palette=\"pastel\", edgecolor=\".6\",\n)\n\n\n\n\n\n\n\n\n\n\nPandas built-in plotting\nIn addition to libraries like Altair and Seaborn, Pandas has some built in charting functionality.\nWhile not as sophisticated as some of the other options, it is often good enough for quick visualizations.\nJust like with seaborn’s plotting functions, the pandas plotting functions return matplotlib axes objects, which can be further customized.\nAssume we have a pandas dataframe called employees, with three columns: name, job, salary.\n# Make a box plot style categorical plot showing the distribution of salaries for each job:\nemployees[ ['job','salary'] ].plot.box()\n\n# Make a box plot style categorical plot, and customize the results\nimport matplotlib.pyplot as plt\n\nplt.figure(figsize=(12, 9))\nax = employees[ ['job','salary'] ].plot().box()\nax.set_title(\"Salaries by Job Title\")\nax.set_ylabel(\"Annual salary in thousands of $USD\")\nax.set_xlabel(\"Job title\")\n\n# Use pandas' built in plotting functions to create a count plot comparing the count of each movie rating\n# This will be a little trickier than the other libraries, but one hint is that the pandas value_counts() function\n# actually returns a dataframe.\n\nimport matplotlib.pyplot as plt\n\nrating_counts = df_filtered[\"rating\"].value_counts()\n\nplt.figure(figsize=(9, 6))\n\nax = rating_counts.plot(kind=\"bar\")\n\nax.set_title(\"Rating Counts for Movies\")\nax.set_xlabel(\"Movie Rating\")\nax.set_ylabel(\"Number of Movies\")\n\nplt.show()"
+  },
+  {
+    "objectID": "notebooks/Exploration_01.html#above-and-beyond",
+    "href": "notebooks/Exploration_01.html#above-and-beyond",
+    "title": "Data Exploration 01",
+    "section": "🌟 Above and Beyond 🌟",
+    "text": "🌟 Above and Beyond 🌟\nAfter reviewing your findings, the watchdog group would like some additional questions answered:\n\nHow are things affected if you include the “made for TV movies” that have been assigned TV ratings in your analysis, but still exclude unrated movies?\nThey would also like to see a separate report that includes only TV shows.\nFor an upcoming community meeting, the group would like to present a simple chart showing “For Kids” and “For Adults” categories. The easiest way to accomplish this would be to create a new column in your data frame that maps each rating to the appropriate “For Kids” or “For Adults” label, then create a new visualization based on that column.\n\n\nall_ratings = [\"NC-17\", \"TV-Y7-FV\", \"G\", \"TV-Y\", \"TV-Y7\", \"TV-G\", \"PG\", \"PG-13\", \"TV-PG\", \"R\", \"TV-14\", \"TV-MA\"]\n\ndf_ratedmovies = df_movies[df_movies[\"rating\"].isin(all_ratings)]\ndf_ratedmovies.head()\ndf_ratedmovies[\"rating\"].value_counts()\n\nallrating_counts = df_ratedmovies[\"rating\"].value_counts()\nplt.figure(figsize = (9,6))\nax = allrating_counts.plot(kind = \"bar\")\nax.set_title(\"Rating Counts For All Movies\")\nax.set_ylabel(\"Movie Count\")\nax.set_xlabel(\"Rating\")\n\nText(0.5, 0, 'Rating')\n\n\n\n\n\n\n\n\n\n\nEven with movies that are rated for TV included, it is clear that Netlix has much more content for Adults than they do for kids."
+  },
+  {
+    "objectID": "notebooks/starter_bank.html",
+    "href": "notebooks/starter_bank.html",
+    "title": "Jacob Walker - Data Science Portfolio",
+    "section": "",
+    "text": "import pandas as pd\n\ncampaign = pd.read_csv('https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/bank.csv')\n\ncampaign\n\n\n    \n\n\n\n\n\n\nage\njob\nmarital\neducation\ndefault\nhousing\nloan\ncontact\nmonth\nday_of_week\ncampaign\npdays\nprevious\npoutcome\nemp.var.rate\ncons.price.idx\ncons.conf.idx\neuribor3m\nnr.employed\ny\n\n\n\n\n0\n56\nhousemaid\nmarried\nbasic.4y\nno\nno\nno\ntelephone\nmay\nmon\n1\n999\n0\nnonexistent\n1.1\n93.994\n-36.4\n4.857\n5191.0\nno\n\n\n1\n57\nservices\nmarried\nhigh.school\nunknown\nno\nno\ntelephone\nmay\nmon\n1\n999\n0\nnonexistent\n1.1\n93.994\n-36.4\n4.857\n5191.0\nno\n\n\n2\n37\nservices\nmarried\nhigh.school\nno\nyes\nno\ntelephone\nmay\nmon\n1\n999\n0\nnonexistent\n1.1\n93.994\n-36.4\n4.857\n5191.0\nno\n\n\n3\n40\nadmin.\nmarried\nbasic.6y\nno\nno\nno\ntelephone\nmay\nmon\n1\n999\n0\nnonexistent\n1.1\n93.994\n-36.4\n4.857\n5191.0\nno\n\n\n4\n56\nservices\nmarried\nhigh.school\nno\nno\nyes\ntelephone\nmay\nmon\n1\n999\n0\nnonexistent\n1.1\n93.994\n-36.4\n4.857\n5191.0\nno\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n37064\n73\nretired\nmarried\nprofessional.course\nno\nyes\nno\ncellular\nnov\nfri\n1\n999\n0\nnonexistent\n-1.1\n94.767\n-50.8\n1.028\n4963.6\nyes\n\n\n37065\n46\nblue-collar\nmarried\nprofessional.course\nno\nno\nno\ncellular\nnov\nfri\n1\n999\n0\nnonexistent\n-1.1\n94.767\n-50.8\n1.028\n4963.6\nno\n\n\n37066\n56\nretired\nmarried\nuniversity.degree\nno\nyes\nno\ncellular\nnov\nfri\n2\n999\n0\nnonexistent\n-1.1\n94.767\n-50.8\n1.028\n4963.6\nno\n\n\n37067\n44\ntechnician\nmarried\nprofessional.course\nno\nno\nno\ncellular\nnov\nfri\n1\n999\n0\nnonexistent\n-1.1\n94.767\n-50.8\n1.028\n4963.6\nyes\n\n\n37068\n74\nretired\nmarried\nprofessional.course\nno\nyes\nno\ncellular\nnov\nfri\n3\n999\n1\nfailure\n-1.1\n94.767\n-50.8\n1.028\n4963.6\nno\n\n\n\n\n37069 rows × 20 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\nimport pandas as pd\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.preprocessing import OneHotEncoder\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.metrics import classification_report, confusion_matrix\n\n# Reload clean copy of the data (or use your existing 'campaign' if it is untouched)\ncampaign = pd.read_csv('https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/bank.csv')\n\n# Drop obvious missing rows (this dataset has very few)\ncampaign = campaign.dropna().copy()\n\ncampaign.head()\ncampaign['y'].value_counts(normalize=True)\n\n\n\n\n\n\n\n\nproportion\n\n\ny\n\n\n\n\n\nno\n0.886482\n\n\nyes\n0.113518\n\n\n\n\ndtype: float64\n\n\n\n# Target: did the client subscribe to a term deposit?\ny = campaign['y'].map({'no': 0, 'yes': 1})   # convert to 0/1\n\n# Drop target to get features\nX = campaign.drop(columns=['y'])\n\n# Identify numeric vs categorical columns\nnumeric_cols = X.select_dtypes(include=['int64', 'float64']).columns.tolist()\ncategorical_cols = X.select_dtypes(include=['object']).columns.tolist()\n\nnumeric_cols, categorical_cols\n\n(['age',\n  'campaign',\n  'pdays',\n  'previous',\n  'emp.var.rate',\n  'cons.price.idx',\n  'cons.conf.idx',\n  'euribor3m',\n  'nr.employed'],\n ['job',\n  'marital',\n  'education',\n  'default',\n  'housing',\n  'loan',\n  'contact',\n  'month',\n  'day_of_week',\n  'poutcome'])\n\n\n\n# One‑hot encode categoricals, leave numerics as-is\npreprocess = ColumnTransformer(\n    transformers=[\n        ('cat', OneHotEncoder(handle_unknown='ignore'), categorical_cols),\n        ('num', 'passthrough', numeric_cols)\n    ]\n)\n\nrf = RandomForestClassifier(\n    n_estimators=300,\n    max_depth=None,\n    min_samples_split=10,\n    min_samples_leaf=5,\n    random_state=42,\n    n_jobs=-1,\n    class_weight='balanced'  # very important: target is imbalanced\n)\n\nmodel = Pipeline(steps=[\n    ('preprocess', preprocess),\n    ('rf', rf)\n])\n\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y,\n    test_size=0.25,\n    random_state=42,\n    stratify=y\n)\n\nmodel.fit(X_train, y_train)\n\nPipeline(steps=[('preprocess',\n                 ColumnTransformer(transformers=[('cat',\n                                                  OneHotEncoder(handle_unknown='ignore'),\n                                                  ['job', 'marital',\n                                                   'education', 'default',\n                                                   'housing', 'loan', 'contact',\n                                                   'month', 'day_of_week',\n                                                   'poutcome']),\n                                                 ('num', 'passthrough',\n                                                  ['age', 'campaign', 'pdays',\n                                                   'previous', 'emp.var.rate',\n                                                   'cons.price.idx',\n                                                   'cons.conf.idx', 'euribor3m',\n                                                   'nr.employed'])])),\n                ('rf',\n                 RandomForestClassifier(class_weight='balanced',\n                                        min_samples_leaf=5,\n                                        min_samples_split=10, n_estimators=300,\n                                        n_jobs=-1, random_state=42))])In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.Pipeline?Documentation for PipelineiFittedPipeline(steps=[('preprocess',\n                 ColumnTransformer(transformers=[('cat',\n                                                  OneHotEncoder(handle_unknown='ignore'),\n                                                  ['job', 'marital',\n                                                   'education', 'default',\n                                                   'housing', 'loan', 'contact',\n                                                   'month', 'day_of_week',\n                                                   'poutcome']),\n                                                 ('num', 'passthrough',\n                                                  ['age', 'campaign', 'pdays',\n                                                   'previous', 'emp.var.rate',\n                                                   'cons.price.idx',\n                                                   'cons.conf.idx', 'euribor3m',\n                                                   'nr.employed'])])),\n                ('rf',\n                 RandomForestClassifier(class_weight='balanced',\n                                        min_samples_leaf=5,\n                                        min_samples_split=10, n_estimators=300,\n                                        n_jobs=-1, random_state=42))]) preprocess: ColumnTransformer?Documentation for preprocess: ColumnTransformerColumnTransformer(transformers=[('cat', OneHotEncoder(handle_unknown='ignore'),\n                                 ['job', 'marital', 'education', 'default',\n                                  'housing', 'loan', 'contact', 'month',\n                                  'day_of_week', 'poutcome']),\n                                ('num', 'passthrough',\n                                 ['age', 'campaign', 'pdays', 'previous',\n                                  'emp.var.rate', 'cons.price.idx',\n                                  'cons.conf.idx', 'euribor3m',\n                                  'nr.employed'])]) cat['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'month', 'day_of_week', 'poutcome'] OneHotEncoder?Documentation for OneHotEncoderOneHotEncoder(handle_unknown='ignore') num['age', 'campaign', 'pdays', 'previous', 'emp.var.rate', 'cons.price.idx', 'cons.conf.idx', 'euribor3m', 'nr.employed'] passthroughpassthrough RandomForestClassifier?Documentation for RandomForestClassifierRandomForestClassifier(class_weight='balanced', min_samples_leaf=5,\n                       min_samples_split=10, n_estimators=300, n_jobs=-1,\n                       random_state=42) \n\n\n\ny_pred = model.predict(X_test)\n\nprint(confusion_matrix(y_test, y_pred))\nprint(classification_report(y_test, y_pred, digits=3))\n\n[[7417  799]\n [ 414  638]]\n              precision    recall  f1-score   support\n\n           0      0.947     0.903     0.924      8216\n           1      0.444     0.606     0.513      1052\n\n    accuracy                          0.869      9268\n   macro avg      0.696     0.755     0.719      9268\nweighted avg      0.890     0.869     0.878      9268\n\n\n\n\n# Get feature names after one‑hot encoding\nohe = model.named_steps['preprocess'].named_transformers_['cat']\nohe_features = ohe.get_feature_names_out(categorical_cols)\nall_features = list(ohe_features) + numeric_cols\n\nimportances = model.named_steps['rf'].feature_importances_\n\nfeat_imp = pd.DataFrame({\n    'feature': all_features,\n    'importance': importances\n}).sort_values('importance', ascending=False)\n\nfeat_imp.head(20)\n\n\n    \n\n\n\n\n\n\nfeature\nimportance\n\n\n\n\n60\neuribor3m\n0.145208\n\n\n61\nnr.employed\n0.114732\n\n\n53\nage\n0.088984\n\n\n57\nemp.var.rate\n0.087936\n\n\n54\ncampaign\n0.049006\n\n\n59\ncons.conf.idx\n0.041911\n\n\n58\ncons.price.idx\n0.036195\n\n\n55\npdays\n0.027286\n\n\n52\npoutcome_success\n0.021230\n\n\n34\ncontact_telephone\n0.018355\n\n\n41\nmonth_may\n0.017552\n\n\n33\ncontact_cellular\n0.014141\n\n\n46\nday_of_week_mon\n0.013581\n\n\n29\nhousing_yes\n0.013200\n\n\n56\nprevious\n0.013061\n\n\n27\nhousing_no\n0.013046\n\n\n0\njob_admin.\n0.012512\n\n\n51\npoutcome_nonexistent\n0.012191\n\n\n22\neducation_university.degree\n0.012175\n\n\n13\nmarital_married\n0.012103\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n  \n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Full_Stack/project2.html",
