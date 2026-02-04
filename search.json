@@ -152,303 +152,99 @@
     "text": "Problem Group 3\nFor the questions in this group, you’ll work with the Titanic Dataset found at this url: https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/titanic.csv\n\nQuestion 6\nAfter loading the dataset into a pandas DataFrame, create a new column called NameGroup that contains the first letter of the passenger’s surname in lower case.\nNote that in the dataset, passenger’s names are provided in the Name column and are listed as:\nSurname, Given names\nFor example, if a passenger’s Name is Braund, Mr. Owen Harris, the NameGroup column should contain the value b.\nThen count how many passengers have a NameGroup value of k.\n\ndf_titanic = pd.read_csv(\"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/titanic.csv\")\ndf_titanic[\"NameGroup\"] = df_titanic[\"Name\"].str.split(\",\").str[0].str[0].str.lower()\ndf_titanic\n\n\n    \n\n\n\n\n\n\nPassengerId\nSurvived\nPclass\nName\nSex\nAge\nSibSp\nParch\nTicket\nFare\nCabin\nEmbarked\nNameGroup\n\n\n\n\n0\n1\nNo\n3\nBraund, Mr. Owen Harris\nmale\n22.0\n1\n0\nA/5 21171\n7.2500\nNaN\nS\nb\n\n\n1\n2\nYes\n1\nCumings, Mrs. John Bradley (Florence Briggs Th...\nfemale\n38.0\n1\n0\nPC 17599\n71.2833\nC85\nC\nc\n\n\n2\n3\nYes\n3\nHeikkinen, Miss. Laina\nfemale\n26.0\n0\n0\nSTON/O2. 3101282\n7.9250\nNaN\nS\nh\n\n\n3\n4\nYes\n1\nFutrelle, Mrs. Jacques Heath (Lily May Peel)\nfemale\n35.0\n1\n0\n113803\n53.1000\nC123\nS\nf\n\n\n4\n5\nNo\n3\nAllen, Mr. William Henry\nmale\n35.0\n0\n0\n373450\n8.0500\nNaN\nS\na\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n886\n887\nNo\n2\nMontvila, Rev. Juozas\nmale\n27.0\n0\n0\n211536\n13.0000\nNaN\nS\nm\n\n\n887\n888\nYes\n1\nGraham, Miss. Margaret Edith\nfemale\n19.0\n0\n0\n112053\n30.0000\nB42\nS\ng\n\n\n888\n889\nNo\n3\nJohnston, Miss. Catherine Helen \"Carrie\"\nfemale\nNaN\n1\n2\nW./C. 6607\n23.4500\nNaN\nS\nj\n\n\n889\n890\nYes\n1\nBehr, Mr. Karl Howell\nmale\n26.0\n0\n0\n111369\n30.0000\nC148\nC\nb\n\n\n890\n891\nNo\n3\nDooley, Mr. Patrick\nmale\n32.0\n0\n0\n370376\n7.7500\nNaN\nQ\nd\n\n\n\n\n891 rows × 13 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\n(df_titanic[\"NameGroup\"] == \"k\").sum()\n\nnp.int64(28)"
   },
   {
-    "objectID": "Cleansing_Exploration/project5.html",
-    "href": "Cleansing_Exploration/project5.html",
+    "objectID": "notebooks/starter_housing.html",
+    "href": "notebooks/starter_housing.html",
+    "title": "Jacob Walker - Data Science Portfolio",
+    "section": "",
+    "text": "!pip install scikit-learn==1.5.2\n\n\nimport pandas as pd\n\nhousing = pd.read_csv('https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/housing.csv')\n\nhousing\n\n\n    \n\n\n\n\n\n\nid\ndate\nbedrooms\nbathrooms\nsqft_living\nsqft_lot\nfloors\nwaterfront\nview\ncondition\n...\nsqft_above\nsqft_basement\nyr_built\nyr_renovated\nzipcode\nlat\nlong\nsqft_living15\nsqft_lot15\nprice\n\n\n\n\n0\n1565930130\n20141104T000000\n4\n3.25\n3760\n4675\n2.0\n0\n0\n3\n...\n2740\n1020\n2007\n0\n98038\n47.3862\n-122.048\n3280\n4033\n429900.0\n\n\n1\n3279000420\n20150115T000000\n3\n1.75\n1460\n7800\n1.0\n0\n0\n2\n...\n1040\n420\n1979\n0\n98023\n47.3035\n-122.382\n1310\n7865\n233000.0\n\n\n2\n194000575\n20141014T000000\n4\n1.00\n1340\n5800\n1.5\n0\n2\n3\n...\n1340\n0\n1914\n0\n98116\n47.5658\n-122.389\n1900\n5800\n455000.0\n\n\n3\n2115510160\n20141208T000000\n3\n1.75\n1440\n8050\n1.0\n0\n0\n3\n...\n1440\n0\n1985\n0\n98023\n47.3187\n-122.390\n1790\n7488\n258950.0\n\n\n4\n7522500005\n20140815T000000\n2\n1.50\n1780\n4750\n1.0\n0\n0\n4\n...\n1080\n700\n1947\n0\n98117\n47.6859\n-122.395\n1690\n5962\n555000.0\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n19995\n5272200045\n20141113T000000\n3\n1.50\n1000\n6914\n1.0\n0\n0\n3\n...\n1000\n0\n1947\n0\n98125\n47.7144\n-122.319\n1000\n6947\n378000.0\n\n\n19996\n9578500790\n20141111T000000\n3\n2.50\n3087\n5002\n2.0\n0\n0\n3\n...\n3087\n0\n2014\n0\n98023\n47.2974\n-122.349\n2927\n5183\n399950.0\n\n\n19997\n7202350480\n20140930T000000\n3\n2.50\n2120\n4780\n2.0\n0\n0\n3\n...\n2120\n0\n2004\n0\n98053\n47.6810\n-122.032\n1690\n2650\n575000.0\n\n\n19998\n1723049033\n20140620T000000\n1\n0.75\n380\n15000\n1.0\n0\n0\n3\n...\n380\n0\n1963\n0\n98168\n47.4810\n-122.323\n1170\n15000\n245000.0\n\n\n19999\n6147650280\n20150325T000000\n4\n2.50\n3130\n5999\n2.0\n0\n0\n3\n...\n3130\n0\n2006\n0\n98042\n47.3837\n-122.099\n3020\n5997\n315000.0\n\n\n\n\n20000 rows × 21 columns\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n  \n    \n    \n\n  \n    \n  \n    \n    \n  \n\n    \n  \n\n\n\nhousing['yr_built'].min()\n\n1900\n\n\n\nhousing.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 20000 entries, 0 to 19999\nData columns (total 21 columns):\n #   Column         Non-Null Count  Dtype  \n---  ------         --------------  -----  \n 0   id             20000 non-null  int64  \n 1   date           20000 non-null  object \n 2   bedrooms       20000 non-null  int64  \n 3   bathrooms      20000 non-null  float64\n 4   sqft_living    20000 non-null  int64  \n 5   sqft_lot       20000 non-null  int64  \n 6   floors         20000 non-null  float64\n 7   waterfront     20000 non-null  int64  \n 8   view           20000 non-null  int64  \n 9   condition      20000 non-null  int64  \n 10  grade          20000 non-null  int64  \n 11  sqft_above     20000 non-null  int64  \n 12  sqft_basement  20000 non-null  int64  \n 13  yr_built       20000 non-null  int64  \n 14  yr_renovated   20000 non-null  int64  \n 15  zipcode        20000 non-null  int64  \n 16  lat            20000 non-null  float64\n 17  long           20000 non-null  float64\n 18  sqft_living15  20000 non-null  int64  \n 19  sqft_lot15     20000 non-null  int64  \n 20  price          20000 non-null  float64\ndtypes: float64(5), int64(15), object(1)\nmemory usage: 3.2+ MB\n\n\n\nhousing.describe()\n\n\n    \n\n\n\n\n\n\nid\nbedrooms\nbathrooms\nsqft_living\nsqft_lot\nfloors\nwaterfront\nview\ncondition\ngrade\nsqft_above\nsqft_basement\nyr_built\nyr_renovated\nzipcode\nlat\nlong\nsqft_living15\nsqft_lot15\nprice\n\n\n\n\ncount\n2.000000e+04\n20000.000000\n20000.000000\n20000.000000\n2.000000e+04\n20000.00000\n20000.000000\n20000.000000\n20000.000000\n20000.000000\n20000.000000\n20000.000000\n20000.000000\n20000.000000\n20000.000000\n20000.000000\n20000.000000\n20000.000000\n20000.00000\n2.000000e+04\n\n\nmean\n4.580297e+09\n3.370200\n2.115750\n2079.883100\n1.501533e+04\n1.49645\n0.007550\n0.234900\n3.409700\n7.657700\n1790.232900\n289.650200\n1971.100150\n82.732150\n98077.876850\n47.559970\n-122.213897\n1986.387500\n12748.96040\n5.394367e+05\n\n\nstd\n2.875295e+09\n0.931931\n0.770134\n919.433672\n3.970135e+04\n0.54095\n0.086564\n0.767692\n0.651895\n1.175287\n829.587101\n441.537072\n29.374008\n397.872344\n53.438026\n0.138517\n0.140649\n685.211515\n27076.48904\n3.664334e+05\n\n\nmin\n1.000102e+06\n0.000000\n0.000000\n290.000000\n5.200000e+02\n1.00000\n0.000000\n0.000000\n1.000000\n1.000000\n290.000000\n0.000000\n1900.000000\n0.000000\n98001.000000\n47.155900\n-122.519000\n399.000000\n651.00000\n7.500000e+04\n\n\n25%\n2.123049e+09\n3.000000\n1.750000\n1430.000000\n5.040000e+03\n1.00000\n0.000000\n0.000000\n3.000000\n7.000000\n1200.000000\n0.000000\n1951.750000\n0.000000\n98033.000000\n47.470675\n-122.328000\n1490.000000\n5100.00000\n3.220000e+05\n\n\n50%\n3.904955e+09\n3.000000\n2.250000\n1910.000000\n7.620000e+03\n1.50000\n0.000000\n0.000000\n3.000000\n7.000000\n1560.000000\n0.000000\n1975.000000\n0.000000\n98065.000000\n47.571450\n-122.230000\n1840.000000\n7622.00000\n4.500000e+05\n\n\n75%\n7.309825e+09\n4.000000\n2.500000\n2550.000000\n1.071000e+04\n2.00000\n0.000000\n0.000000\n4.000000\n8.000000\n2210.000000\n560.000000\n1997.000000\n0.000000\n98117.000000\n47.678000\n-122.124000\n2360.000000\n10088.25000\n6.416250e+05\n\n\nmax\n9.900000e+09\n33.000000\n8.000000\n13540.000000\n1.164794e+06\n3.50000\n1.000000\n4.000000\n5.000000\n13.000000\n9410.000000\n4820.000000\n2015.000000\n2015.000000\n98199.000000\n47.777600\n-121.315000\n6210.000000\n871200.00000\n7.700000e+06\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n  \n\n\n\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\nplt.figure(figsize=(10, 6))\nsns.histplot(housing['price'], bins=50, kde=True)\nplt.title('Distribution of Housing Prices')\nplt.xlabel('Price')\nplt.ylabel('Frequency')\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project1.html",
+    "href": "Cleansing_Exploration/project1.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Cleansing_Exploration/project4.html",
-    "href": "Cleansing_Exploration/project4.html",
+    "objectID": "Cleansing_Exploration/project2.html",
+    "href": "Cleansing_Exploration/project2.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Cleansing_Exploration/project3.html",
-    "href": "Cleansing_Exploration/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "cleansing.html",
-    "href": "cleansing.html",
+    "objectID": "full_stack.html",
+    "href": "full_stack.html",
     "title": "about me",
     "section": "",
     "text": "MarkDown Basics",
     "crumbs": [
-      "Data Cleansing"
+      "Full Stack"
     ]
   },
   {
-    "objectID": "cleansing.html#title-2-header",
-    "href": "cleansing.html#title-2-header",
+    "objectID": "full_stack.html#title-2-header",
+    "href": "full_stack.html#title-2-header",
     "title": "about me",
     "section": "",
     "text": "MarkDown Basics",
     "crumbs": [
-      "Data Cleansing"
+      "Full Stack"
     ]
   },
   {
-    "objectID": "Cleansing_Projects/project1.html",
-    "href": "Cleansing_Projects/project1.html",
+    "objectID": "Cleansing_Projects/project5.html",
+    "href": "Cleansing_Projects/project5.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top",
     "crumbs": [
       "Data Cleansing",
-      "Project 1"
+      "Project 5"
     ]
   },
   {
-    "objectID": "Cleansing_Projects/project2.html",
-    "href": "Cleansing_Projects/project2.html",
+    "objectID": "Cleansing_Projects/project4.html",
+    "href": "Cleansing_Projects/project4.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top",
     "crumbs": [
       "Data Cleansing",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "Story_Telling/project5.html",
-    "href": "Story_Telling/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
-      "Project 5"
-    ]
-  },
-  {
-    "objectID": "Story_Telling/project4.html",
-    "href": "Story_Telling/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
       "Project 4"
     ]
   },
   {
-    "objectID": "Story_Telling/project3.html",
-    "href": "Story_Telling/project3.html",
+    "objectID": "Cleansing_Projects/project3.html",
+    "href": "Cleansing_Projects/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "Story_Telling/project1.html",
+    "href": "Story_Telling/project1.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top",
     "crumbs": [
       "Story Telling",
-      "Project 3"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "index.html#title-2-header",
-    "href": "index.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "Machine_Learning/project1.html",
-    "href": "Machine_Learning/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
       "Project 1"
     ]
   },
   {
-    "objectID": "Machine_Learning/project2.html",
-    "href": "Machine_Learning/project2.html",
+    "objectID": "Story_Telling/project2.html",
+    "href": "Story_Telling/project2.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top",
     "crumbs": [
-      "Machine Learning",
+      "Story Telling",
       "Project 2"
-    ]
-  },
-  {
-    "objectID": "ml.html",
-    "href": "ml.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Machine Learning"
-    ]
-  },
-  {
-    "objectID": "ml.html#title-2-header",
-    "href": "ml.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Machine Learning"
-    ]
-  },
-  {
-    "objectID": "story_telling.html",
-    "href": "story_telling.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Story Telling"
-    ]
-  },
-  {
-    "objectID": "story_telling.html#title-2-header",
-    "href": "story_telling.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Story Telling"
-    ]
-  },
-  {
-    "objectID": "Competition/project5.html",
-    "href": "Competition/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 5"
-    ]
-  },
-  {
-    "objectID": "Competition/project4.html",
-    "href": "Competition/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 4"
-    ]
-  },
-  {
-    "objectID": "Competition/project3.html",
-    "href": "Competition/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 3"
-    ]
-  },
-  {
-    "objectID": "Competition/project2.html",
-    "href": "Competition/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "Competition/project1.html",
-    "href": "Competition/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Competition",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "competition.html",
-    "href": "competition.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Competition"
-    ]
-  },
-  {
-    "objectID": "competition.html#title-2-header",
-    "href": "competition.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Competition"
-    ]
-  },
-  {
-    "objectID": "exploration.html",
-    "href": "exploration.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Data Exploration"
-    ]
-  },
-  {
-    "objectID": "exploration.html#title-2-header",
-    "href": "exploration.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
-    "crumbs": [
-      "Data Exploration"
-    ]
-  },
-  {
-    "objectID": "Machine_Learning/project3.html",
-    "href": "Machine_Learning/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 3"
-    ]
-  },
-  {
-    "objectID": "Machine_Learning/project4.html",
-    "href": "Machine_Learning/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 4"
-    ]
-  },
-  {
-    "objectID": "Machine_Learning/project5.html",
-    "href": "Machine_Learning/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Machine Learning",
-      "Project 5"
     ]
   },
   {
@@ -487,90 +283,301 @@
     "text": "Certified in the Spanish language through TrueNorth: Score 7.2\n\nProficient with Microsoft Office Suite\n\nProficient operating knowledge of the HORIZON banking system\nProficient in SQL\nProficient in R\nProficient in Python"
   },
   {
-    "objectID": "Story_Telling/project2.html",
-    "href": "Story_Telling/project2.html",
+    "objectID": "Machine_Learning/project5.html",
+    "href": "Machine_Learning/project5.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top",
     "crumbs": [
-      "Story Telling",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "Story_Telling/project1.html",
-    "href": "Story_Telling/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Story Telling",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Projects/project3.html",
-    "href": "Cleansing_Projects/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Data Cleansing",
-      "Project 3"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Projects/project4.html",
-    "href": "Cleansing_Projects/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Data Cleansing",
-      "Project 4"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Projects/project5.html",
-    "href": "Cleansing_Projects/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Data Cleansing",
+      "Machine Learning",
       "Project 5"
     ]
   },
   {
-    "objectID": "full_stack.html",
-    "href": "full_stack.html",
+    "objectID": "Machine_Learning/project4.html",
+    "href": "Machine_Learning/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Machine Learning",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "Machine_Learning/project3.html",
+    "href": "Machine_Learning/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Machine Learning",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "exploration.html",
+    "href": "exploration.html",
     "title": "about me",
     "section": "",
     "text": "MarkDown Basics",
     "crumbs": [
-      "Full Stack"
+      "Data Exploration"
     ]
   },
   {
-    "objectID": "full_stack.html#title-2-header",
-    "href": "full_stack.html#title-2-header",
+    "objectID": "exploration.html#title-2-header",
+    "href": "exploration.html#title-2-header",
     "title": "about me",
     "section": "",
     "text": "MarkDown Basics",
     "crumbs": [
-      "Full Stack"
+      "Data Exploration"
     ]
   },
   {
-    "objectID": "Cleansing_Exploration/project2.html",
-    "href": "Cleansing_Exploration/project2.html",
+    "objectID": "competition.html",
+    "href": "competition.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Competition"
+    ]
+  },
+  {
+    "objectID": "competition.html#title-2-header",
+    "href": "competition.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Competition"
+    ]
+  },
+  {
+    "objectID": "Competition/project1.html",
+    "href": "Competition/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Competition",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Competition/project2.html",
+    "href": "Competition/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Competition",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Competition/project3.html",
+    "href": "Competition/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Competition",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "Competition/project4.html",
+    "href": "Competition/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Competition",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "Competition/project5.html",
+    "href": "Competition/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Competition",
+      "Project 5"
+    ]
+  },
+  {
+    "objectID": "story_telling.html",
+    "href": "story_telling.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Story Telling"
+    ]
+  },
+  {
+    "objectID": "story_telling.html#title-2-header",
+    "href": "story_telling.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Story Telling"
+    ]
+  },
+  {
+    "objectID": "ml.html",
+    "href": "ml.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "objectID": "ml.html#title-2-header",
+    "href": "ml.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "objectID": "Machine_Learning/project2.html",
+    "href": "Machine_Learning/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Machine Learning",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Machine_Learning/project1.html",
+    "href": "Machine_Learning/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Machine Learning",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "index.html#title-2-header",
+    "href": "index.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "Story_Telling/project3.html",
+    "href": "Story_Telling/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Story Telling",
+      "Project 3"
+    ]
+  },
+  {
+    "objectID": "Story_Telling/project4.html",
+    "href": "Story_Telling/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Story Telling",
+      "Project 4"
+    ]
+  },
+  {
+    "objectID": "Story_Telling/project5.html",
+    "href": "Story_Telling/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Story Telling",
+      "Project 5"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html",
+    "href": "Cleansing_Projects/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html",
+    "href": "Cleansing_Projects/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "cleansing.html",
+    "href": "cleansing.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Data Cleansing"
+    ]
+  },
+  {
+    "objectID": "cleansing.html#title-2-header",
+    "href": "cleansing.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Data Cleansing"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Exploration/project3.html",
+    "href": "Cleansing_Exploration/project3.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Cleansing_Exploration/project1.html",
-    "href": "Cleansing_Exploration/project1.html",
+    "objectID": "Cleansing_Exploration/project4.html",
+    "href": "Cleansing_Exploration/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project5.html",
+    "href": "Cleansing_Exploration/project5.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
@@ -629,7 +636,7 @@
     "href": "notebooks/hint_xgboost.html",
     "title": "Jacob Walker - Data Science Portfolio",
     "section": "",
-    "text": "!pip install scikit-learn==1.5.2\n\n\nCollecting scikit-learn==1.5.2\n\n  Downloading scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)\n\nRequirement already satisfied: numpy&gt;=1.19.5 in /usr/local/lib/python3.12/dist-packages (from scikit-learn==1.5.2) (2.0.2)\n\nRequirement already satisfied: scipy&gt;=1.6.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn==1.5.2) (1.16.3)\n\nRequirement already satisfied: joblib&gt;=1.2.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn==1.5.2) (1.5.3)\n\nRequirement already satisfied: threadpoolctl&gt;=3.1.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn==1.5.2) (3.6.0)\n\nDownloading scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.9/12.9 MB 49.9 MB/s eta 0:00:00\n\nInstalling collected packages: scikit-learn\n\n  Attempting uninstall: scikit-learn\n\n    Found existing installation: scikit-learn 1.6.1\n\n    Uninstalling scikit-learn-1.6.1:\n\n      Successfully uninstalled scikit-learn-1.6.1\n\nERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n\numap-learn 0.5.11 requires scikit-learn&gt;=1.6, but you have scikit-learn 1.5.2 which is incompatible.\n\nhdbscan 0.8.41 requires scikit-learn&gt;=1.6, but you have scikit-learn 1.5.2 which is incompatible.\n\nSuccessfully installed scikit-learn-1.5.2\n\n\n\n\n\n# Load some test data\nimport pandas as pd\nmpg = pd.read_csv('https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/mpg.csv')\nmpg.head()\n\n\n    \n\n\n\n\n\n\nmpg\ncylinders\ndisplacement\nhorsepower\nweight\nacceleration\nyear\norigin\nname\n\n\n\n\n0\n18.0\n8\n307.0\n130\n3504\n12.0\n70\n1\nchevrolet chevelle malibu\n\n\n1\n15.0\n8\n350.0\n165\n3693\n11.5\n70\n1\nbuick skylark 320\n\n\n2\n18.0\n8\n318.0\n150\n3436\n11.0\n70\n1\nplymouth satellite\n\n\n3\n16.0\n8\n304.0\n150\n3433\n12.0\n70\n1\namc rebel sst\n\n\n4\n17.0\n8\n302.0\n140\n3449\n10.5\n70\n1\nford torino\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n  \n\n\n\n# Import the libraries we need\nfrom xgboost import XGBRegressor\nfrom sklearn.model_selection import train_test_split\n\n\n# Horsepower has some missing values, represented as '?'\nmpg[mpg['horsepower'] == '?']\n\n\n    \n\n\n\n\n\n\nmpg\ncylinders\ndisplacement\nhorsepower\nweight\nacceleration\nyear\norigin\nname\n\n\n\n\n32\n25.0\n4\n98.0\n?\n2046\n19.0\n71\n1\nford pinto\n\n\n126\n21.0\n6\n200.0\n?\n2875\n17.0\n74\n1\nford maverick\n\n\n330\n40.9\n4\n85.0\n?\n1835\n17.3\n80\n2\nrenault lecar deluxe\n\n\n336\n23.6\n4\n140.0\n?\n2905\n14.3\n80\n1\nford mustang cobra\n\n\n354\n34.5\n4\n100.0\n?\n2320\n15.8\n81\n2\nrenault 18i\n\n\n374\n23.0\n4\n151.0\n?\n3035\n20.5\n82\n1\namc concord dl\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n  \n\n\n\n# Get our target variable and features and split them into test and train datasets\n\nX = mpg[['cylinders', 'displacement', 'acceleration', 'weight']]\ny = mpg['mpg']\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\n\n# Create the model and train it, use default hyperparameters for now\nmodel = XGBRegressor()\nmodel.fit(X_train, y_train)\n\nXGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             feature_weights=None, gamma=None, grow_policy=None,\n             importance_type=None, interaction_constraints=None,\n             learning_rate=None, max_bin=None, max_cat_threshold=None,\n             max_cat_to_onehot=None, max_delta_step=None, max_depth=None,\n             max_leaves=None, min_child_weight=None, missing=nan,\n             monotone_constraints=None, multi_strategy=None, n_estimators=None,\n             n_jobs=None, num_parallel_tree=None, ...)In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.  XGBRegressor?Documentation for XGBRegressoriFittedXGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             feature_weights=None, gamma=None, grow_policy=None,\n             importance_type=None, interaction_constraints=None,\n             learning_rate=None, max_bin=None, max_cat_threshold=None,\n             max_cat_to_onehot=None, max_delta_step=None, max_depth=None,\n             max_leaves=None, min_child_weight=None, missing=nan,\n             monotone_constraints=None, multi_strategy=None, n_estimators=None,\n             n_jobs=None, num_parallel_tree=None, ...) \n\n\n\n# Get predictions for our test data\npredictions = model.predict(X_test)\npredictions\n\narray([38.657696, 28.087242, 23.523146, 17.897999, 15.234213, 27.013454,\n       22.056187, 11.940811, 16.265862, 19.103987, 13.940032, 31.308727,\n       35.01516 , 16.411985, 26.870445, 13.404857, 27.392363, 19.531116,\n       13.77361 , 37.423004, 35.091824, 18.268314, 18.177662, 30.06011 ,\n       15.404021, 25.241917, 29.574886, 26.355955, 20.4689  , 10.909517,\n       22.864702, 31.812233, 18.264406, 23.914774, 35.1818  , 14.921148,\n       25.206757, 20.949095, 13.071755, 28.7247  , 23.589334, 25.701653,\n       22.081858, 13.138733, 31.13615 , 27.268324, 24.874348, 25.438108,\n       26.179909, 27.972618, 18.926208, 29.807665, 31.330664, 13.662537,\n       25.912758, 13.90974 , 15.214119, 23.43225 , 25.944368, 21.094381,\n       14.643568, 37.514183, 26.335974, 29.254011, 19.77668 , 23.710693,\n       26.440866, 32.163937, 25.943663, 14.524177, 32.345703, 12.65041 ,\n       14.335071, 27.323072, 20.730164, 21.49504 , 17.644854, 28.044266,\n       29.646917, 15.890411], dtype=float32)\n\n\n\n# Compute the Root Mean Squared Error of the predictions\nfrom sklearn.metrics import root_mean_squared_error\n\nresult = root_mean_squared_error(y_test, predictions)\nresult\n\n# Looks like we're off by just 4.5 mpg on average\n# Not bad for a quick run with no real preprocessing\n\nnp.float64(4.357173029067956)\n\n\n\n\n\n Back to top"
+    "text": "!pip install scikit-learn==1.5.2\n\n\nCollecting scikit-learn==1.5.2\n\n  Downloading scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)\n\nRequirement already satisfied: numpy&gt;=1.19.5 in /usr/local/lib/python3.12/dist-packages (from scikit-learn==1.5.2) (2.0.2)\n\nRequirement already satisfied: scipy&gt;=1.6.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn==1.5.2) (1.16.3)\n\nRequirement already satisfied: joblib&gt;=1.2.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn==1.5.2) (1.5.3)\n\nRequirement already satisfied: threadpoolctl&gt;=3.1.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn==1.5.2) (3.6.0)\n\nDownloading scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.9/12.9 MB 49.9 MB/s eta 0:00:00\n\nInstalling collected packages: scikit-learn\n\n  Attempting uninstall: scikit-learn\n\n    Found existing installation: scikit-learn 1.6.1\n\n    Uninstalling scikit-learn-1.6.1:\n\n      Successfully uninstalled scikit-learn-1.6.1\n\nERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n\numap-learn 0.5.11 requires scikit-learn&gt;=1.6, but you have scikit-learn 1.5.2 which is incompatible.\n\nhdbscan 0.8.41 requires scikit-learn&gt;=1.6, but you have scikit-learn 1.5.2 which is incompatible.\n\nSuccessfully installed scikit-learn-1.5.2\n\n\n\n\n\n# Load some test data\nimport pandas as pd\nmpg = pd.read_csv('https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/mpg.csv')\nmpg.head()\n\n\n    \n\n\n\n\n\n\nmpg\ncylinders\ndisplacement\nhorsepower\nweight\nacceleration\nyear\norigin\nname\n\n\n\n\n0\n18.0\n8\n307.0\n130\n3504\n12.0\n70\n1\nchevrolet chevelle malibu\n\n\n1\n15.0\n8\n350.0\n165\n3693\n11.5\n70\n1\nbuick skylark 320\n\n\n2\n18.0\n8\n318.0\n150\n3436\n11.0\n70\n1\nplymouth satellite\n\n\n3\n16.0\n8\n304.0\n150\n3433\n12.0\n70\n1\namc rebel sst\n\n\n4\n17.0\n8\n302.0\n140\n3449\n10.5\n70\n1\nford torino\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n  \n\n\n\n# Import the libraries we need\nfrom xgboost import XGBRegressor\nfrom sklearn.model_selection import train_test_split\n\n\n# Horsepower has some missing values, represented as '?'\nmpg[mpg['horsepower'] == '?']\n\n\n    \n\n\n\n\n\n\nmpg\ncylinders\ndisplacement\nhorsepower\nweight\nacceleration\nyear\norigin\nname\n\n\n\n\n32\n25.0\n4\n98.0\n?\n2046\n19.0\n71\n1\nford pinto\n\n\n126\n21.0\n6\n200.0\n?\n2875\n17.0\n74\n1\nford maverick\n\n\n330\n40.9\n4\n85.0\n?\n1835\n17.3\n80\n2\nrenault lecar deluxe\n\n\n336\n23.6\n4\n140.0\n?\n2905\n14.3\n80\n1\nford mustang cobra\n\n\n354\n34.5\n4\n100.0\n?\n2320\n15.8\n81\n2\nrenault 18i\n\n\n374\n23.0\n4\n151.0\n?\n3035\n20.5\n82\n1\namc concord dl\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n    \n  \n\n\n\n# Get our target variable and features and split them into test and train datasets\n\nX = mpg[['cylinders', 'displacement', 'acceleration', 'weight']]\ny = mpg['mpg']\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\n\n# Create the model and train it, use default hyperparameters for now\nmodel = XGBRegressor(\n    n_estimators=149,\n    learning_rate=0.05,\n    n_jobs=4\n)\nmodel.fit(X_train, y_train)\n\nXGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             feature_weights=None, gamma=None, grow_policy=None,\n             importance_type=None, interaction_constraints=None,\n             learning_rate=0.05, max_bin=None, max_cat_threshold=None,\n             max_cat_to_onehot=None, max_delta_step=None, max_depth=None,\n             max_leaves=None, min_child_weight=None, missing=nan,\n             monotone_constraints=None, multi_strategy=None, n_estimators=149,\n             n_jobs=4, num_parallel_tree=None, ...)In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.  XGBRegressor?Documentation for XGBRegressoriFittedXGBRegressor(base_score=None, booster=None, callbacks=None,\n             colsample_bylevel=None, colsample_bynode=None,\n             colsample_bytree=None, device=None, early_stopping_rounds=None,\n             enable_categorical=False, eval_metric=None, feature_types=None,\n             feature_weights=None, gamma=None, grow_policy=None,\n             importance_type=None, interaction_constraints=None,\n             learning_rate=0.05, max_bin=None, max_cat_threshold=None,\n             max_cat_to_onehot=None, max_delta_step=None, max_depth=None,\n             max_leaves=None, min_child_weight=None, missing=nan,\n             monotone_constraints=None, multi_strategy=None, n_estimators=149,\n             n_jobs=4, num_parallel_tree=None, ...) \n\n\n\n# Get predictions for our test data\npredictions = model.predict(X_test)\npredictions\n\narray([38.093006 , 27.461372 , 22.79962  , 16.645338 , 15.378193 ,\n       29.41955  , 23.398054 , 12.267829 , 16.908375 , 19.940163 ,\n       14.9492445, 31.863993 , 35.887993 , 16.5434   , 27.60999  ,\n       13.194569 , 24.996582 , 19.156929 , 14.103415 , 37.346256 ,\n       32.364914 , 19.11032  , 19.063623 , 30.751842 , 15.607439 ,\n       28.053463 , 28.560078 , 26.008118 , 18.795809 , 11.531976 ,\n       23.269327 , 30.558887 , 16.128803 , 25.198778 , 35.487507 ,\n       14.383799 , 22.517305 , 20.64062  , 13.096999 , 29.229704 ,\n       22.646235 , 26.493925 , 22.085453 , 13.090571 , 28.941313 ,\n       26.843548 , 25.783709 , 26.329193 , 28.039436 , 28.239431 ,\n       20.80405  , 29.425743 , 30.69106  , 13.278478 , 25.092815 ,\n       13.74018  , 15.858232 , 24.208864 , 26.002754 , 20.382626 ,\n       14.559072 , 38.102917 , 26.578058 , 27.201317 , 19.473768 ,\n       24.155085 , 25.13554  , 30.973312 , 27.066053 , 15.259853 ,\n       32.575447 , 13.869861 , 13.796803 , 26.134579 , 20.052567 ,\n       21.71818  , 17.549486 , 28.110527 , 29.306341 , 16.3149   ],\n      dtype=float32)\n\n\n\n# Compute the Root Mean Squared Error of the predictions\nfrom sklearn.metrics import root_mean_squared_error\nfrom sklearn.metrics import r2_score\n\nresult = root_mean_squared_error(y_test, predictions)\nresult\n\n# Looks like we're off by just 4.5 mpg on average\n# Not bad for a quick run with no real preprocessing\n\nnp.float64(4.019845477561109)\n\n\n\nr2 = r2_score(y_test, predictions)\nr2\n\n0.6994564539435715\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "notebooks/Exploration_01.html",
