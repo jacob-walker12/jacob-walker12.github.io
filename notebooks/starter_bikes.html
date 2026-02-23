@@ -400,7 +400,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="cell-0" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="287d4bf0-4b0a-433c-a980-1b366de1de18" data-execution_count="5">
+<p><a href="https://colab.research.google.com/github/jacob-walker12/jacob-walker12.github.io/blob/main/notebooks/starter_bikes.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<div id="cell-1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="287d4bf0-4b0a-433c-a980-1b366de1de18" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow <span class="im">import</span> keras</span>
@@ -737,7 +738,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="2995707b-1696-4477-bd31-ec6d7722fc40" data-execution_count="6">
+<div id="cell-2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="2995707b-1696-4477-bd31-ec6d7722fc40" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bike[<span class="st">'dteday'</span>])</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'date'</span>] <span class="op">=</span> bike[<span class="st">'dteday'</span>].dt.date</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -787,7 +788,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 4  12.700000           1       1        0           1   Wednesday  </code></pre>
 </div>
 </div>
-<div id="cell-2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}}" data-outputid="62e61f75-e3de-4e47-940b-d767cdfb646d" data-execution_count="7">
+<div id="cell-3" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}}" data-outputid="62e61f75-e3de-4e47-940b-d767cdfb646d" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>bike.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <div id="df-0682b82a-f6f6-4bbe-a007-b3356ef3f2b2" class="colab-df-container">
@@ -980,7 +981,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-5" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:607}}" data-outputid="edbb22c3-fb1a-4179-aa3d-df96dd34e63f" data-execution_count="9">
+<div id="cell-6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:607}}" data-outputid="edbb22c3-fb1a-4179-aa3d-df96dd34e63f" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1034,7 +1035,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="subtask">Subtask:</h3>
 <p>Add a ‘total_riders’ column to the <code>daily_bike_data</code> DataFrame by summing the ‘casual’ and ‘registered’ columns. This will be used for the bar chart.</p>
 <p><strong>Reasoning</strong>: To complete the subtask, I will add a new column ‘total_riders’ to the <code>daily_bike_data</code> DataFrame by summing the ‘casual’ and ‘registered’ columns. Then, I will display the head of the DataFrame to verify the new column.</p>
-<div id="cell-11" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="0d6a0574-20b3-43d7-c4af-a1030f81f7ed" data-execution_count="10">
+<div id="cell-12" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="0d6a0574-20b3-43d7-c4af-a1030f81f7ed" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>daily_bike_data[<span class="st">'total_riders'</span>] <span class="op">=</span> daily_bike_data[<span class="st">'casual'</span>] <span class="op">+</span> daily_bike_data[<span class="st">'registered'</span>]</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(daily_bike_data.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1069,7 +1070,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="subtask-1">Subtask:</h3>
 <p>Generate a plot where bars represent the ‘total_riders’ from <code>daily_bike_data</code> for each day, and overlaid lines show the ‘casual’ users (green) and ‘registered’ users (blue) over the same period. Ensure proper labeling for axes and a title for the chart.</p>
 <p><strong>Reasoning</strong>: I need to generate a combined bar and line chart as described in the subtask. This involves creating a bar plot for total riders and overlaying line plots for casual and registered riders on a secondary y-axis. I will use <code>matplotlib.pyplot</code> and <code>seaborn</code> to achieve this, ensuring all labels, titles, and legends are correctly placed.</p>
-<div id="cell-14" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-outputid="a2b9c412-b26b-41c6-9bcd-149527d33287" data-execution_count="11">
+<div id="cell-15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-outputid="a2b9c412-b26b-41c6-9bcd-149527d33287" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1211,7 +1212,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>Reasoning</strong>: The previous code failed because <code>sns.barplot</code> likely coerced the ‘date’ column into a categorical type for the x-axis, which then caused a <code>TypeError</code> when <code>ax2.plot</code> tried to interpret the same ‘date’ column as a datetime object for plotting lines. To fix this, I will use <code>ax1.bar</code> instead of <code>sns.barplot</code> to plot the total riders, using the numerical representation of dates for the x-axis. This ensures that the x-axis is treated as a continuous datetime scale, allowing the line plots on <code>ax2</code> to render correctly without conflicts.</p>
-<div id="cell-16" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:806}}" data-outputid="6debba7b-20f6-4945-fb6c-a1d740b70d74" data-execution_count="13">
+<div id="cell-17" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:806}}" data-outputid="6debba7b-20f6-4945-fb6c-a1d740b70d74" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.dates <span class="im">as</span> mdates</span>
@@ -1321,7 +1322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="subtask-3">Subtask:</h3>
 <p>Convert the ‘dteday’ column in the <code>bike</code> DataFrame to datetime objects, then extract the ‘day_of_week’ to enable hourly and daily analysis.</p>
 <p><strong>Reasoning</strong>: First, I’ll convert the ‘dteday’ column to datetime objects to ensure consistency and then extract the ‘day_of_week’ to a new column as instructed. Finally, I will display the head of the DataFrame to verify the changes.</p>
-<div id="cell-22" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bdea8848-0294-4544-c8b2-d43ba0f50efe" data-execution_count="14">
+<div id="cell-23" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bdea8848-0294-4544-c8b2-d43ba0f50efe" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bike[<span class="st">'dteday'</span>])</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'day_of_week'</span>] <span class="op">=</span> bike[<span class="st">'dteday'</span>].dt.day_name()</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1350,7 +1351,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="subtask-4">Subtask:</h3>
 <p>Group the <code>bike</code> DataFrame by ‘day_of_week’ and ‘hr’, and then sum the ‘casual’ and ‘registered’ columns to get the total usage for each hour of each day of the week.</p>
 <p><strong>Reasoning</strong>: To complete the subtask, I will group the <code>bike</code> DataFrame by ‘day_of_week’ and ‘hr’, calculate the sum of ‘casual’ and ‘registered’ riders, reset the index, and store the result in <code>hourly_bike_usage</code>.</p>
-<div id="cell-25" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="ced9fbe7-7fce-4bf0-8ad9-0ca29ac61b59" data-execution_count="15">
+<div id="cell-26" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="ced9fbe7-7fce-4bf0-8ad9-0ca29ac61b59" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>hourly_bike_usage <span class="op">=</span> bike.groupby([<span class="st">'day_of_week'</span>, <span class="st">'hr'</span>]).agg(</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    casual<span class="op">=</span>(<span class="st">'casual'</span>, <span class="st">'sum'</span>),</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    registered<span class="op">=</span>(<span class="st">'registered'</span>, <span class="st">'sum'</span>)</span>
@@ -1374,7 +1375,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="subtask-5">Subtask:</h3>
 <p>Create line charts showing casual and registered bike usage across hours, faceted by each day of the week, with different colored lines for casual and registered users. Ensure proper labeling for axes and a title for the chart.</p>
 <p><strong>Reasoning</strong>: To create line charts showing casual and registered bike usage faceted by day of the week, I need to first prepare the data by melting the <code>hourly_bike_usage</code> DataFrame into a long format suitable for <code>seaborn.relplot</code>. Then, I will generate the plot with the specified parameters.</p>
-<div id="cell-28" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:692}}" data-outputid="08cc9b32-1de8-4d0f-c9e8-70644e31decd" data-execution_count="16">
+<div id="cell-29" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:692}}" data-outputid="08cc9b32-1de8-4d0f-c9e8-70644e31decd" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
