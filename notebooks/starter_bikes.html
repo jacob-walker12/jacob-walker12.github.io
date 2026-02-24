@@ -401,7 +401,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><a href="https://colab.research.google.com/github/jacob-walker12/jacob-walker12.github.io/blob/main/notebooks/starter_bikes.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
-<div id="cell-1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="6b578402-fa99-4745-fb4e-4ec0a8263611" data-execution_count="35">
+<div id="cell-1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:443}}" data-outputid="a5967a77-2669-4091-b3f0-c3fa57e65436" data-execution_count="47">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow <span class="im">import</span> keras</span>
@@ -410,8 +410,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>bike <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/bikes.csv'</span>)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>bike</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="35">
-<div id="df-b111ed49-6eba-4781-ac5c-41247ad1b1f8" class="colab-df-container">
+<div class="cell-output cell-output-display" data-execution_count="47">
+<div id="df-74c14b5c-1831-45b5-b198-1972d9560a4e" class="colab-df-container">
     <div>
 
 
@@ -607,7 +607,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-b111ed49-6eba-4781-ac5c-41247ad1b1f8')" title="Convert this dataframe to an interactive table." style="display:none;">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-74c14b5c-1831-45b5-b198-1972d9560a4e')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
     <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
@@ -657,12 +657,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
     <script>
       const buttonEl =
-        document.querySelector('#df-b111ed49-6eba-4781-ac5c-41247ad1b1f8 button.colab-df-convert');
+        document.querySelector('#df-74c14b5c-1831-45b5-b198-1972d9560a4e button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-b111ed49-6eba-4781-ac5c-41247ad1b1f8');
+        const element = document.querySelector('#df-74c14b5c-1831-45b5-b198-1972d9560a4e');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -682,7 +682,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 
 
-  <div id="id_524311ae-c2a0-42ca-9f66-44491d6017a6">
+  <div id="id_e9e41955-b527-41b5-8173-f43855e12195">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -723,7 +723,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_524311ae-c2a0-42ca-9f66-44491d6017a6 button.colab-df-generate');
+        document.querySelector('#id_e9e41955-b527-41b5-8173-f43855e12195 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -738,7 +738,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="92e5d711-d692-4161-b25a-d080f01f7d4b" data-execution_count="36">
+<div id="cell-2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="859d14d8-25e9-4efa-b714-2eb10dc6e5fb" data-execution_count="48">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pandas.tseries.holiday <span class="im">import</span> USFederalHolidayCalendar</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -891,7 +891,7 @@ dtype: int64
 [112475 rows x 16 columns]</code></pre>
 </div>
 </div>
-<div id="cell-3" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bcc88ad4-84f6-4013-87cb-605156ae4514" data-execution_count="37">
+<div id="cell-3" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="fc977fdb-bbaa-49e0-ac53-9a1710d6c094" data-execution_count="49">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bike[<span class="st">'dteday'</span>])</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'date'</span>] <span class="op">=</span> bike[<span class="st">'dteday'</span>].dt.date</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -941,10 +941,10 @@ dtype: int64
 4  12.700000           1       1        0           1   Wednesday  </code></pre>
 </div>
 </div>
-<div id="cell-4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}}" data-outputid="96b22188-d127-46a1-b03b-5575d8200e56" data-execution_count="38">
+<div id="cell-4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:399}}" data-outputid="c2c8cabf-3843-497e-c642-dcdc0ee34c84" data-execution_count="50">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>bike.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="38">
-<div id="df-9f2886b1-a7a1-46a1-942d-e7da996c733c" class="colab-df-container">
+<div class="cell-output cell-output-display" data-execution_count="50">
+<div id="df-43db6d27-39e9-42ff-80b6-81c6bc4726a7" class="colab-df-container">
     <div>
 
 
@@ -1055,7 +1055,7 @@ dtype: int64
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-9f2886b1-a7a1-46a1-942d-e7da996c733c')" title="Convert this dataframe to an interactive table." style="display:none;">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-43db6d27-39e9-42ff-80b6-81c6bc4726a7')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
     <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
@@ -1105,12 +1105,12 @@ dtype: int64
 
     <script>
       const buttonEl =
-        document.querySelector('#df-9f2886b1-a7a1-46a1-942d-e7da996c733c button.colab-df-convert');
+        document.querySelector('#df-43db6d27-39e9-42ff-80b6-81c6bc4726a7 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-9f2886b1-a7a1-46a1-942d-e7da996c733c');
+        const element = document.querySelector('#df-43db6d27-39e9-42ff-80b6-81c6bc4726a7');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1134,7 +1134,7 @@ dtype: int64
   </div>
 </div>
 </div>
-<div id="cell-7" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:607}}" data-outputid="d75493e9-cd27-4305-c1ce-f90336bca44c" data-execution_count="39">
+<div id="cell-7" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:533}}" data-outputid="16593864-0a37-410b-be8c-ed694e0ee4a5" data-execution_count="51">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1188,7 +1188,7 @@ dtype: int64
 <h3 class="anchored" data-anchor-id="subtask">Subtask:</h3>
 <p>Add a ‘total_riders’ column to the <code>daily_bike_data</code> DataFrame by summing the ‘casual’ and ‘registered’ columns. This will be used for the bar chart.</p>
 <p><strong>Reasoning</strong>: To complete the subtask, I will add a new column ‘total_riders’ to the <code>daily_bike_data</code> DataFrame by summing the ‘casual’ and ‘registered’ columns. Then, I will display the head of the DataFrame to verify the new column.</p>
-<div id="cell-13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="51f6d403-cac2-4a33-e81e-747a7eb3f35a" data-execution_count="40">
+<div id="cell-13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="e4a45dd6-be37-4bbd-c987-0744821304ea" data-execution_count="52">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>daily_bike_data[<span class="st">'total_riders'</span>] <span class="op">=</span> daily_bike_data[<span class="st">'casual'</span>] <span class="op">+</span> daily_bike_data[<span class="st">'registered'</span>]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(daily_bike_data.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1223,7 +1223,7 @@ dtype: int64
 <h3 class="anchored" data-anchor-id="subtask-1">Subtask:</h3>
 <p>Generate a plot where bars represent the ‘total_riders’ from <code>daily_bike_data</code> for each day, and overlaid lines show the ‘casual’ users (green) and ‘registered’ users (blue) over the same period. Ensure proper labeling for axes and a title for the chart.</p>
 <p><strong>Reasoning</strong>: I need to generate a combined bar and line chart as described in the subtask. This involves creating a bar plot for total riders and overlaying line plots for casual and registered riders on a secondary y-axis. I will use <code>matplotlib.pyplot</code> and <code>seaborn</code> to achieve this, ensuring all labels, titles, and legends are correctly placed.</p>
-<div id="cell-16" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:646}}" data-outputid="44d74943-00b7-4e1d-f6c8-16ea63763e23" data-execution_count="41">
+<div id="cell-16" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:476}}" data-outputid="c36b89b0-a17e-4d5e-e7cb-0cafb8c55342" data-execution_count="53">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.dates <span class="im">as</span> mdates</span>
@@ -1290,7 +1290,7 @@ dtype: int64
 </div>
 </div>
 <p><strong>Reasoning</strong>: The previous code failed because <code>sns.barplot</code> likely coerced the ‘date’ column into a categorical type for the x-axis, which then caused a <code>TypeError</code> when <code>ax2.plot</code> tried to interpret the same ‘date’ column as a datetime object for plotting lines. To fix this, I will use <code>ax1.bar</code> instead of <code>sns.barplot</code> to plot the total riders, using the numerical representation of dates for the x-axis. This ensures that the x-axis is treated as a continuous datetime scale, allowing the line plots on <code>ax2</code> to render correctly without conflicts.</p>
-<div id="cell-18" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:646}}" data-outputid="2a56251a-1002-4a53-d9a2-6650b9817552" data-execution_count="42">
+<div id="cell-18" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:476}}" data-outputid="b493a9f3-f276-446f-c234-28a406e1708d" data-execution_count="54">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.dates <span class="im">as</span> mdates</span>
@@ -1400,7 +1400,7 @@ dtype: int64
 <h3 class="anchored" data-anchor-id="subtask-3">Subtask:</h3>
 <p>Convert the ‘dteday’ column in the <code>bike</code> DataFrame to datetime objects, then extract the ‘day_of_week’ to enable hourly and daily analysis.</p>
 <p><strong>Reasoning</strong>: First, I’ll convert the ‘dteday’ column to datetime objects to ensure consistency and then extract the ‘day_of_week’ to a new column as instructed. Finally, I will display the head of the DataFrame to verify the changes.</p>
-<div id="cell-24" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="fa652711-486e-46dc-8894-12c78f534a67" data-execution_count="43">
+<div id="cell-24" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="96885590-2a0c-4bdf-ce47-17ce68523aad" data-execution_count="55">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bike[<span class="st">'dteday'</span>])</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'day_of_week'</span>] <span class="op">=</span> bike[<span class="st">'dteday'</span>].dt.day_name()</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1429,7 +1429,7 @@ dtype: int64
 <h3 class="anchored" data-anchor-id="subtask-4">Subtask:</h3>
 <p>Group the <code>bike</code> DataFrame by ‘day_of_week’ and ‘hr’, and then sum the ‘casual’ and ‘registered’ columns to get the total usage for each hour of each day of the week.</p>
 <p><strong>Reasoning</strong>: To complete the subtask, I will group the <code>bike</code> DataFrame by ‘day_of_week’ and ‘hr’, calculate the sum of ‘casual’ and ‘registered’ riders, reset the index, and store the result in <code>hourly_bike_usage</code>.</p>
-<div id="cell-27" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="32d11a80-1327-422a-e095-63903a49c0cb" data-execution_count="44">
+<div id="cell-27" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="8a420ef9-612a-4d15-a55a-f62f65f3ec70" data-execution_count="56">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>hourly_bike_usage <span class="op">=</span> bike.groupby([<span class="st">'day_of_week'</span>, <span class="st">'hr'</span>]).agg(</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    casual<span class="op">=</span>(<span class="st">'casual'</span>, <span class="st">'sum'</span>),</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    registered<span class="op">=</span>(<span class="st">'registered'</span>, <span class="st">'sum'</span>)</span>
@@ -1453,7 +1453,7 @@ dtype: int64
 <h3 class="anchored" data-anchor-id="subtask-5">Subtask:</h3>
 <p>Create line charts showing casual and registered bike usage across hours, faceted by each day of the week, with different colored lines for casual and registered users. Ensure proper labeling for axes and a title for the chart.</p>
 <p><strong>Reasoning</strong>: To create line charts showing casual and registered bike usage faceted by day of the week, I need to first prepare the data by melting the <code>hourly_bike_usage</code> DataFrame into a long format suitable for <code>seaborn.relplot</code>. Then, I will generate the plot with the specified parameters.</p>
-<div id="cell-30" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:492}}" data-outputid="b39339b9-3e4e-4e41-9954-fc72eac16d99" data-execution_count="45">
+<div id="cell-30" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:363}}" data-outputid="71a0d94e-3b5b-4b61-a4f7-6d927127edf0" data-execution_count="57">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1538,10 +1538,10 @@ dtype: int64
 <li>The observed distinct usage patterns between casual and registered riders and across weekdays/weekends can inform demand-side management strategies, such as dynamic pricing or promotional campaigns tailored to specific user types and times.</li>
 <li>Further analysis could explore the impact of weather conditions, holidays, or special events on these hourly and daily usage trends to provide a more complete picture of demand drivers.</li>
 </ul>
-<div id="cell-33" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="e4300a53-72e2-4c0f-bb21-b886097dd72c" data-execution_count="46">
+<div id="cell-33" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:617}}" data-outputid="c5612500-ab5d-4bca-9b35-cd17a246e98b" data-execution_count="58">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>bike</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="46">
-<div id="df-9f5abe4f-ddab-41b7-8bf9-b8915b644532" class="colab-df-container">
+<div class="cell-output cell-output-display" data-execution_count="58">
+<div id="df-b64028b2-82b3-46d5-b3ef-34edfb7cf885" class="colab-df-container">
     <div>
 
 
@@ -1761,7 +1761,7 @@ dtype: int64
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-9f5abe4f-ddab-41b7-8bf9-b8915b644532')" title="Convert this dataframe to an interactive table." style="display:none;">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b64028b2-82b3-46d5-b3ef-34edfb7cf885')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
     <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
@@ -1811,12 +1811,12 @@ dtype: int64
 
     <script>
       const buttonEl =
-        document.querySelector('#df-9f5abe4f-ddab-41b7-8bf9-b8915b644532 button.colab-df-convert');
+        document.querySelector('#df-b64028b2-82b3-46d5-b3ef-34edfb7cf885 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-9f5abe4f-ddab-41b7-8bf9-b8915b644532');
+        const element = document.querySelector('#df-b64028b2-82b3-46d5-b3ef-34edfb7cf885');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1836,7 +1836,7 @@ dtype: int64
   </div>
 
 
-  <div id="id_a8a3a32f-4ab0-4ee1-af63-606a971ca4f5">
+  <div id="id_86fe33f9-a406-4d15-bde0-159d8a07b38d">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -1877,7 +1877,7 @@ dtype: int64
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_a8a3a32f-4ab0-4ee1-af63-606a971ca4f5 button.colab-df-generate');
+        document.querySelector('#id_86fe33f9-a406-4d15-bde0-159d8a07b38d button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -1890,6 +1890,806 @@ dtype: int64
 
     </div>
   </div>
+</div>
+</div>
+<div id="cell-34" class="cell" data-outputid="719a7ca8-7b14-4b2c-a18f-3e8662d6450b" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:779}}" data-execution_count="59">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pandas.tseries.holiday <span class="im">import</span> USFederalHolidayCalendar</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Re-add all engineered features ──────────────────────────────────────</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bike[<span class="st">'dteday'</span>])</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>min_day <span class="op">=</span> bike[<span class="st">'dteday'</span>].<span class="bu">min</span>()</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>max_day <span class="op">=</span> bike[<span class="st">'dteday'</span>].<span class="bu">max</span>()</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) covid_lockdown</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>covid_lockdown_ranges <span class="op">=</span> [(<span class="st">'2020-04-01'</span>, <span class="st">'2021-07-25'</span>)]</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'covid_lockdown'</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> start, end <span class="kw">in</span> covid_lockdown_ranges:</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    bike.loc[(bike[<span class="st">'dteday'</span>] <span class="op">&gt;=</span> pd.to_datetime(start)) <span class="op">&amp;</span> (bike[<span class="st">'dteday'</span>] <span class="op">&lt;=</span> pd.to_datetime(end)), <span class="st">'covid_lockdown'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) gov_shutdown</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>gov_shutdown_ranges <span class="op">=</span> [(<span class="st">'2013-10-01'</span>,<span class="st">'2013-10-17'</span>), (<span class="st">'2018-01-20'</span>,<span class="st">'2018-01-22'</span>), (<span class="st">'2018-12-22'</span>,<span class="st">'2019-01-25'</span>)]</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'gov_shutdown'</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> start, end <span class="kw">in</span> gov_shutdown_ranges:</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>    bike.loc[(bike[<span class="st">'dteday'</span>] <span class="op">&gt;=</span> pd.to_datetime(start)) <span class="op">&amp;</span> (bike[<span class="st">'dteday'</span>] <span class="op">&lt;=</span> pd.to_datetime(end)), <span class="st">'gov_shutdown'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) big_event</span></span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>big_event_ranges <span class="op">=</span> [</span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Presidential Inaugurations</span></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2013-01-18'</span>, <span class="st">'2013-01-22'</span>), (<span class="st">'2017-01-19'</span>, <span class="st">'2017-01-21'</span>), (<span class="st">'2021-01-19'</span>, <span class="st">'2021-01-21'</span>),</span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># State of the Union / Joint Session Addresses</span></span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2011-01-25'</span>, <span class="st">'2011-01-25'</span>), (<span class="st">'2012-01-24'</span>, <span class="st">'2012-01-24'</span>), (<span class="st">'2013-02-12'</span>, <span class="st">'2013-02-12'</span>),</span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2014-01-28'</span>, <span class="st">'2014-01-28'</span>), (<span class="st">'2015-01-20'</span>, <span class="st">'2015-01-20'</span>), (<span class="st">'2016-01-12'</span>, <span class="st">'2016-01-12'</span>),</span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2017-02-28'</span>, <span class="st">'2017-02-28'</span>), (<span class="st">'2018-01-30'</span>, <span class="st">'2018-01-30'</span>), (<span class="st">'2019-02-05'</span>, <span class="st">'2019-02-05'</span>),</span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2020-02-04'</span>, <span class="st">'2020-02-04'</span>), (<span class="st">'2021-04-28'</span>, <span class="st">'2021-04-28'</span>), (<span class="st">'2022-03-01'</span>, <span class="st">'2022-03-01'</span>),</span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2023-02-07'</span>, <span class="st">'2023-02-07'</span>),</span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Major Marches &amp; Protests</span></span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2017-01-21'</span>, <span class="st">'2017-01-21'</span>), (<span class="st">'2018-01-20'</span>, <span class="st">'2018-01-20'</span>), (<span class="st">'2019-01-19'</span>, <span class="st">'2019-01-19'</span>), (<span class="st">'2020-01-18'</span>, <span class="st">'2020-01-18'</span>),</span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2018-03-24'</span>, <span class="st">'2018-03-24'</span>), (<span class="st">'2017-04-22'</span>, <span class="st">'2017-04-22'</span>),</span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2011-01-22'</span>, <span class="st">'2011-01-22'</span>), (<span class="st">'2012-01-23'</span>, <span class="st">'2012-01-23'</span>), (<span class="st">'2013-01-25'</span>, <span class="st">'2013-01-25'</span>),</span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2014-01-22'</span>, <span class="st">'2014-01-22'</span>), (<span class="st">'2015-01-22'</span>, <span class="st">'2015-01-22'</span>), (<span class="st">'2016-01-22'</span>, <span class="st">'2016-01-22'</span>),</span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2017-01-27'</span>, <span class="st">'2017-01-27'</span>), (<span class="st">'2018-01-19'</span>, <span class="st">'2018-01-19'</span>), (<span class="st">'2019-01-18'</span>, <span class="st">'2019-01-18'</span>),</span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2020-01-24'</span>, <span class="st">'2020-01-24'</span>), (<span class="st">'2022-01-21'</span>, <span class="st">'2022-01-21'</span>), (<span class="st">'2023-01-20'</span>, <span class="st">'2023-01-20'</span>),</span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2020-05-29'</span>, <span class="st">'2020-06-07'</span>), (<span class="st">'2021-01-06'</span>, <span class="st">'2021-01-06'</span>),</span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Other Major DC Events</span></span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2015-09-22'</span>, <span class="st">'2015-09-24'</span>), (<span class="st">'2014-11-11'</span>, <span class="st">'2014-11-11'</span>),</span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2017-04-29'</span>, <span class="st">'2017-04-29'</span>), (<span class="st">'2018-08-12'</span>, <span class="st">'2018-08-12'</span>),</span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'big_event'</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> start, end <span class="kw">in</span> big_event_ranges:</span>
+<span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a>    bike.loc[(bike[<span class="st">'dteday'</span>] <span class="op">&gt;=</span> pd.to_datetime(start)) <span class="op">&amp;</span> (bike[<span class="st">'dteday'</span>] <span class="op">&lt;=</span> pd.to_datetime(end)), <span class="st">'big_event'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb18-47"><a href="#cb18-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-48"><a href="#cb18-48" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) major_holiday</span></span>
+<span id="cb18-49"><a href="#cb18-49" aria-hidden="true" tabindex="-1"></a>cal <span class="op">=</span> USFederalHolidayCalendar()</span>
+<span id="cb18-50"><a href="#cb18-50" aria-hidden="true" tabindex="-1"></a>federal_holidays <span class="op">=</span> cal.holidays(start<span class="op">=</span>min_day, end<span class="op">=</span>max_day)</span>
+<span id="cb18-51"><a href="#cb18-51" aria-hidden="true" tabindex="-1"></a>fixed_major_md <span class="op">=</span> {(<span class="dv">1</span>,<span class="dv">1</span>),(<span class="dv">7</span>,<span class="dv">4</span>),(<span class="dv">12</span>,<span class="dv">25</span>)}</span>
+<span id="cb18-52"><a href="#cb18-52" aria-hidden="true" tabindex="-1"></a>fixed_major <span class="op">=</span> bike[<span class="st">'dteday'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> d: (d.month, d.day) <span class="kw">in</span> fixed_major_md)</span>
+<span id="cb18-53"><a href="#cb18-53" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'major_holiday'</span>] <span class="op">=</span> (((bike[<span class="st">'holiday'</span>] <span class="op">==</span> <span class="dv">1</span>) <span class="op">&amp;</span> (bike[<span class="st">'dteday'</span>].isin(federal_holidays) <span class="op">|</span> fixed_major)) <span class="op">|</span> fixed_major).astype(<span class="bu">int</span>)</span>
+<span id="cb18-54"><a href="#cb18-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-55"><a href="#cb18-55" aria-hidden="true" tabindex="-1"></a><span class="co"># 5) date and day_of_week</span></span>
+<span id="cb18-56"><a href="#cb18-56" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'date'</span>] <span class="op">=</span> bike[<span class="st">'dteday'</span>].dt.date</span>
+<span id="cb18-57"><a href="#cb18-57" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'day_of_week'</span>] <span class="op">=</span> bike[<span class="st">'dteday'</span>].dt.day_name()</span>
+<span id="cb18-58"><a href="#cb18-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-59"><a href="#cb18-59" aria-hidden="true" tabindex="-1"></a><span class="co"># 6) weather_emergency (NEW)</span></span>
+<span id="cb18-60"><a href="#cb18-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Blizzards, hurricanes, derechos, and other major weather events in DC (2011-2023)</span></span>
+<span id="cb18-61"><a href="#cb18-61" aria-hidden="true" tabindex="-1"></a>weather_emergency_ranges <span class="op">=</span> [</span>
+<span id="cb18-62"><a href="#cb18-62" aria-hidden="true" tabindex="-1"></a>    <span class="co"># --- Major Blizzards / Snowstorms ---</span></span>
+<span id="cb18-63"><a href="#cb18-63" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Jan 2011 snowstorm (~5" at DCA, widespread disruption)</span></span>
+<span id="cb18-64"><a href="#cb18-64" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2011-01-26'</span>, <span class="st">'2011-01-27'</span>),</span>
+<span id="cb18-65"><a href="#cb18-65" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Feb 2014 snowstorm (~6" + ice, 2nd major storm of brutal winter)</span></span>
+<span id="cb18-66"><a href="#cb18-66" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2014-02-12'</span>, <span class="st">'2014-02-13'</span>),</span>
+<span id="cb18-67"><a href="#cb18-67" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Mar 2014 snowstorm (continuation of brutal 2013-14 winter)</span></span>
+<span id="cb18-68"><a href="#cb18-68" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2014-03-17'</span>, <span class="st">'2014-03-17'</span>),</span>
+<span id="cb18-69"><a href="#cb18-69" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Jan 2016 Blizzard Jonas / Snowzilla (17.8" at DCA - historic, state of emergency)</span></span>
+<span id="cb18-70"><a href="#cb18-70" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2016-01-22'</span>, <span class="st">'2016-01-24'</span>),</span>
+<span id="cb18-71"><a href="#cb18-71" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Jan 2019 major snowstorm (8.3" at DCA)</span></span>
+<span id="cb18-72"><a href="#cb18-72" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2019-01-13'</span>, <span class="st">'2019-01-14'</span>),</span>
+<span id="cb18-73"><a href="#cb18-73" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Feb 2019 snowstorm</span></span>
+<span id="cb18-74"><a href="#cb18-74" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2019-02-11'</span>, <span class="st">'2019-02-12'</span>),</span>
+<span id="cb18-75"><a href="#cb18-75" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Jan 2022 snowstorm (6.9" at DCA)</span></span>
+<span id="cb18-76"><a href="#cb18-76" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2022-01-03'</span>, <span class="st">'2022-01-04'</span>),</span>
+<span id="cb18-77"><a href="#cb18-77" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Jan 2016 also had a second smaller storm</span></span>
+<span id="cb18-78"><a href="#cb18-78" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2016-02-15'</span>, <span class="st">'2016-02-16'</span>),</span>
+<span id="cb18-79"><a href="#cb18-79" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Dec 2020 snowstorm</span></span>
+<span id="cb18-80"><a href="#cb18-80" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2020-12-16'</span>, <span class="st">'2020-12-17'</span>),</span>
+<span id="cb18-81"><a href="#cb18-81" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Feb 2015 back-to-back snowstorms (Juno aftermath + multiple storms)</span></span>
+<span id="cb18-82"><a href="#cb18-82" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2015-02-16'</span>, <span class="st">'2015-02-17'</span>),</span>
+<span id="cb18-83"><a href="#cb18-83" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2015-03-05'</span>, <span class="st">'2015-03-06'</span>),</span>
+<span id="cb18-84"><a href="#cb18-84" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Feb 2013 Nemo (DC fringe, significant snow)</span></span>
+<span id="cb18-85"><a href="#cb18-85" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2013-02-08'</span>, <span class="st">'2013-02-09'</span>),</span>
+<span id="cb18-86"><a href="#cb18-86" aria-hidden="true" tabindex="-1"></a>    <span class="co"># --- Hurricanes &amp; Tropical Storms ---</span></span>
+<span id="cb18-87"><a href="#cb18-87" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Hurricane Irene - heavy rain, flooding, wind damage in DC</span></span>
+<span id="cb18-88"><a href="#cb18-88" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2011-08-27'</span>, <span class="st">'2011-08-28'</span>),</span>
+<span id="cb18-89"><a href="#cb18-89" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Hurricane Sandy - historic storm, extensive DC-area damage, state of emergency</span></span>
+<span id="cb18-90"><a href="#cb18-90" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2012-10-28'</span>, <span class="st">'2012-10-30'</span>),</span>
+<span id="cb18-91"><a href="#cb18-91" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Tropical Storm Isaias - power outages, downed trees across DC metro</span></span>
+<span id="cb18-92"><a href="#cb18-92" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2020-08-04'</span>, <span class="st">'2020-08-04'</span>),</span>
+<span id="cb18-93"><a href="#cb18-93" aria-hidden="true" tabindex="-1"></a>    <span class="co"># --- Derecho &amp; Extreme Wind Events ---</span></span>
+<span id="cb18-94"><a href="#cb18-94" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Derecho of June 29, 2012 - 70+ mph gusts, 1M+ without power, 22 deaths</span></span>
+<span id="cb18-95"><a href="#cb18-95" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2012-06-29'</span>, <span class="st">'2012-06-29'</span>),</span>
+<span id="cb18-96"><a href="#cb18-96" aria-hidden="true" tabindex="-1"></a>    <span class="co"># --- Earthquake ---</span></span>
+<span id="cb18-97"><a href="#cb18-97" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 5.8 magnitude Virginia earthquake felt strongly throughout DC</span></span>
+<span id="cb18-98"><a href="#cb18-98" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2011-08-23'</span>, <span class="st">'2011-08-23'</span>),</span>
+<span id="cb18-99"><a href="#cb18-99" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb18-100"><a href="#cb18-100" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'weather_emergency'</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb18-101"><a href="#cb18-101" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> start, end <span class="kw">in</span> weather_emergency_ranges:</span>
+<span id="cb18-102"><a href="#cb18-102" aria-hidden="true" tabindex="-1"></a>    bike.loc[(bike[<span class="st">'dteday'</span>] <span class="op">&gt;=</span> pd.to_datetime(start)) <span class="op">&amp;</span> (bike[<span class="st">'dteday'</span>] <span class="op">&lt;=</span> pd.to_datetime(end)), <span class="st">'weather_emergency'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb18-103"><a href="#cb18-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-104"><a href="#cb18-104" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Sanity check</span></span>
+<span id="cb18-105"><a href="#cb18-105" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'weather_emergency flagged dates:'</span>)</span>
+<span id="cb18-106"><a href="#cb18-106" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bike[bike[<span class="st">'weather_emergency'</span>] <span class="op">==</span> <span class="dv">1</span>][[<span class="st">'dteday'</span>]].drop_duplicates().sort_values(<span class="st">'dteday'</span>).to_string())</span>
+<span id="cb18-107"><a href="#cb18-107" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="ch">\n</span><span class="ss">Total weather_emergency rows: </span><span class="sc">{</span>bike[<span class="st">"weather_emergency"</span>]<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb18-108"><a href="#cb18-108" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Total columns: </span><span class="sc">{</span>bike<span class="sc">.</span>shape[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb18-109"><a href="#cb18-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-110"><a href="#cb18-110" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Export</span></span>
+<span id="cb18-111"><a href="#cb18-111" aria-hidden="true" tabindex="-1"></a>bike.to_csv(<span class="st">'bikes_with_features.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb18-112"><a href="#cb18-112" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Columns included:'</span>, <span class="bu">list</span>(bike.columns))</span>
+<span id="cb18-113"><a href="#cb18-113" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Shape: </span><span class="sc">{</span>bike<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb18-114"><a href="#cb18-114" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'CSV saved as bikes_with_features.csv'</span>)</span>
+<span id="cb18-115"><a href="#cb18-115" aria-hidden="true" tabindex="-1"></a>files.download(<span class="st">'bikes_with_features.csv'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>weather_emergency flagged dates:
+          dteday
+600   2011-01-26
+624   2011-01-27
+5615  2011-08-23
+5711  2011-08-27
+5735  2011-08-28
+13078 2012-06-29
+15982 2012-10-28
+16006 2012-10-29
+16030 2012-10-30
+18454 2013-02-08
+18478 2013-02-09
+27309 2014-02-12
+27333 2014-02-13
+28100 2014-03-17
+36164 2015-02-16
+36188 2015-02-17
+36572 2015-03-05
+36596 2015-03-06
+44323 2016-01-22
+44347 2016-01-23
+44371 2016-01-24
+44899 2016-02-15
+44923 2016-02-16
+70408 2019-01-13
+70432 2019-01-14
+71104 2019-02-11
+71128 2019-02-12
+84062 2020-08-04
+87278 2020-12-16
+87302 2020-12-17
+96469 2022-01-03
+96493 2022-01-04
+
+Total weather_emergency rows: 768
+Total columns: 19
+
+Columns included: ['dteday', 'hr', 'casual', 'registered', 'temp_c', 'feels_like_c', 'hum', 'windspeed', 'weathersit', 'season', 'holiday', 'workingday', 'date', 'day_of_week', 'covid_lockdown', 'gov_shutdown', 'big_event', 'major_holiday', 'weather_emergency']
+Shape: (112475, 19)
+CSV saved as bikes_with_features.csv</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/javascript">
+
+    async function download(id, filename, size) {
+      if (!google.colab.kernel.accessAllowed) {
+        return;
+      }
+      const div = document.createElement('div');
+      const label = document.createElement('label');
+      label.textContent = `Downloading "${filename}": `;
+      div.appendChild(label);
+      const progress = document.createElement('progress');
+      progress.max = size;
+      div.appendChild(progress);
+      document.body.appendChild(div);
+
+      const buffers = [];
+      let downloaded = 0;
+
+      const channel = await google.colab.kernel.comms.open(id);
+      // Send a message to notify the kernel that we're ready.
+      channel.send({})
+
+      for await (const message of channel.messages) {
+        // Send a message to notify the kernel that we're ready.
+        channel.send({})
+        if (message.buffers) {
+          for (const buffer of message.buffers) {
+            buffers.push(buffer);
+            downloaded += buffer.byteLength;
+            progress.value = downloaded;
+          }
+        }
+      }
+      const blob = new Blob(buffers, {type: 'application/binary'});
+      const a = document.createElement('a');
+      a.href = window.URL.createObjectURL(blob);
+      a.download = filename;
+      div.appendChild(a);
+      a.click();
+      div.remove();
+    }
+  
+</script>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/javascript">
+download("download_cac5cd23-0b06-47cb-91ac-dae09b40be8e", "bikes_with_features.csv", 9323718)
+</script>
+</div>
+</div>
+<div id="cell-35" class="cell" data-outputid="382dd52c-c417-4d8d-9834-fe84b7cd1258" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-execution_count="60">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow <span class="im">import</span> keras</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> MinMaxScaler</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras.models <span class="im">import</span> Sequential</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras.layers <span class="im">import</span> Dense, Dropout</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="co"># ── 1. Prepare features &amp; target ──────────────────────────────────────────</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Target: total hourly ridership</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'total_riders'</span>] <span class="op">=</span> bike[<span class="st">'casual'</span>] <span class="op">+</span> bike[<span class="st">'registered'</span>]</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Encode day_of_week as integer (Monday=0 ... Sunday=6)</span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>day_map <span class="op">=</span> {<span class="st">'Monday'</span>:<span class="dv">0</span>,<span class="st">'Tuesday'</span>:<span class="dv">1</span>,<span class="st">'Wednesday'</span>:<span class="dv">2</span>,<span class="st">'Thursday'</span>:<span class="dv">3</span>,</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>           <span class="st">'Friday'</span>:<span class="dv">4</span>,<span class="st">'Saturday'</span>:<span class="dv">5</span>,<span class="st">'Sunday'</span>:<span class="dv">6</span>}</span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'day_of_week_num'</span>] <span class="op">=</span> bike[<span class="st">'day_of_week'</span>].<span class="bu">map</span>(day_map)</span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Feature columns</span></span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>feature_cols <span class="op">=</span> [</span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">'hr'</span>,            <span class="co"># hour of day</span></span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">'temp_c'</span>,        <span class="co"># temperature</span></span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">'feels_like_c'</span>,  <span class="co"># feels-like temperature</span></span>
+<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">'hum'</span>,           <span class="co"># humidity</span></span>
+<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">'windspeed'</span>,     <span class="co"># wind speed</span></span>
+<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">'weathersit'</span>,    <span class="co"># weather situation code</span></span>
+<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">'season'</span>,        <span class="co"># season (1-4)</span></span>
+<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">'holiday'</span>,       <span class="co"># public holiday flag</span></span>
+<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">'workingday'</span>,    <span class="co"># working day flag</span></span>
+<span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">'day_of_week_num'</span>,  <span class="co"># day of week (0-6)</span></span>
+<span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">'covid_lockdown'</span>,   <span class="co"># COVID lockdown period</span></span>
+<span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">'gov_shutdown'</span>,     <span class="co"># government shutdown period</span></span>
+<span id="cb20-35"><a href="#cb20-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">'big_event'</span>,        <span class="co"># major DC events</span></span>
+<span id="cb20-36"><a href="#cb20-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">'major_holiday'</span>,    <span class="co"># major holiday</span></span>
+<span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a>    <span class="st">'weather_emergency'</span> <span class="co"># blizzards, hurricanes, etc.</span></span>
+<span id="cb20-38"><a href="#cb20-38" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb20-39"><a href="#cb20-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> bike[feature_cols].values</span>
+<span id="cb20-41"><a href="#cb20-41" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> bike[<span class="st">'total_riders'</span>].values</span>
+<span id="cb20-42"><a href="#cb20-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-43"><a href="#cb20-43" aria-hidden="true" tabindex="-1"></a><span class="co"># ── 2. Scale features ─────────────────────────────────────────────────────</span></span>
+<span id="cb20-44"><a href="#cb20-44" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> MinMaxScaler()</span>
+<span id="cb20-45"><a href="#cb20-45" aria-hidden="true" tabindex="-1"></a>X_scaled <span class="op">=</span> scaler.fit_transform(X)</span>
+<span id="cb20-46"><a href="#cb20-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-47"><a href="#cb20-47" aria-hidden="true" tabindex="-1"></a><span class="co"># ── 3. Train / Validation / Test split (70 / 15 / 15) ────────────────────</span></span>
+<span id="cb20-48"><a href="#cb20-48" aria-hidden="true" tabindex="-1"></a>X_train, X_temp, y_train, y_temp <span class="op">=</span> train_test_split(</span>
+<span id="cb20-49"><a href="#cb20-49" aria-hidden="true" tabindex="-1"></a>    X_scaled, y, test_size<span class="op">=</span><span class="fl">0.30</span>, random_state<span class="op">=</span><span class="dv">42</span></span>
+<span id="cb20-50"><a href="#cb20-50" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb20-51"><a href="#cb20-51" aria-hidden="true" tabindex="-1"></a>X_val, X_test, y_val, y_test <span class="op">=</span> train_test_split(</span>
+<span id="cb20-52"><a href="#cb20-52" aria-hidden="true" tabindex="-1"></a>    X_temp, y_temp, test_size<span class="op">=</span><span class="fl">0.50</span>, random_state<span class="op">=</span><span class="dv">42</span></span>
+<span id="cb20-53"><a href="#cb20-53" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb20-54"><a href="#cb20-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-55"><a href="#cb20-55" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Train:      </span><span class="sc">{</span>X_train<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">:,}</span><span class="ss"> rows'</span>)</span>
+<span id="cb20-56"><a href="#cb20-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Validation: </span><span class="sc">{</span>X_val<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">:,}</span><span class="ss"> rows'</span>)</span>
+<span id="cb20-57"><a href="#cb20-57" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Test:       </span><span class="sc">{</span>X_test<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">:,}</span><span class="ss"> rows'</span>)</span>
+<span id="cb20-58"><a href="#cb20-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-59"><a href="#cb20-59" aria-hidden="true" tabindex="-1"></a><span class="co"># ── 4. Build the Neural Network ───────────────────────────────────────────</span></span>
+<span id="cb20-60"><a href="#cb20-60" aria-hidden="true" tabindex="-1"></a>tf.random.set_seed(<span class="dv">111</span>)</span>
+<span id="cb20-61"><a href="#cb20-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-62"><a href="#cb20-62" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> Sequential()</span>
+<span id="cb20-63"><a href="#cb20-63" aria-hidden="true" tabindex="-1"></a>model.add(Dense(<span class="dv">128</span>, input_dim<span class="op">=</span><span class="bu">len</span>(X_train[<span class="dv">0</span>]), activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb20-64"><a href="#cb20-64" aria-hidden="true" tabindex="-1"></a>model.add(Dropout(<span class="fl">.5</span>))</span>
+<span id="cb20-65"><a href="#cb20-65" aria-hidden="true" tabindex="-1"></a>model.add(Dense(<span class="dv">256</span>, activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb20-66"><a href="#cb20-66" aria-hidden="true" tabindex="-1"></a>model.add(Dense(<span class="dv">64</span>, activation<span class="op">=</span><span class="st">'leaky_relu'</span>))</span>
+<span id="cb20-67"><a href="#cb20-67" aria-hidden="true" tabindex="-1"></a>model.add(Dense(<span class="dv">1</span>, activation<span class="op">=</span><span class="st">'relu'</span>))</span>
+<span id="cb20-68"><a href="#cb20-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-69"><a href="#cb20-69" aria-hidden="true" tabindex="-1"></a>model.<span class="bu">compile</span>(</span>
+<span id="cb20-70"><a href="#cb20-70" aria-hidden="true" tabindex="-1"></a>    optimizer<span class="op">=</span><span class="st">'adam'</span>,</span>
+<span id="cb20-71"><a href="#cb20-71" aria-hidden="true" tabindex="-1"></a>    loss<span class="op">=</span><span class="st">'mse'</span>,</span>
+<span id="cb20-72"><a href="#cb20-72" aria-hidden="true" tabindex="-1"></a>    metrics<span class="op">=</span>[<span class="st">'mae'</span>]</span>
+<span id="cb20-73"><a href="#cb20-73" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb20-74"><a href="#cb20-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-75"><a href="#cb20-75" aria-hidden="true" tabindex="-1"></a>model.summary()</span>
+<span id="cb20-76"><a href="#cb20-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-77"><a href="#cb20-77" aria-hidden="true" tabindex="-1"></a><span class="co"># ── 5. Train ──────────────────────────────────────────────────────────────</span></span>
+<span id="cb20-78"><a href="#cb20-78" aria-hidden="true" tabindex="-1"></a>early_stop <span class="op">=</span> tf.keras.callbacks.EarlyStopping(</span>
+<span id="cb20-79"><a href="#cb20-79" aria-hidden="true" tabindex="-1"></a>    monitor<span class="op">=</span><span class="st">'val_loss'</span>, patience<span class="op">=</span><span class="dv">10</span>, restore_best_weights<span class="op">=</span><span class="va">True</span></span>
+<span id="cb20-80"><a href="#cb20-80" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb20-81"><a href="#cb20-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-82"><a href="#cb20-82" aria-hidden="true" tabindex="-1"></a>history <span class="op">=</span> model.fit(</span>
+<span id="cb20-83"><a href="#cb20-83" aria-hidden="true" tabindex="-1"></a>    X_train, y_train,</span>
+<span id="cb20-84"><a href="#cb20-84" aria-hidden="true" tabindex="-1"></a>    validation_data<span class="op">=</span>(X_val, y_val),</span>
+<span id="cb20-85"><a href="#cb20-85" aria-hidden="true" tabindex="-1"></a>    epochs<span class="op">=</span><span class="dv">200</span>,</span>
+<span id="cb20-86"><a href="#cb20-86" aria-hidden="true" tabindex="-1"></a>    batch_size<span class="op">=</span><span class="dv">256</span>,</span>
+<span id="cb20-87"><a href="#cb20-87" aria-hidden="true" tabindex="-1"></a>    callbacks<span class="op">=</span>[early_stop],</span>
+<span id="cb20-88"><a href="#cb20-88" aria-hidden="true" tabindex="-1"></a>    verbose<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb20-89"><a href="#cb20-89" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb20-90"><a href="#cb20-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-91"><a href="#cb20-91" aria-hidden="true" tabindex="-1"></a><span class="co"># ── 6. Evaluate on test set ───────────────────────────────────────────────</span></span>
+<span id="cb20-92"><a href="#cb20-92" aria-hidden="true" tabindex="-1"></a>test_loss, test_mae <span class="op">=</span> model.evaluate(X_test, y_test, verbose<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb20-93"><a href="#cb20-93" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="ch">\n</span><span class="ss">Test MSE: </span><span class="sc">{</span>test_loss<span class="sc">:.2f}</span><span class="ss">'</span>)</span>
+<span id="cb20-94"><a href="#cb20-94" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Test MAE: </span><span class="sc">{</span>test_mae<span class="sc">:.2f}</span><span class="ss"> riders'</span>)</span>
+<span id="cb20-95"><a href="#cb20-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-96"><a href="#cb20-96" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> model.predict(X_test).flatten()</span>
+<span id="cb20-97"><a href="#cb20-97" aria-hidden="true" tabindex="-1"></a>ss_res <span class="op">=</span> np.<span class="bu">sum</span>((y_test <span class="op">-</span> y_pred) <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb20-98"><a href="#cb20-98" aria-hidden="true" tabindex="-1"></a>ss_tot <span class="op">=</span> np.<span class="bu">sum</span>((y_test <span class="op">-</span> np.mean(y_test)) <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb20-99"><a href="#cb20-99" aria-hidden="true" tabindex="-1"></a>r2 <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> ss_res <span class="op">/</span> ss_tot</span>
+<span id="cb20-100"><a href="#cb20-100" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Test R²:  </span><span class="sc">{</span>r2<span class="sc">:.4f}</span><span class="ss">'</span>)</span>
+<span id="cb20-101"><a href="#cb20-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-102"><a href="#cb20-102" aria-hidden="true" tabindex="-1"></a><span class="co"># ── 7. Plot training curves ───────────────────────────────────────────────</span></span>
+<span id="cb20-103"><a href="#cb20-103" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">4</span>))</span>
+<span id="cb20-104"><a href="#cb20-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-105"><a href="#cb20-105" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(history.history[<span class="st">'loss'</span>], label<span class="op">=</span><span class="st">'Train Loss'</span>)</span>
+<span id="cb20-106"><a href="#cb20-106" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(history.history[<span class="st">'val_loss'</span>], label<span class="op">=</span><span class="st">'Val Loss'</span>)</span>
+<span id="cb20-107"><a href="#cb20-107" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="st">'Loss (MSE) Over Epochs'</span>)</span>
+<span id="cb20-108"><a href="#cb20-108" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_xlabel(<span class="st">'Epoch'</span>)</span>
+<span id="cb20-109"><a href="#cb20-109" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylabel(<span class="st">'MSE'</span>)</span>
+<span id="cb20-110"><a href="#cb20-110" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].legend()</span>
+<span id="cb20-111"><a href="#cb20-111" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb20-112"><a href="#cb20-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-113"><a href="#cb20-113" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].plot(history.history[<span class="st">'mae'</span>], label<span class="op">=</span><span class="st">'Train MAE'</span>)</span>
+<span id="cb20-114"><a href="#cb20-114" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].plot(history.history[<span class="st">'val_mae'</span>], label<span class="op">=</span><span class="st">'Val MAE'</span>)</span>
+<span id="cb20-115"><a href="#cb20-115" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">'MAE Over Epochs'</span>)</span>
+<span id="cb20-116"><a href="#cb20-116" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xlabel(<span class="st">'Epoch'</span>)</span>
+<span id="cb20-117"><a href="#cb20-117" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylabel(<span class="st">'MAE (riders)'</span>)</span>
+<span id="cb20-118"><a href="#cb20-118" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].legend()</span>
+<span id="cb20-119"><a href="#cb20-119" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb20-120"><a href="#cb20-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-121"><a href="#cb20-121" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb20-122"><a href="#cb20-122" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb20-123"><a href="#cb20-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-124"><a href="#cb20-124" aria-hidden="true" tabindex="-1"></a><span class="co"># ── 8. Predicted vs Actual scatter (sample 2000 pts for clarity) ──────────</span></span>
+<span id="cb20-125"><a href="#cb20-125" aria-hidden="true" tabindex="-1"></a>sample_idx <span class="op">=</span> np.random.choice(<span class="bu">len</span>(y_test), size<span class="op">=</span><span class="dv">2000</span>, replace<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb20-126"><a href="#cb20-126" aria-hidden="true" tabindex="-1"></a>fig2, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="dv">6</span>))</span>
+<span id="cb20-127"><a href="#cb20-127" aria-hidden="true" tabindex="-1"></a>ax.scatter(y_test[sample_idx], y_pred[sample_idx], alpha<span class="op">=</span><span class="fl">0.3</span>, s<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'steelblue'</span>)</span>
+<span id="cb20-128"><a href="#cb20-128" aria-hidden="true" tabindex="-1"></a>max_val <span class="op">=</span> <span class="bu">max</span>(y_test.<span class="bu">max</span>(), y_pred.<span class="bu">max</span>())</span>
+<span id="cb20-129"><a href="#cb20-129" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">0</span>, max_val], [<span class="dv">0</span>, max_val], <span class="st">'r--'</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span><span class="st">'Perfect fit'</span>)</span>
+<span id="cb20-130"><a href="#cb20-130" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Actual Riders'</span>)</span>
+<span id="cb20-131"><a href="#cb20-131" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Predicted Riders'</span>)</span>
+<span id="cb20-132"><a href="#cb20-132" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="ss">f'Predicted vs Actual  (R² = </span><span class="sc">{</span>r2<span class="sc">:.4f}</span><span class="ss">)'</span>)</span>
+<span id="cb20-133"><a href="#cb20-133" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb20-134"><a href="#cb20-134" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb20-135"><a href="#cb20-135" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb20-136"><a href="#cb20-136" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb20-137"><a href="#cb20-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-138"><a href="#cb20-138" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Done.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Train:      78,732 rows
+Validation: 16,871 rows
+Test:       16,872 rows</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/usr/local/lib/python3.12/dist-packages/keras/src/layers/core/dense.py:93: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="font-weight: bold">Model: "sequential_3"</span>
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃<span style="font-weight: bold"> Layer (type)                    </span>┃<span style="font-weight: bold"> Output Shape           </span>┃<span style="font-weight: bold">       Param # </span>┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ dense_12 (<span style="color: #0087ff; text-decoration-color: #0087ff">Dense</span>)                │ (<span style="color: #00d7ff; text-decoration-color: #00d7ff">None</span>, <span style="color: #00af00; text-decoration-color: #00af00">128</span>)            │         <span style="color: #00af00; text-decoration-color: #00af00">2,048</span> │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout_5 (<span style="color: #0087ff; text-decoration-color: #0087ff">Dropout</span>)             │ (<span style="color: #00d7ff; text-decoration-color: #00d7ff">None</span>, <span style="color: #00af00; text-decoration-color: #00af00">128</span>)            │             <span style="color: #00af00; text-decoration-color: #00af00">0</span> │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_13 (<span style="color: #0087ff; text-decoration-color: #0087ff">Dense</span>)                │ (<span style="color: #00d7ff; text-decoration-color: #00d7ff">None</span>, <span style="color: #00af00; text-decoration-color: #00af00">256</span>)            │        <span style="color: #00af00; text-decoration-color: #00af00">33,024</span> │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_14 (<span style="color: #0087ff; text-decoration-color: #0087ff">Dense</span>)                │ (<span style="color: #00d7ff; text-decoration-color: #00d7ff">None</span>, <span style="color: #00af00; text-decoration-color: #00af00">64</span>)             │        <span style="color: #00af00; text-decoration-color: #00af00">16,448</span> │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_15 (<span style="color: #0087ff; text-decoration-color: #0087ff">Dense</span>)                │ (<span style="color: #00d7ff; text-decoration-color: #00d7ff">None</span>, <span style="color: #00af00; text-decoration-color: #00af00">1</span>)              │            <span style="color: #00af00; text-decoration-color: #00af00">65</span> │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="font-weight: bold"> Total params: </span><span style="color: #00af00; text-decoration-color: #00af00">51,585</span> (201.50 KB)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="font-weight: bold"> Trainable params: </span><span style="color: #00af00; text-decoration-color: #00af00">51,585</span> (201.50 KB)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="font-weight: bold"> Non-trainable params: </span><span style="color: #00af00; text-decoration-color: #00af00">0</span> (0.00 B)
+</pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<div class="ansi-escaped-output">
+<pre>Epoch 1/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">5s</span> 10ms/step - loss: 152501.0000 - mae: 279.4078 - val_loss: 74134.0547 - val_mae: 200.1946
+
+Epoch 2/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 76752.6797 - mae: 202.9598 - val_loss: 65868.1094 - val_mae: 183.6300
+
+Epoch 3/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 68735.0859 - mae: 187.1489 - val_loss: 55513.5938 - val_mae: 161.4163
+
+Epoch 4/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 60470.6328 - mae: 169.7561 - val_loss: 49300.6875 - val_mae: 146.9074
+
+Epoch 5/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 54761.6719 - mae: 158.1217 - val_loss: 46864.2188 - val_mae: 139.5348
+
+Epoch 6/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 51921.9805 - mae: 152.6435 - val_loss: 45619.4570 - val_mae: 136.9275
+
+Epoch 7/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 49876.2031 - mae: 148.5215 - val_loss: 44276.8594 - val_mae: 135.8661
+
+Epoch 8/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 48813.0430 - mae: 146.4271 - val_loss: 43409.6797 - val_mae: 133.8442
+
+Epoch 9/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 47962.5430 - mae: 144.9780 - val_loss: 42720.8008 - val_mae: 131.9946
+
+Epoch 10/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 47062.9492 - mae: 143.1583 - val_loss: 42040.6875 - val_mae: 131.2746
+
+Epoch 11/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 4ms/step - loss: 46126.9414 - mae: 142.0711 - val_loss: 41193.9492 - val_mae: 130.1528
+
+Epoch 12/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 4ms/step - loss: 45297.8164 - mae: 140.1482 - val_loss: 40697.0273 - val_mae: 128.5506
+
+Epoch 13/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 44839.7578 - mae: 139.6460 - val_loss: 39594.1602 - val_mae: 127.0315
+
+Epoch 14/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 43893.0781 - mae: 137.7982 - val_loss: 38993.4023 - val_mae: 126.2840
+
+Epoch 15/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 43113.9570 - mae: 136.3700 - val_loss: 37659.6719 - val_mae: 124.9191
+
+Epoch 16/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 42126.8867 - mae: 135.0425 - val_loss: 36426.1094 - val_mae: 123.1340
+
+Epoch 17/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 41190.5234 - mae: 133.4366 - val_loss: 35378.1875 - val_mae: 120.9585
+
+Epoch 18/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 40426.3477 - mae: 132.0047 - val_loss: 34400.6445 - val_mae: 119.4459
+
+Epoch 19/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 38900.5469 - mae: 129.8069 - val_loss: 33594.4570 - val_mae: 117.9269
+
+Epoch 20/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 38091.7266 - mae: 128.4335 - val_loss: 32272.2734 - val_mae: 116.7060
+
+Epoch 21/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 37192.6367 - mae: 127.0074 - val_loss: 31694.8281 - val_mae: 114.5729
+
+Epoch 22/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 36024.1836 - mae: 124.9552 - val_loss: 31001.0723 - val_mae: 113.8579
+
+Epoch 23/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 35562.9492 - mae: 123.7791 - val_loss: 30556.0859 - val_mae: 112.0332
+
+Epoch 24/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 4ms/step - loss: 34622.7930 - mae: 122.3952 - val_loss: 29733.5742 - val_mae: 111.8574
+
+Epoch 25/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 4ms/step - loss: 33973.4492 - mae: 121.3241 - val_loss: 29041.8887 - val_mae: 110.1698
+
+Epoch 26/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 33173.3008 - mae: 120.0674 - val_loss: 28617.0723 - val_mae: 109.1703
+
+Epoch 27/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 32851.1602 - mae: 119.1616 - val_loss: 28347.8574 - val_mae: 108.6753
+
+Epoch 28/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 32402.0352 - mae: 118.3535 - val_loss: 28135.3164 - val_mae: 108.3932
+
+Epoch 29/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 32027.5664 - mae: 118.0120 - val_loss: 27585.8066 - val_mae: 107.3315
+
+Epoch 30/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 31633.8184 - mae: 116.8752 - val_loss: 27211.4238 - val_mae: 106.6708
+
+Epoch 31/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 31552.1172 - mae: 117.1889 - val_loss: 27351.0801 - val_mae: 106.5609
+
+Epoch 32/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 31296.9395 - mae: 116.8520 - val_loss: 27023.6055 - val_mae: 106.8063
+
+Epoch 33/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 31119.7441 - mae: 116.3007 - val_loss: 26480.6699 - val_mae: 104.8046
+
+Epoch 34/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 30371.5273 - mae: 114.7110 - val_loss: 26131.1680 - val_mae: 104.1957
+
+Epoch 35/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 30001.2480 - mae: 113.9055 - val_loss: 25863.2969 - val_mae: 103.4615
+
+Epoch 36/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 4ms/step - loss: 30052.2012 - mae: 113.9486 - val_loss: 25587.4609 - val_mae: 102.4599
+
+Epoch 37/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 4ms/step - loss: 29594.4043 - mae: 112.7697 - val_loss: 26128.6543 - val_mae: 103.1150
+
+Epoch 38/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 4ms/step - loss: 29526.3945 - mae: 112.5382 - val_loss: 25630.0352 - val_mae: 102.9069
+
+Epoch 39/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 29353.8750 - mae: 112.2332 - val_loss: 25748.7207 - val_mae: 102.8455
+
+Epoch 40/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 29032.9180 - mae: 111.8667 - val_loss: 25268.9590 - val_mae: 101.8018
+
+Epoch 41/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 28903.0449 - mae: 111.3795 - val_loss: 24787.0312 - val_mae: 100.8669
+
+Epoch 42/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 28581.3848 - mae: 111.1541 - val_loss: 24492.7871 - val_mae: 100.1240
+
+Epoch 43/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 28529.4629 - mae: 111.0053 - val_loss: 24853.5605 - val_mae: 101.1915
+
+Epoch 44/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 28445.9746 - mae: 110.7087 - val_loss: 25024.2656 - val_mae: 100.9988
+
+Epoch 45/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 27906.2344 - mae: 109.6537 - val_loss: 24660.1367 - val_mae: 100.6702
+
+Epoch 46/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 28115.4980 - mae: 110.2361 - val_loss: 23887.3262 - val_mae: 98.8253
+
+Epoch 47/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 27615.6660 - mae: 109.1585 - val_loss: 23930.5762 - val_mae: 98.9298
+
+Epoch 48/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">2s</span> 4ms/step - loss: 27626.0312 - mae: 109.3007 - val_loss: 23718.6035 - val_mae: 98.4578
+
+Epoch 49/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 4ms/step - loss: 27757.0273 - mae: 109.6322 - val_loss: 25175.4434 - val_mae: 101.7248
+
+Epoch 50/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 27657.7891 - mae: 109.5590 - val_loss: 23271.6602 - val_mae: 97.6312
+
+Epoch 51/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 27766.7383 - mae: 109.6592 - val_loss: 23557.3008 - val_mae: 98.4395
+
+Epoch 52/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 27180.8672 - mae: 108.4292 - val_loss: 23757.2363 - val_mae: 98.2678
+
+Epoch 53/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 26990.9414 - mae: 108.1149 - val_loss: 23045.5391 - val_mae: 97.5090
+
+Epoch 54/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 27195.6992 - mae: 108.9309 - val_loss: 23271.6582 - val_mae: 97.6311
+
+Epoch 55/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 4ms/step - loss: 26794.2656 - mae: 108.0009 - val_loss: 22969.2539 - val_mae: 96.8344
+
+Epoch 56/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 4ms/step - loss: 26720.8535 - mae: 107.5512 - val_loss: 23264.3613 - val_mae: 97.9195
+
+Epoch 57/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 27101.1270 - mae: 108.6479 - val_loss: 22809.9863 - val_mae: 97.0108
+
+Epoch 58/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 26658.2109 - mae: 107.8101 - val_loss: 23095.3145 - val_mae: 97.5613
+
+Epoch 59/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 26703.6973 - mae: 107.8433 - val_loss: 22885.4277 - val_mae: 96.7381
+
+Epoch 60/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 4ms/step - loss: 26565.3418 - mae: 107.5362 - val_loss: 22557.8008 - val_mae: 96.5564
+
+Epoch 61/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 4ms/step - loss: 26472.9043 - mae: 107.4292 - val_loss: 22885.5605 - val_mae: 97.1474
+
+Epoch 62/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 26105.7754 - mae: 106.6863 - val_loss: 23000.4473 - val_mae: 97.7772
+
+Epoch 63/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 26280.6777 - mae: 107.4029 - val_loss: 22639.9199 - val_mae: 96.6093
+
+Epoch 64/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 26283.1504 - mae: 106.9620 - val_loss: 22970.6426 - val_mae: 97.3550
+
+Epoch 65/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 26414.2891 - mae: 107.2428 - val_loss: 22562.5410 - val_mae: 95.9161
+
+Epoch 66/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 26236.5078 - mae: 106.8431 - val_loss: 22565.6289 - val_mae: 96.3522
+
+Epoch 67/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 26235.1191 - mae: 106.7647 - val_loss: 22878.8359 - val_mae: 96.8295
+
+Epoch 68/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 26190.4219 - mae: 106.9940 - val_loss: 22628.1211 - val_mae: 96.4429
+
+Epoch 69/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 25758.3574 - mae: 105.8355 - val_loss: 23017.6055 - val_mae: 96.9442
+
+Epoch 70/200
+
+<span class="ansi-bold">308/308</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 3ms/step - loss: 25868.6289 - mae: 106.3213 - val_loss: 22637.5410 - val_mae: 96.3798
+
+
+
+Test MSE: 22550.83
+
+Test MAE: 97.27 riders
+
+<span class="ansi-bold">528/528</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">1s</span> 2ms/step
+
+Test R²:  0.8117
+</pre>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter_bikes_files/figure-html/cell-18-output-9.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="starter_bikes_files/figure-html/cell-18-output-10.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Done.</code></pre>
+</div>
+</div>
+<div id="cell-36" class="cell" data-outputid="103ea11a-9d72-4372-bea5-81eb2d79e275" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="61">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pandas.tseries.holiday <span class="im">import</span> USFederalHolidayCalendar</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Load holdout</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>HOLDOUT_URL <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/biking_holdout_test_mini.csv"</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>holdout <span class="op">=</span> pd.read_csv(HOLDOUT_URL)</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Apply same transformations</span></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="co">#    (match what you did for bike)</span></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>holdout[<span class="st">"dteday"</span>] <span class="op">=</span> pd.to_datetime(holdout[<span class="st">"dteday"</span>])</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>holdout[<span class="st">"day_of_week"</span>] <span class="op">=</span> holdout[<span class="st">"dteday"</span>].dt.day_name()</span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>day_map <span class="op">=</span> {</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Monday"</span>: <span class="dv">0</span>, <span class="st">"Tuesday"</span>: <span class="dv">1</span>, <span class="st">"Wednesday"</span>: <span class="dv">2</span>, <span class="st">"Thursday"</span>: <span class="dv">3</span>,</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Friday"</span>: <span class="dv">4</span>, <span class="st">"Saturday"</span>: <span class="dv">5</span>, <span class="st">"Sunday"</span>: <span class="dv">6</span></span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>holdout[<span class="st">"day_of_week_num"</span>] <span class="op">=</span> holdout[<span class="st">"day_of_week"</span>].<span class="bu">map</span>(day_map)</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Event flags (use the SAME windows you used above) ---</span></span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a><span class="co"># covid_lockdown</span></span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a>covid_lockdown_ranges <span class="op">=</span> [(<span class="st">"2020-04-01"</span>, <span class="st">"2020-05-29"</span>)]  <span class="co"># as in your earlier cell [page:1]</span></span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>holdout[<span class="st">"covid_lockdown"</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> start, end <span class="kw">in</span> covid_lockdown_ranges:</span>
+<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> pd.to_datetime(start)<span class="op">;</span> end <span class="op">=</span> pd.to_datetime(end)</span>
+<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a>    holdout.loc[(holdout[<span class="st">"dteday"</span>] <span class="op">&gt;=</span> start) <span class="op">&amp;</span> (holdout[<span class="st">"dteday"</span>] <span class="op">&lt;=</span> end), <span class="st">"covid_lockdown"</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb24-31"><a href="#cb24-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-32"><a href="#cb24-32" aria-hidden="true" tabindex="-1"></a><span class="co"># gov_shutdown</span></span>
+<span id="cb24-33"><a href="#cb24-33" aria-hidden="true" tabindex="-1"></a>gov_shutdown_ranges <span class="op">=</span> [(<span class="st">"2013-10-01"</span>,<span class="st">"2013-10-17"</span>), (<span class="st">"2018-01-20"</span>,<span class="st">"2018-01-22"</span>), (<span class="st">"2018-12-22"</span>,<span class="st">"2019-01-25"</span>)]</span>
+<span id="cb24-34"><a href="#cb24-34" aria-hidden="true" tabindex="-1"></a>holdout[<span class="st">"gov_shutdown"</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb24-35"><a href="#cb24-35" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> start, end <span class="kw">in</span> gov_shutdown_ranges:</span>
+<span id="cb24-36"><a href="#cb24-36" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> pd.to_datetime(start)<span class="op">;</span> end <span class="op">=</span> pd.to_datetime(end)</span>
+<span id="cb24-37"><a href="#cb24-37" aria-hidden="true" tabindex="-1"></a>    holdout.loc[(holdout[<span class="st">"dteday"</span>] <span class="op">&gt;=</span> start) <span class="op">&amp;</span> (holdout[<span class="st">"dteday"</span>] <span class="op">&lt;=</span> end), <span class="st">"gov_shutdown"</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb24-38"><a href="#cb24-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-39"><a href="#cb24-39" aria-hidden="true" tabindex="-1"></a><span class="co"># big_event</span></span>
+<span id="cb24-40"><a href="#cb24-40" aria-hidden="true" tabindex="-1"></a>big_event_ranges <span class="op">=</span> [(<span class="st">"2013-01-18"</span>,<span class="st">"2013-01-22"</span>), (<span class="st">"2017-01-19"</span>,<span class="st">"2017-01-21"</span>), (<span class="st">"2021-01-19"</span>,<span class="st">"2021-01-21"</span>),</span>
+<span id="cb24-41"><a href="#cb24-41" aria-hidden="true" tabindex="-1"></a>                    (<span class="st">"2015-09-22"</span>,<span class="st">"2015-09-24"</span>), (<span class="st">"2020-06-01"</span>,<span class="st">"2020-06-02"</span>)]</span>
+<span id="cb24-42"><a href="#cb24-42" aria-hidden="true" tabindex="-1"></a>holdout[<span class="st">"big_event"</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb24-43"><a href="#cb24-43" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> start, end <span class="kw">in</span> big_event_ranges:</span>
+<span id="cb24-44"><a href="#cb24-44" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> pd.to_datetime(start)<span class="op">;</span> end <span class="op">=</span> pd.to_datetime(end)</span>
+<span id="cb24-45"><a href="#cb24-45" aria-hidden="true" tabindex="-1"></a>    holdout.loc[(holdout[<span class="st">"dteday"</span>] <span class="op">&gt;=</span> start) <span class="op">&amp;</span> (holdout[<span class="st">"dteday"</span>] <span class="op">&lt;=</span> end), <span class="st">"big_event"</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb24-46"><a href="#cb24-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-47"><a href="#cb24-47" aria-hidden="true" tabindex="-1"></a><span class="co"># major_holiday (same logic as your notebook: US federal holidays + fixed dates, and uses existing holiday col) [page:1]</span></span>
+<span id="cb24-48"><a href="#cb24-48" aria-hidden="true" tabindex="-1"></a>min_day <span class="op">=</span> holdout[<span class="st">"dteday"</span>].<span class="bu">min</span>()</span>
+<span id="cb24-49"><a href="#cb24-49" aria-hidden="true" tabindex="-1"></a>max_day <span class="op">=</span> holdout[<span class="st">"dteday"</span>].<span class="bu">max</span>()</span>
+<span id="cb24-50"><a href="#cb24-50" aria-hidden="true" tabindex="-1"></a>cal <span class="op">=</span> USFederalHolidayCalendar()</span>
+<span id="cb24-51"><a href="#cb24-51" aria-hidden="true" tabindex="-1"></a>federal_holidays <span class="op">=</span> cal.holidays(start<span class="op">=</span>min_day, end<span class="op">=</span>max_day)</span>
+<span id="cb24-52"><a href="#cb24-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-53"><a href="#cb24-53" aria-hidden="true" tabindex="-1"></a>fixed_major_md <span class="op">=</span> {(<span class="dv">1</span>, <span class="dv">1</span>), (<span class="dv">7</span>, <span class="dv">4</span>), (<span class="dv">12</span>, <span class="dv">25</span>)}</span>
+<span id="cb24-54"><a href="#cb24-54" aria-hidden="true" tabindex="-1"></a>fixed_major <span class="op">=</span> holdout[<span class="st">"dteday"</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> d: (d.month, d.day) <span class="kw">in</span> fixed_major_md)</span>
+<span id="cb24-55"><a href="#cb24-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-56"><a href="#cb24-56" aria-hidden="true" tabindex="-1"></a>holdout[<span class="st">"major_holiday"</span>] <span class="op">=</span> (</span>
+<span id="cb24-57"><a href="#cb24-57" aria-hidden="true" tabindex="-1"></a>    (((holdout[<span class="st">"holiday"</span>] <span class="op">==</span> <span class="dv">1</span>) <span class="op">&amp;</span> (holdout[<span class="st">"dteday"</span>].isin(federal_holidays) <span class="op">|</span> fixed_major)) <span class="op">|</span> fixed_major)</span>
+<span id="cb24-58"><a href="#cb24-58" aria-hidden="true" tabindex="-1"></a>).astype(<span class="bu">int</span>)</span>
+<span id="cb24-59"><a href="#cb24-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-60"><a href="#cb24-60" aria-hidden="true" tabindex="-1"></a><span class="co"># IMPORTANT: your model expects weather_emergency too (it was in feature_cols) [page:1]</span></span>
+<span id="cb24-61"><a href="#cb24-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Your notebook printed the flagged dates list and created the column there; replicate by</span></span>
+<span id="cb24-62"><a href="#cb24-62" aria-hidden="true" tabindex="-1"></a><span class="co"># defaulting to 0 unless you have a specific rule cell to copy over.</span></span>
+<span id="cb24-63"><a href="#cb24-63" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">"weather_emergency"</span> <span class="kw">not</span> <span class="kw">in</span> holdout.columns:</span>
+<span id="cb24-64"><a href="#cb24-64" aria-hidden="true" tabindex="-1"></a>    holdout[<span class="st">"weather_emergency"</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb24-65"><a href="#cb24-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-66"><a href="#cb24-66" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb24-67"><a href="#cb24-67" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) Build X in the same column order and scale with existing scaler</span></span>
+<span id="cb24-68"><a href="#cb24-68" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb24-69"><a href="#cb24-69" aria-hidden="true" tabindex="-1"></a>X_holdout <span class="op">=</span> holdout[feature_cols].values   <span class="co"># feature_cols defined in your training cell [page:1]</span></span>
+<span id="cb24-70"><a href="#cb24-70" aria-hidden="true" tabindex="-1"></a>X_holdout_scaled <span class="op">=</span> scaler.transform(X_holdout)  <span class="co"># scaler already fit on training data [page:1]</span></span>
+<span id="cb24-71"><a href="#cb24-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-72"><a href="#cb24-72" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb24-73"><a href="#cb24-73" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) Predict + save exactly as required</span></span>
+<span id="cb24-74"><a href="#cb24-74" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb24-75"><a href="#cb24-75" aria-hidden="true" tabindex="-1"></a>pred <span class="op">=</span> model.predict(X_holdout_scaled).reshape(<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb24-76"><a href="#cb24-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-77"><a href="#cb24-77" aria-hidden="true" tabindex="-1"></a>submission <span class="op">=</span> pd.DataFrame({<span class="st">"predictions"</span>: pred})</span>
+<span id="cb24-78"><a href="#cb24-78" aria-hidden="true" tabindex="-1"></a>submission.to_csv(<span class="st">"team4-module4-predictions.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb24-79"><a href="#cb24-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-80"><a href="#cb24-80" aria-hidden="true" tabindex="-1"></a>submission.head(), submission.shape</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-bold">12/12</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">0s</span> 3ms/step 
+</pre>
+</div>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="61">
+<pre><code>(   predictions
+ 0          0.0
+ 1          0.0
+ 2          0.0
+ 3          0.0
+ 4          0.0,
+ (384, 1))</code></pre>
 </div>
 </div>
 
