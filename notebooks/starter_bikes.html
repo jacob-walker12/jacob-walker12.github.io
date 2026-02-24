@@ -401,7 +401,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><a href="https://colab.research.google.com/github/jacob-walker12/jacob-walker12.github.io/blob/main/notebooks/starter_bikes.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
-<div id="cell-1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="287d4bf0-4b0a-433c-a980-1b366de1de18" data-execution_count="5">
+<div id="cell-1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="6b578402-fa99-4745-fb4e-4ec0a8263611" data-execution_count="35">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow <span class="im">import</span> keras</span>
@@ -410,8 +410,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>bike <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/bikes.csv'</span>)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>bike</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<div id="df-68508333-25ea-40f9-9105-92565ba8a520" class="colab-df-container">
+<div class="cell-output cell-output-display" data-execution_count="35">
+<div id="df-b111ed49-6eba-4781-ac5c-41247ad1b1f8" class="colab-df-container">
     <div>
 
 
@@ -607,7 +607,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-68508333-25ea-40f9-9105-92565ba8a520')" title="Convert this dataframe to an interactive table." style="display:none;">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b111ed49-6eba-4781-ac5c-41247ad1b1f8')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
     <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
@@ -657,12 +657,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
     <script>
       const buttonEl =
-        document.querySelector('#df-68508333-25ea-40f9-9105-92565ba8a520 button.colab-df-convert');
+        document.querySelector('#df-b111ed49-6eba-4781-ac5c-41247ad1b1f8 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-68508333-25ea-40f9-9105-92565ba8a520');
+        const element = document.querySelector('#df-b111ed49-6eba-4781-ac5c-41247ad1b1f8');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -682,7 +682,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 
 
-  <div id="id_398cb0fa-8397-41de-8742-a583f1914b33">
+  <div id="id_524311ae-c2a0-42ca-9f66-44491d6017a6">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -723,7 +723,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_398cb0fa-8397-41de-8742-a583f1914b33 button.colab-df-generate');
+        document.querySelector('#id_524311ae-c2a0-42ca-9f66-44491d6017a6 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -738,40 +738,193 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="2995707b-1696-4477-bd31-ec6d7722fc40" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bike[<span class="st">'dteday'</span>])</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'date'</span>] <span class="op">=</span> bike[<span class="st">'dteday'</span>].dt.date</span>
+<div id="cell-2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="92e5d711-d692-4161-b25a-d080f01f7d4b" data-execution_count="36">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pandas.tseries.holiday <span class="im">import</span> USFederalHolidayCalendar</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># print(bike[['dteday', 'date']].head())</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bike[<span class="st">'dteday'</span>])</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'date'</span>] <span class="op">=</span> bike[<span class="st">'dteday'</span>].dt.date</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load + parse dates</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bike[<span class="st">'dteday'</span>])</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># print(bike[['dteday', 'date']].head())</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>bike <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/bikes.csv'</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Handy bounds (auto-adjust to your dataset)</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>min_day <span class="op">=</span> bike[<span class="st">'dteday'</span>].<span class="bu">min</span>()</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>max_day <span class="op">=</span> bike[<span class="st">'dteday'</span>].<span class="bu">max</span>()</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bike[<span class="st">'dteday'</span>])</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'date'</span>] <span class="op">=</span> bike[<span class="st">'dteday'</span>].dt.date</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># print(bike[['dteday', 'date']].head())</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>daily_bike_data <span class="op">=</span> bike.groupby(<span class="st">'date'</span>).agg(</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    casual<span class="op">=</span>(<span class="st">'casual'</span>, <span class="st">'sum'</span>),</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    registered<span class="op">=</span>(<span class="st">'registered'</span>, <span class="st">'sum'</span>),</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    temp_c<span class="op">=</span>(<span class="st">'temp_c'</span>, <span class="st">'mean'</span>),</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    feels_like_c<span class="op">=</span>(<span class="st">'feels_like_c'</span>, <span class="st">'mean'</span>),</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    hum<span class="op">=</span>(<span class="st">'hum'</span>, <span class="st">'mean'</span>),</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    windspeed<span class="op">=</span>(<span class="st">'windspeed'</span>, <span class="st">'mean'</span>),</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    weathersit<span class="op">=</span>(<span class="st">'weathersit'</span>, <span class="st">'first'</span>),</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    season<span class="op">=</span>(<span class="st">'season'</span>, <span class="st">'first'</span>),</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    holiday<span class="op">=</span>(<span class="st">'holiday'</span>, <span class="st">'first'</span>),</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    workingday<span class="op">=</span>(<span class="st">'workingday'</span>, <span class="st">'first'</span>)</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>).reset_index()</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>daily_bike_data[<span class="st">'day_of_week'</span>] <span class="op">=</span> pd.to_datetime(daily_bike_data[<span class="st">'date'</span>]).dt.day_name()</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(daily_bike_data.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) COVID lockdown indicator (DC stay-at-home order period)</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">#   DC stay-at-home order effective 2020-04-01; extended through mid/late May 2020.</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co">#   You can broaden this window if you mean "COVID restriction era" rather than strict stay-at-home.</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>covid_lockdown_ranges <span class="op">=</span> [</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2020-04-01'</span>, <span class="st">'2020-05-29'</span>),  <span class="co"># DC stay-at-home era (edit end date if your definition differs)</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'covid_lockdown'</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> start, end <span class="kw">in</span> covid_lockdown_ranges:</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> pd.to_datetime(start)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    end <span class="op">=</span> pd.to_datetime(end)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    bike.loc[(bike[<span class="st">'dteday'</span>] <span class="op">&gt;=</span> start) <span class="op">&amp;</span> (bike[<span class="st">'dteday'</span>] <span class="op">&lt;=</span> end), <span class="st">'covid_lockdown'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Government shutdown indicator (US federal shutdowns affecting DC)</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>gov_shutdown_ranges <span class="op">=</span> [</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2013-10-01'</span>, <span class="st">'2013-10-17'</span>),  <span class="co"># 2013 shutdown</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2018-01-20'</span>, <span class="st">'2018-01-22'</span>),  <span class="co"># 2018 shutdown</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2018-12-22'</span>, <span class="st">'2019-01-25'</span>),  <span class="co"># 2018-2019 shutdown</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'gov_shutdown'</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> start, end <span class="kw">in</span> gov_shutdown_ranges:</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> pd.to_datetime(start)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    end <span class="op">=</span> pd.to_datetime(end)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    bike.loc[(bike[<span class="st">'dteday'</span>] <span class="op">&gt;=</span> start) <span class="op">&amp;</span> (bike[<span class="st">'dteday'</span>] <span class="op">&lt;=</span> end), <span class="st">'gov_shutdown'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) Big event indicator (EDIT these to match what *you* consider "big events")</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="co">#   Examples shown: major DC-centric events (inaugurations) + a couple of common big days.</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>big_event_ranges <span class="op">=</span> [</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2013-01-18'</span>, <span class="st">'2013-01-22'</span>),  <span class="co"># 2013 presidential inauguration weekend window</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2017-01-19'</span>, <span class="st">'2017-01-21'</span>),  <span class="co"># 2017 inauguration window</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2021-01-19'</span>, <span class="st">'2021-01-21'</span>),  <span class="co"># 2021 inauguration window</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2015-09-22'</span>, <span class="st">'2015-09-24'</span>),  <span class="co"># example: Papal visit window (edit if desired)</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'2020-06-01'</span>, <span class="st">'2020-06-02'</span>),  <span class="co"># example: curfew/unrest peak window (edit if desired)</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'big_event'</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> start, end <span class="kw">in</span> big_event_ranges:</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> pd.to_datetime(start)</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    end <span class="op">=</span> pd.to_datetime(end)</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    bike.loc[(bike[<span class="st">'dteday'</span>] <span class="op">&gt;=</span> start) <span class="op">&amp;</span> (bike[<span class="st">'dteday'</span>] <span class="op">&lt;=</span> end), <span class="st">'big_event'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) Major holiday indicator</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="co">#   Strategy:</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="co">#   - If your dataset has a "holiday" column (0/1), keep it as a baseline</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="co">#   - Define "major" as: (holiday==1) AND also matches US federal holiday calendar</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="co">#     OR (explicitly listed major fixed-date holidays like Jul 4 / Dec 25 / Jan 1).</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="co"># US federal holidays within data range</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>cal <span class="op">=</span> USFederalHolidayCalendar()</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>federal_holidays <span class="op">=</span> cal.holidays(start<span class="op">=</span>min_day, end<span class="op">=</span>max_day)</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixed-date major holidays (commonly treated as major regardless of calendar nuances)</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>fixed_major_md <span class="op">=</span> {(<span class="dv">1</span>, <span class="dv">1</span>), (<span class="dv">7</span>, <span class="dv">4</span>), (<span class="dv">12</span>, <span class="dv">25</span>)}  <span class="co"># New Year, Independence Day, Christmas</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>fixed_major <span class="op">=</span> bike[<span class="st">'dteday'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> d: (d.month, d.day) <span class="kw">in</span> fixed_major_md)</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="co"># If your dataset has 'holiday', incorporate it; otherwise just use calendar logic</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">'holiday'</span> <span class="kw">in</span> bike.columns:</span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>    bike[<span class="st">'major_holiday'</span>] <span class="op">=</span> (</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>        ((bike[<span class="st">'holiday'</span>] <span class="op">==</span> <span class="dv">1</span>) <span class="op">&amp;</span> (bike[<span class="st">'dteday'</span>].isin(federal_holidays) <span class="op">|</span> fixed_major))</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> fixed_major</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>    ).astype(<span class="bu">int</span>)</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>    bike[<span class="st">'major_holiday'</span>] <span class="op">=</span> (bike[<span class="st">'dteday'</span>].isin(federal_holidays) <span class="op">|</span> fixed_major).astype(<span class="bu">int</span>)</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="co"># Quick sanity check</span></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>cols <span class="op">=</span> [<span class="st">'dteday'</span>, <span class="st">'covid_lockdown'</span>, <span class="st">'gov_shutdown'</span>, <span class="st">'big_event'</span>, <span class="st">'major_holiday'</span>]</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bike[cols].head(<span class="dv">10</span>))</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Counts:</span><span class="ch">\n</span><span class="st">"</span>, bike[cols[<span class="dv">1</span>:]].<span class="bu">sum</span>())</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bike)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      dteday  covid_lockdown  gov_shutdown  big_event  major_holiday
+0 2011-01-01               0             0          0              1
+1 2011-01-01               0             0          0              1
+2 2011-01-01               0             0          0              1
+3 2011-01-01               0             0          0              1
+4 2011-01-01               0             0          0              1
+5 2011-01-01               0             0          0              1
+6 2011-01-01               0             0          0              1
+7 2011-01-01               0             0          0              1
+8 2011-01-01               0             0          0              1
+9 2011-01-01               0             0          0              1
+
+Counts:
+ covid_lockdown    1416
+gov_shutdown      1320
+big_event          384
+major_holiday     3384
+dtype: int64
+           dteday    hr  casual  registered  temp_c  feels_like_c     hum  \
+0      2011-01-01   0.0       3          13     3.0           3.0  0.7957   
+1      2011-01-01   1.0       8          30     1.7           1.7  0.8272   
+2      2011-01-01   2.0       5          26     1.9           1.9  0.8157   
+3      2011-01-01   3.0       3           9     2.5           2.5  0.7831   
+4      2011-01-01   4.0       0           1     2.0           2.0  0.8075   
+...           ...   ...     ...         ...     ...           ...     ...   
+112470 2023-10-31  19.0     241         594    10.2          10.2  0.4516   
+112471 2023-10-31  20.0     171         450     8.9           7.5  0.5268   
+112472 2023-10-31  21.0     176         402     7.7           6.4  0.5756   
+112473 2023-10-31  22.0     106         257     8.0           8.0  0.5604   
+112474 2023-10-31  23.0      78         135     6.5           6.5  0.6401   
+
+        windspeed  weathersit  season  holiday  workingday  covid_lockdown  \
+0             0.8           1       1        0           0               0   
+1             0.8           1       1        0           0               0   
+2             1.1           1       1        0           0               0   
+3             0.8           1       1        0           0               0   
+4             1.1           1       1        0           0               0   
+...           ...         ...     ...      ...         ...             ...   
+112470        8.4           2       4        0           1               0   
+112471        9.3           1       4        0           1               0   
+112472        7.8           1       4        0           1               0   
+112473        0.0           1       4        0           1               0   
+112474        4.5           1       4        0           1               0   
+
+        gov_shutdown  big_event  major_holiday  
+0                  0          0              1  
+1                  0          0              1  
+2                  0          0              1  
+3                  0          0              1  
+4                  0          0              1  
+...              ...        ...            ...  
+112470             0          0              0  
+112471             0          0              0  
+112472             0          0              0  
+112473             0          0              0  
+112474             0          0              0  
+
+[112475 rows x 16 columns]</code></pre>
+</div>
+</div>
+<div id="cell-3" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bcc88ad4-84f6-4013-87cb-605156ae4514" data-execution_count="37">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bike[<span class="st">'dteday'</span>])</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'date'</span>] <span class="op">=</span> bike[<span class="st">'dteday'</span>].dt.date</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># print(bike[['dteday', 'date']].head())</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bike[<span class="st">'dteday'</span>])</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'date'</span>] <span class="op">=</span> bike[<span class="st">'dteday'</span>].dt.date</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># print(bike[['dteday', 'date']].head())</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>bike <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/byui-cse/cse450-course/master/data/bikes.csv'</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bike[<span class="st">'dteday'</span>])</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'date'</span>] <span class="op">=</span> bike[<span class="st">'dteday'</span>].dt.date</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># print(bike[['dteday', 'date']].head())</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>daily_bike_data <span class="op">=</span> bike.groupby(<span class="st">'date'</span>).agg(</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    casual<span class="op">=</span>(<span class="st">'casual'</span>, <span class="st">'sum'</span>),</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    registered<span class="op">=</span>(<span class="st">'registered'</span>, <span class="st">'sum'</span>),</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    temp_c<span class="op">=</span>(<span class="st">'temp_c'</span>, <span class="st">'mean'</span>),</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    feels_like_c<span class="op">=</span>(<span class="st">'feels_like_c'</span>, <span class="st">'mean'</span>),</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    hum<span class="op">=</span>(<span class="st">'hum'</span>, <span class="st">'mean'</span>),</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    windspeed<span class="op">=</span>(<span class="st">'windspeed'</span>, <span class="st">'mean'</span>),</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    weathersit<span class="op">=</span>(<span class="st">'weathersit'</span>, <span class="st">'first'</span>),</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    season<span class="op">=</span>(<span class="st">'season'</span>, <span class="st">'first'</span>),</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    holiday<span class="op">=</span>(<span class="st">'holiday'</span>, <span class="st">'first'</span>),</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    workingday<span class="op">=</span>(<span class="st">'workingday'</span>, <span class="st">'first'</span>)</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>).reset_index()</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>daily_bike_data[<span class="st">'day_of_week'</span>] <span class="op">=</span> pd.to_datetime(daily_bike_data[<span class="st">'date'</span>]).dt.day_name()</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(daily_bike_data.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         date  casual  registered    temp_c  feels_like_c       hum  \
 0  2011-01-01     330         629  8.137500      7.970833  0.823567   
@@ -788,10 +941,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 4  12.700000           1       1        0           1   Wednesday  </code></pre>
 </div>
 </div>
-<div id="cell-3" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}}" data-outputid="62e61f75-e3de-4e47-940b-d767cdfb646d" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>bike.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<div id="df-0682b82a-f6f6-4bbe-a007-b3356ef3f2b2" class="colab-df-container">
+<div id="cell-4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}}" data-outputid="96b22188-d127-46a1-b03b-5575d8200e56" data-execution_count="38">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>bike.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="38">
+<div id="df-9f2886b1-a7a1-46a1-942d-e7da996c733c" class="colab-df-container">
     <div>
 
 
@@ -902,7 +1055,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-0682b82a-f6f6-4bbe-a007-b3356ef3f2b2')" title="Convert this dataframe to an interactive table." style="display:none;">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-9f2886b1-a7a1-46a1-942d-e7da996c733c')" title="Convert this dataframe to an interactive table." style="display:none;">
 
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
     <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
@@ -952,12 +1105,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
     <script>
       const buttonEl =
-        document.querySelector('#df-0682b82a-f6f6-4bbe-a007-b3356ef3f2b2 button.colab-df-convert');
+        document.querySelector('#df-9f2886b1-a7a1-46a1-942d-e7da996c733c button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-0682b82a-f6f6-4bbe-a007-b3356ef3f2b2');
+        const element = document.querySelector('#df-9f2886b1-a7a1-46a1-942d-e7da996c733c');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -981,46 +1134,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:607}}" data-outputid="edbb22c3-fb1a-4179-aa3d-df96dd34e63f" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Group by holiday and sum casual and registered bike usage</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>holiday_bike_usage <span class="op">=</span> daily_bike_data.groupby(<span class="st">'holiday'</span>)[[<span class="st">'casual'</span>, <span class="st">'registered'</span>]].<span class="bu">sum</span>().reset_index()</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate total riders for each holiday category</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>holiday_bike_usage[<span class="st">'total'</span>] <span class="op">=</span> holiday_bike_usage[<span class="st">'casual'</span>] <span class="op">+</span> holiday_bike_usage[<span class="st">'registered'</span>]</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate proportions</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>holiday_bike_usage[<span class="st">'casual_proportion'</span>] <span class="op">=</span> holiday_bike_usage[<span class="st">'casual'</span>] <span class="op">/</span> holiday_bike_usage[<span class="st">'total'</span>]</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>holiday_bike_usage[<span class="st">'registered_proportion'</span>] <span class="op">=</span> holiday_bike_usage[<span class="st">'registered'</span>] <span class="op">/</span> holiday_bike_usage[<span class="st">'total'</span>]</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Melt the DataFrame for easier plotting with seaborn, now with proportions</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>holiday_bike_usage_melted <span class="op">=</span> holiday_bike_usage.melt(id_vars<span class="op">=</span><span class="st">'holiday'</span>, value_vars<span class="op">=</span>[<span class="st">'casual_proportion'</span>, <span class="st">'registered_proportion'</span>], var_name<span class="op">=</span><span class="st">'user_type'</span>, value_name<span class="op">=</span><span class="st">'proportion_of_riders'</span>)</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename user_type for better legend labels</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>holiday_bike_usage_melted[<span class="st">'user_type'</span>] <span class="op">=</span> holiday_bike_usage_melted[<span class="st">'user_type'</span>].replace({</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'casual_proportion'</span>: <span class="st">'Casual Riders'</span>,</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'registered_proportion'</span>: <span class="st">'Registered Riders'</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the bar plot</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>sns.barplot(x<span class="op">=</span><span class="st">'holiday'</span>, y<span class="op">=</span><span class="st">'proportion_of_riders'</span>, hue<span class="op">=</span><span class="st">'user_type'</span>, data<span class="op">=</span>holiday_bike_usage_melted, palette<span class="op">=</span><span class="st">'viridis'</span>)</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Customize the plot</span></span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Proportion of Bike Usage: Regular Days vs. Holidays'</span>)</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Day Type (0 = Regular Day, 1 = Holiday)'</span>)</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Proportion of Riders'</span>)</span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>plt.xticks(ticks<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>], labels<span class="op">=</span>[<span class="st">'Regular Day'</span>, <span class="st">'Holiday'</span>])</span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">'User Type'</span>)</span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cell-7" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:607}}" data-outputid="d75493e9-cd27-4305-c1ce-f90336bca44c" data-execution_count="39">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Group by holiday and sum casual and registered bike usage</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>holiday_bike_usage <span class="op">=</span> daily_bike_data.groupby(<span class="st">'holiday'</span>)[[<span class="st">'casual'</span>, <span class="st">'registered'</span>]].<span class="bu">sum</span>().reset_index()</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate total riders for each holiday category</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>holiday_bike_usage[<span class="st">'total'</span>] <span class="op">=</span> holiday_bike_usage[<span class="st">'casual'</span>] <span class="op">+</span> holiday_bike_usage[<span class="st">'registered'</span>]</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate proportions</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>holiday_bike_usage[<span class="st">'casual_proportion'</span>] <span class="op">=</span> holiday_bike_usage[<span class="st">'casual'</span>] <span class="op">/</span> holiday_bike_usage[<span class="st">'total'</span>]</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>holiday_bike_usage[<span class="st">'registered_proportion'</span>] <span class="op">=</span> holiday_bike_usage[<span class="st">'registered'</span>] <span class="op">/</span> holiday_bike_usage[<span class="st">'total'</span>]</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Melt the DataFrame for easier plotting with seaborn, now with proportions</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>holiday_bike_usage_melted <span class="op">=</span> holiday_bike_usage.melt(id_vars<span class="op">=</span><span class="st">'holiday'</span>, value_vars<span class="op">=</span>[<span class="st">'casual_proportion'</span>, <span class="st">'registered_proportion'</span>], var_name<span class="op">=</span><span class="st">'user_type'</span>, value_name<span class="op">=</span><span class="st">'proportion_of_riders'</span>)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename user_type for better legend labels</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>holiday_bike_usage_melted[<span class="st">'user_type'</span>] <span class="op">=</span> holiday_bike_usage_melted[<span class="st">'user_type'</span>].replace({</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'casual_proportion'</span>: <span class="st">'Casual Riders'</span>,</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'registered_proportion'</span>: <span class="st">'Registered Riders'</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the bar plot</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>sns.barplot(x<span class="op">=</span><span class="st">'holiday'</span>, y<span class="op">=</span><span class="st">'proportion_of_riders'</span>, hue<span class="op">=</span><span class="st">'user_type'</span>, data<span class="op">=</span>holiday_bike_usage_melted, palette<span class="op">=</span><span class="st">'viridis'</span>)</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Customize the plot</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Proportion of Bike Usage: Regular Days vs. Holidays'</span>)</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Day Type (0 = Regular Day, 1 = Holiday)'</span>)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Proportion of Riders'</span>)</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>plt.xticks(ticks<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>], labels<span class="op">=</span>[<span class="st">'Regular Day'</span>, <span class="st">'Holiday'</span>])</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">'User Type'</span>)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="starter_bikes_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="starter_bikes_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1035,10 +1188,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="subtask">Subtask:</h3>
 <p>Add a ‘total_riders’ column to the <code>daily_bike_data</code> DataFrame by summing the ‘casual’ and ‘registered’ columns. This will be used for the bar chart.</p>
 <p><strong>Reasoning</strong>: To complete the subtask, I will add a new column ‘total_riders’ to the <code>daily_bike_data</code> DataFrame by summing the ‘casual’ and ‘registered’ columns. Then, I will display the head of the DataFrame to verify the new column.</p>
-<div id="cell-12" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="0d6a0574-20b3-43d7-c4af-a1030f81f7ed" data-execution_count="10">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>daily_bike_data[<span class="st">'total_riders'</span>] <span class="op">=</span> daily_bike_data[<span class="st">'casual'</span>] <span class="op">+</span> daily_bike_data[<span class="st">'registered'</span>]</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(daily_bike_data.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cell-13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="51f6d403-cac2-4a33-e81e-747a7eb3f35a" data-execution_count="40">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>daily_bike_data[<span class="st">'total_riders'</span>] <span class="op">=</span> daily_bike_data[<span class="st">'casual'</span>] <span class="op">+</span> daily_bike_data[<span class="st">'registered'</span>]</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(daily_bike_data.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         date  casual  registered    temp_c  feels_like_c       hum  \
 0  2011-01-01     330         629  8.137500      7.970833  0.823567   
@@ -1070,212 +1223,137 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="subtask-1">Subtask:</h3>
 <p>Generate a plot where bars represent the ‘total_riders’ from <code>daily_bike_data</code> for each day, and overlaid lines show the ‘casual’ users (green) and ‘registered’ users (blue) over the same period. Ensure proper labeling for axes and a title for the chart.</p>
 <p><strong>Reasoning</strong>: I need to generate a combined bar and line chart as described in the subtask. This involves creating a bar plot for total riders and overlaying line plots for casual and registered riders on a secondary y-axis. I will use <code>matplotlib.pyplot</code> and <code>seaborn</code> to achieve this, ensuring all labels, titles, and legends are correctly placed.</p>
-<div id="cell-15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-outputid="a2b9c412-b26b-41c6-9bcd-149527d33287" data-execution_count="11">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure 'date' column is in datetime format for proper plotting</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>daily_bike_data[<span class="st">'date'</span>] <span class="op">=</span> pd.to_datetime(daily_bike_data[<span class="st">'date'</span>])</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a figure and a set of subplots</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>fig, ax1 <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="dv">8</span>))</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot total_riders as a bar chart on ax1</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>sns.barplot(x<span class="op">=</span><span class="st">'date'</span>, y<span class="op">=</span><span class="st">'total_riders'</span>, data<span class="op">=</span>daily_bike_data, color<span class="op">=</span><span class="st">'#cccccc'</span>, ax<span class="op">=</span>ax1, label<span class="op">=</span><span class="st">'Total Riders'</span>)</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a second y-axis that shares the same x-axis as ax1</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> ax1.twinx()</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot casual riders as a green line on ax2</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>ax2.plot(daily_bike_data[<span class="st">'date'</span>], daily_bike_data[<span class="st">'casual'</span>], color<span class="op">=</span><span class="st">'green'</span>, label<span class="op">=</span><span class="st">'Casual Riders'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot registered riders as a blue line on ax2</span></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>ax2.plot(daily_bike_data[<span class="st">'date'</span>], daily_bike_data[<span class="st">'registered'</span>], color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Registered Riders'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the title of the chart</span></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Daily Bike Usage: Total, Casual, and Registered Riders'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Set x-axis label for ax1</span></span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'Date'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Set y-axis label for ax1</span></span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'Total Riders'</span>, color<span class="op">=</span><span class="st">'#cccccc'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>ax1.tick_params(axis<span class="op">=</span><span class="st">'y'</span>, labelcolor<span class="op">=</span><span class="st">'#cccccc'</span>)</span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Set y-axis label for ax2</span></span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'Number of Casual/Registered Riders'</span>, color<span class="op">=</span><span class="st">'black'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine legends from both axes</span></span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>handles1, labels1 <span class="op">=</span> ax1.get_legend_handles_labels()</span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>handles2, labels2 <span class="op">=</span> ax2.get_legend_handles_labels()</span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>ax2.legend(handles1 <span class="op">+</span> handles2, labels1 <span class="op">+</span> labels2, loc<span class="op">=</span><span class="st">'upper left'</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Rotate x-axis labels if they overlap to improve readability</span></span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>fig.autofmt_xdate()</span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Add grid for better readability</span></span>
-<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>ax1.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
-<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the plot</span></span>
-<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/ipython-input-4158710144.py</span> in <span class="ansi-cyan-fg">&lt;cell line: 0&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg ansi-bold">     15</span> 
-<span class="ansi-green-fg ansi-bold">     16</span> <span class="ansi-red-fg"># Plot casual riders as a green line on ax2</span>
-<span class="ansi-green-fg">---&gt; 17</span><span class="ansi-red-fg"> </span>ax2<span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span>daily_bike_data<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">'date'</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> daily_bike_data<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">'casual'</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'green'</span><span class="ansi-blue-fg">,</span> label<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'Casual Riders'</span><span class="ansi-blue-fg">,</span> linewidth<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg ansi-bold">     18</span> 
-<span class="ansi-green-fg ansi-bold">     19</span> <span class="ansi-red-fg"># Plot registered riders as a blue line on ax2</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.12/dist-packages/matplotlib/axes/_axes.py</span> in <span class="ansi-cyan-fg">plot</span><span class="ansi-blue-fg">(self, scalex, scaley, data, *args, **kwargs)</span>
-<span class="ansi-green-fg ansi-bold">   1775</span>         """
-<span class="ansi-green-fg ansi-bold">   1776</span>         kwargs <span class="ansi-blue-fg">=</span> cbook<span class="ansi-blue-fg">.</span>normalize_kwargs<span class="ansi-blue-fg">(</span>kwargs<span class="ansi-blue-fg">,</span> mlines<span class="ansi-blue-fg">.</span>Line2D<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 1777</span><span class="ansi-red-fg">         </span>lines <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">*</span>self<span class="ansi-blue-fg">.</span>_get_lines<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> data<span class="ansi-blue-fg">=</span>data<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-fg ansi-bold">   1778</span>         <span class="ansi-green-fg">for</span> line <span class="ansi-green-fg">in</span> lines<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg ansi-bold">   1779</span>             self<span class="ansi-blue-fg">.</span>add_line<span class="ansi-blue-fg">(</span>line<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.12/dist-packages/matplotlib/axes/_base.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, axes, data, return_kwargs, *args, **kwargs)</span>
-<span class="ansi-green-fg ansi-bold">    295</span>                 this <span class="ansi-blue-fg">+=</span> args<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg ansi-bold">    296</span>                 args <span class="ansi-blue-fg">=</span> args<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-fg">--&gt; 297</span><span class="ansi-red-fg">             yield from self._plot_args(
-</span><span class="ansi-green-fg ansi-bold">    298</span>                 axes<span class="ansi-blue-fg">,</span> this<span class="ansi-blue-fg">,</span> kwargs<span class="ansi-blue-fg">,</span> ambiguous_fmt_datakey<span class="ansi-blue-fg">=</span>ambiguous_fmt_datakey<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg ansi-bold">    299</span>                 return_kwargs<span class="ansi-blue-fg">=</span>return_kwargs
-
-<span class="ansi-green-fg">/usr/local/lib/python3.12/dist-packages/matplotlib/axes/_base.py</span> in <span class="ansi-cyan-fg">_plot_args</span><span class="ansi-blue-fg">(self, axes, tup, kwargs, return_kwargs, ambiguous_fmt_datakey)</span>
-<span class="ansi-green-fg ansi-bold">    487</span> 
-<span class="ansi-green-fg ansi-bold">    488</span>         <span class="ansi-green-fg">if</span> axes<span class="ansi-blue-fg">.</span>xaxis <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 489</span><span class="ansi-red-fg">             </span>axes<span class="ansi-blue-fg">.</span>xaxis<span class="ansi-blue-fg">.</span>update_units<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg ansi-bold">    490</span>         <span class="ansi-green-fg">if</span> axes<span class="ansi-blue-fg">.</span>yaxis <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg ansi-bold">    491</span>             axes<span class="ansi-blue-fg">.</span>yaxis<span class="ansi-blue-fg">.</span>update_units<span class="ansi-blue-fg">(</span>y<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.12/dist-packages/matplotlib/axis.py</span> in <span class="ansi-cyan-fg">update_units</span><span class="ansi-blue-fg">(self, data)</span>
-<span class="ansi-green-fg ansi-bold">   1768</span> 
-<span class="ansi-green-fg ansi-bold">   1769</span>         <span class="ansi-green-fg">elif</span> neednew<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 1770</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_update_axisinfo<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg ansi-bold">   1771</span>         self<span class="ansi-blue-fg">.</span>stale <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">True</span>
-<span class="ansi-green-fg ansi-bold">   1772</span>         <span class="ansi-green-fg">return</span> <span class="ansi-green-fg">True</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.12/dist-packages/matplotlib/axis.py</span> in <span class="ansi-cyan-fg">_update_axisinfo</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-fg ansi-bold">   1780</span>             <span class="ansi-green-fg">return</span>
-<span class="ansi-green-fg ansi-bold">   1781</span> 
-<span class="ansi-green-fg">-&gt; 1782</span><span class="ansi-red-fg">         </span>info <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_converter<span class="ansi-blue-fg">.</span>axisinfo<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>units<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg ansi-bold">   1783</span> 
-<span class="ansi-green-fg ansi-bold">   1784</span>         <span class="ansi-green-fg">if</span> info <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.12/dist-packages/matplotlib/dates.py</span> in <span class="ansi-cyan-fg">axisinfo</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
-<span class="ansi-green-fg ansi-bold">   1826</span> 
-<span class="ansi-green-fg ansi-bold">   1827</span>     <span class="ansi-green-fg">def</span> axisinfo<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 1828</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_get_converter<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>axisinfo<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg ansi-bold">   1829</span> 
-<span class="ansi-green-fg ansi-bold">   1830</span>     <span class="ansi-green-fg">def</span> default_units<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.12/dist-packages/matplotlib/dates.py</span> in <span class="ansi-cyan-fg">axisinfo</span><span class="ansi-blue-fg">(self, unit, axis)</span>
-<span class="ansi-green-fg ansi-bold">   1743</span>         tz <span class="ansi-blue-fg">=</span> unit
-<span class="ansi-green-fg ansi-bold">   1744</span> 
-<span class="ansi-green-fg">-&gt; 1745</span><span class="ansi-red-fg">         majloc = AutoDateLocator(tz=tz,
-</span><span class="ansi-green-fg ansi-bold">   1746</span>                                  interval_multiples=self._interval_multiples)
-<span class="ansi-green-fg ansi-bold">   1747</span>         majfmt <span class="ansi-blue-fg">=</span> AutoDateFormatter<span class="ansi-blue-fg">(</span>majloc<span class="ansi-blue-fg">,</span> tz<span class="ansi-blue-fg">=</span>tz<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.12/dist-packages/matplotlib/dates.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, tz, minticks, maxticks, interval_multiples)</span>
-<span class="ansi-green-fg ansi-bold">   1277</span>             at <span class="ansi-cyan-fg">6</span> hour intervals<span class="ansi-blue-fg">.</span>
-<span class="ansi-green-fg ansi-bold">   1278</span>         """
-<span class="ansi-green-fg">-&gt; 1279</span><span class="ansi-red-fg">         </span>super<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>__init__<span class="ansi-blue-fg">(</span>tz<span class="ansi-blue-fg">=</span>tz<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg ansi-bold">   1280</span>         self<span class="ansi-blue-fg">.</span>_freq <span class="ansi-blue-fg">=</span> YEARLY
-<span class="ansi-green-fg ansi-bold">   1281</span>         self._freqs = [YEARLY, MONTHLY, DAILY, HOURLY, MINUTELY,
-
-<span class="ansi-green-fg">/usr/local/lib/python3.12/dist-packages/matplotlib/dates.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, tz)</span>
-<span class="ansi-green-fg ansi-bold">   1076</span>             Ticks timezone<span class="ansi-blue-fg">.</span> If a string<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>tz<span class="ansi-blue-fg">*</span> <span class="ansi-green-fg">is</span> passed to<span class="ansi-red-fg"> </span><span class="ansi-red-fg">`</span>dateutil<span class="ansi-blue-fg">.</span>tz<span class="ansi-red-fg">`</span><span class="ansi-blue-fg">.</span>
-<span class="ansi-green-fg ansi-bold">   1077</span>         """
-<span class="ansi-green-fg">-&gt; 1078</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>tz <span class="ansi-blue-fg">=</span> _get_tzinfo<span class="ansi-blue-fg">(</span>tz<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg ansi-bold">   1079</span> 
-<span class="ansi-green-fg ansi-bold">   1080</span>     <span class="ansi-green-fg">def</span> set_tzinfo<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> tz<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/usr/local/lib/python3.12/dist-packages/matplotlib/dates.py</span> in <span class="ansi-cyan-fg">_get_tzinfo</span><span class="ansi-blue-fg">(tz)</span>
-<span class="ansi-green-fg ansi-bold">    222</span>     <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>tz<span class="ansi-blue-fg">,</span> datetime<span class="ansi-blue-fg">.</span>tzinfo<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg ansi-bold">    223</span>         <span class="ansi-green-fg">return</span> tz
-<span class="ansi-green-fg">--&gt; 224</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">raise</span> TypeError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f"tz must be string or tzinfo subclass, not {tz!r}."</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg ansi-bold">    225</span> 
-<span class="ansi-green-fg ansi-bold">    226</span> 
-
-<span class="ansi-red-fg">TypeError</span>: tz must be string or tzinfo subclass, not &lt;matplotlib.category.UnitData object at 0x7c7a72140170&gt;.</pre>
-</div>
-</div>
+<div id="cell-16" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:646}}" data-outputid="44d74943-00b7-4e1d-f6c8-16ea63763e23" data-execution_count="41">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.dates <span class="im">as</span> mdates</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure 'date' column is in datetime format for proper plotting</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>daily_bike_data[<span class="st">'date'</span>] <span class="op">=</span> pd.to_datetime(daily_bike_data[<span class="st">'date'</span>])</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a figure and a set of subplots</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>fig, ax1 <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="dv">8</span>))</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert dates to numerical format so both bar and line plots share the same continuous date axis</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>dates_numeric <span class="op">=</span> mdates.date2num(daily_bike_data[<span class="st">'date'</span>])</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot total_riders as a bar chart on ax1 using numerical dates</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>bar_width <span class="op">=</span> <span class="fl">0.8</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>ax1.bar(dates_numeric, daily_bike_data[<span class="st">'total_riders'</span>], width<span class="op">=</span>bar_width, color<span class="op">=</span><span class="st">'#cccccc'</span>, label<span class="op">=</span><span class="st">'Total Riders'</span>, align<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a second y-axis that shares the same x-axis as ax1</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> ax1.twinx()</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot casual riders as a green line on ax2</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>ax2.plot(dates_numeric, daily_bike_data[<span class="st">'casual'</span>], color<span class="op">=</span><span class="st">'green'</span>, label<span class="op">=</span><span class="st">'Casual Riders'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot registered riders as a blue line on ax2</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>ax2.plot(dates_numeric, daily_bike_data[<span class="st">'registered'</span>], color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Registered Riders'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the title of the chart</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Daily Bike Usage: Total, Casual, and Registered Riders'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Set x-axis label for ax1</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'Date'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Set y-axis label for ax1</span></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'Total Riders'</span>, color<span class="op">=</span><span class="st">'#cccccc'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>ax1.tick_params(axis<span class="op">=</span><span class="st">'y'</span>, labelcolor<span class="op">=</span><span class="st">'#cccccc'</span>)</span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Set y-axis label for ax2</span></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'Number of Casual/Registered Riders'</span>, color<span class="op">=</span><span class="st">'black'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Format the x-axis to display dates properly</span></span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>ax1.xaxis.set_major_formatter(mdates.DateFormatter(<span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st">'</span>))</span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>ax1.xaxis.set_major_locator(mdates.AutoDateLocator())</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine legends from both axes</span></span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>handles1, labels1 <span class="op">=</span> ax1.get_legend_handles_labels()</span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>handles2, labels2 <span class="op">=</span> ax2.get_legend_handles_labels()</span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>ax2.legend(handles1 <span class="op">+</span> handles2, labels1 <span class="op">+</span> labels2, loc<span class="op">=</span><span class="st">'upper left'</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Rotate x-axis labels if they overlap to improve readability</span></span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>fig.autofmt_xdate()</span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Add grid for better readability</span></span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>ax1.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the plot</span></span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="starter_bikes_files/figure-html/cell-10-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="starter_bikes_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p><strong>Reasoning</strong>: The previous code failed because <code>sns.barplot</code> likely coerced the ‘date’ column into a categorical type for the x-axis, which then caused a <code>TypeError</code> when <code>ax2.plot</code> tried to interpret the same ‘date’ column as a datetime object for plotting lines. To fix this, I will use <code>ax1.bar</code> instead of <code>sns.barplot</code> to plot the total riders, using the numerical representation of dates for the x-axis. This ensures that the x-axis is treated as a continuous datetime scale, allowing the line plots on <code>ax2</code> to render correctly without conflicts.</p>
-<div id="cell-17" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:806}}" data-outputid="6debba7b-20f6-4945-fb6c-a1d740b70d74" data-execution_count="13">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.dates <span class="im">as</span> mdates</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure 'date' column is in datetime format for proper plotting</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>daily_bike_data[<span class="st">'date'</span>] <span class="op">=</span> pd.to_datetime(daily_bike_data[<span class="st">'date'</span>])</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a figure and a set of subplots</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>fig, ax1 <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="dv">8</span>))</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert dates to numerical format for plotting with plt.bar and plt.plot</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co"># This ensures a continuous date axis consistent across both axes</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>dates_numeric <span class="op">=</span> mdates.date2num(daily_bike_data[<span class="st">'date'</span>])</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot total_riders as a bar chart on ax1 using numerical dates</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co"># We need to set the width of the bars appropriately for daily data</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>bar_width <span class="op">=</span> <span class="fl">0.8</span> <span class="co"># Adjust as needed</span></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>ax1.bar(dates_numeric, daily_bike_data[<span class="st">'total_riders'</span>], width<span class="op">=</span>bar_width, color<span class="op">=</span><span class="st">'#cccccc'</span>, label<span class="op">=</span><span class="st">'Total Riders'</span>, align<span class="op">=</span><span class="st">'center'</span>)</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a second y-axis that shares the same x-axis as ax1</span></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> ax1.twinx()</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot casual riders as a green line on ax2 using numerical dates</span></span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>ax2.plot(dates_numeric, daily_bike_data[<span class="st">'casual'</span>], color<span class="op">=</span><span class="st">'green'</span>, label<span class="op">=</span><span class="st">'Casual Riders'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot registered riders as a blue line on ax2 using numerical dates</span></span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="co">#ax2.plot(dates_numeric, daily_bike_data['registered'], color='blue', label='Registered Riders', linewidth=2)</span></span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the title of the chart</span></span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Daily Bike Usage: Total, Casual, and Registered Riders'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Set x-axis label for ax1</span></span>
-<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'Date'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Set y-axis label for ax1</span></span>
-<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'Total Riders'</span>, color<span class="op">=</span><span class="st">'#555555'</span>, fontsize<span class="op">=</span><span class="dv">12</span>) <span class="co"># Adjusted color for visibility</span></span>
-<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>ax1.tick_params(axis<span class="op">=</span><span class="st">'y'</span>, labelcolor<span class="op">=</span><span class="st">'#555555'</span>)</span>
-<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Set y-axis label for ax2</span></span>
-<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'Number of Casual/Registered Riders'</span>, color<span class="op">=</span><span class="st">'black'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Format the x-axis to display dates properly</span></span>
-<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>ax1.xaxis.set_major_formatter(mdates.DateFormatter(<span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st">'</span>))</span>
-<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>ax1.xaxis.set_major_locator(mdates.AutoDateLocator())</span>
-<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine legends from both axes</span></span>
-<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>handles1, labels1 <span class="op">=</span> ax1.get_legend_handles_labels()</span>
-<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>handles2, labels2 <span class="op">=</span> ax2.get_legend_handles_labels()</span>
-<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>ax2.legend(handles1 <span class="op">+</span> handles2, labels1 <span class="op">+</span> labels2, loc<span class="op">=</span><span class="st">'upper left'</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Rotate x-axis labels if they overlap to improve readability</span></span>
-<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>fig.autofmt_xdate()</span>
-<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Add grid for better readability</span></span>
-<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>ax1.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
-<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the plot</span></span>
-<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cell-18" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:646}}" data-outputid="2a56251a-1002-4a53-d9a2-6650b9817552" data-execution_count="42">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.dates <span class="im">as</span> mdates</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure 'date' column is in datetime format for proper plotting</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>daily_bike_data[<span class="st">'date'</span>] <span class="op">=</span> pd.to_datetime(daily_bike_data[<span class="st">'date'</span>])</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a figure and a set of subplots</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>fig, ax1 <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="dv">8</span>))</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert dates to numerical format for plotting with plt.bar and plt.plot</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co"># This ensures a continuous date axis consistent across both axes</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>dates_numeric <span class="op">=</span> mdates.date2num(daily_bike_data[<span class="st">'date'</span>])</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot total_riders as a bar chart on ax1 using numerical dates</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co"># We need to set the width of the bars appropriately for daily data</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>bar_width <span class="op">=</span> <span class="fl">0.8</span> <span class="co"># Adjust as needed</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>ax1.bar(dates_numeric, daily_bike_data[<span class="st">'total_riders'</span>], width<span class="op">=</span>bar_width, color<span class="op">=</span><span class="st">'#cccccc'</span>, label<span class="op">=</span><span class="st">'Total Riders'</span>, align<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a second y-axis that shares the same x-axis as ax1</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> ax1.twinx()</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot casual riders as a green line on ax2 using numerical dates</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>ax2.plot(dates_numeric, daily_bike_data[<span class="st">'casual'</span>], color<span class="op">=</span><span class="st">'green'</span>, label<span class="op">=</span><span class="st">'Casual Riders'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot registered riders as a blue line on ax2 using numerical dates</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>ax2.plot(dates_numeric, daily_bike_data[<span class="st">'registered'</span>], color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Registered Riders'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the title of the chart</span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Daily Bike Usage: Total, Casual, and Registered Riders'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Set x-axis label for ax1</span></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'Date'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Set y-axis label for ax1</span></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'Total Riders'</span>, color<span class="op">=</span><span class="st">'#555555'</span>, fontsize<span class="op">=</span><span class="dv">12</span>) <span class="co"># Adjusted color for visibility</span></span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>ax1.tick_params(axis<span class="op">=</span><span class="st">'y'</span>, labelcolor<span class="op">=</span><span class="st">'#555555'</span>)</span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Set y-axis label for ax2</span></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'Number of Casual/Registered Riders'</span>, color<span class="op">=</span><span class="st">'black'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Format the x-axis to display dates properly</span></span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>ax1.xaxis.set_major_formatter(mdates.DateFormatter(<span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st">'</span>))</span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>ax1.xaxis.set_major_locator(mdates.AutoDateLocator())</span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine legends from both axes</span></span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>handles1, labels1 <span class="op">=</span> ax1.get_legend_handles_labels()</span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>handles2, labels2 <span class="op">=</span> ax2.get_legend_handles_labels()</span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>ax2.legend(handles1 <span class="op">+</span> handles2, labels1 <span class="op">+</span> labels2, loc<span class="op">=</span><span class="st">'upper left'</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Rotate x-axis labels if they overlap to improve readability</span></span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a>fig.autofmt_xdate()</span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Add grid for better readability</span></span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>ax1.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the plot</span></span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="starter_bikes_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="starter_bikes_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1322,11 +1400,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="subtask-3">Subtask:</h3>
 <p>Convert the ‘dteday’ column in the <code>bike</code> DataFrame to datetime objects, then extract the ‘day_of_week’ to enable hourly and daily analysis.</p>
 <p><strong>Reasoning</strong>: First, I’ll convert the ‘dteday’ column to datetime objects to ensure consistency and then extract the ‘day_of_week’ to a new column as instructed. Finally, I will display the head of the DataFrame to verify the changes.</p>
-<div id="cell-23" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bdea8848-0294-4544-c8b2-d43ba0f50efe" data-execution_count="14">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bike[<span class="st">'dteday'</span>])</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'day_of_week'</span>] <span class="op">=</span> bike[<span class="st">'dteday'</span>].dt.day_name()</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bike.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cell-24" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="fa652711-486e-46dc-8894-12c78f534a67" data-execution_count="43">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'dteday'</span>] <span class="op">=</span> pd.to_datetime(bike[<span class="st">'dteday'</span>])</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>bike[<span class="st">'day_of_week'</span>] <span class="op">=</span> bike[<span class="st">'dteday'</span>].dt.day_name()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bike.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      dteday   hr  casual  registered  temp_c  feels_like_c     hum  \
 0 2011-01-01  0.0       3          13     3.0           3.0  0.7957   
@@ -1351,13 +1429,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="subtask-4">Subtask:</h3>
 <p>Group the <code>bike</code> DataFrame by ‘day_of_week’ and ‘hr’, and then sum the ‘casual’ and ‘registered’ columns to get the total usage for each hour of each day of the week.</p>
 <p><strong>Reasoning</strong>: To complete the subtask, I will group the <code>bike</code> DataFrame by ‘day_of_week’ and ‘hr’, calculate the sum of ‘casual’ and ‘registered’ riders, reset the index, and store the result in <code>hourly_bike_usage</code>.</p>
-<div id="cell-26" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="ced9fbe7-7fce-4bf0-8ad9-0ca29ac61b59" data-execution_count="15">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>hourly_bike_usage <span class="op">=</span> bike.groupby([<span class="st">'day_of_week'</span>, <span class="st">'hr'</span>]).agg(</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    casual<span class="op">=</span>(<span class="st">'casual'</span>, <span class="st">'sum'</span>),</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    registered<span class="op">=</span>(<span class="st">'registered'</span>, <span class="st">'sum'</span>)</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>).reset_index()</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(hourly_bike_usage.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cell-27" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="32d11a80-1327-422a-e095-63903a49c0cb" data-execution_count="44">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>hourly_bike_usage <span class="op">=</span> bike.groupby([<span class="st">'day_of_week'</span>, <span class="st">'hr'</span>]).agg(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    casual<span class="op">=</span>(<span class="st">'casual'</span>, <span class="st">'sum'</span>),</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    registered<span class="op">=</span>(<span class="st">'registered'</span>, <span class="st">'sum'</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>).reset_index()</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(hourly_bike_usage.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  day_of_week   hr  casual  registered
 0      Friday  0.0   13673       34099
@@ -1375,56 +1453,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="subtask-5">Subtask:</h3>
 <p>Create line charts showing casual and registered bike usage across hours, faceted by each day of the week, with different colored lines for casual and registered users. Ensure proper labeling for axes and a title for the chart.</p>
 <p><strong>Reasoning</strong>: To create line charts showing casual and registered bike usage faceted by day of the week, I need to first prepare the data by melting the <code>hourly_bike_usage</code> DataFrame into a long format suitable for <code>seaborn.relplot</code>. Then, I will generate the plot with the specified parameters.</p>
-<div id="cell-29" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:692}}" data-outputid="08cc9b32-1de8-4d0f-c9e8-70644e31decd" data-execution_count="16">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the order of days for consistent plotting</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>day_order <span class="op">=</span> [<span class="st">'Monday'</span>, <span class="st">'Tuesday'</span>, <span class="st">'Wednesday'</span>, <span class="st">'Thursday'</span>, <span class="st">'Friday'</span>, <span class="st">'Saturday'</span>, <span class="st">'Sunday'</span>]</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert 'hr' to int type to remove '.0'</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>hourly_bike_usage[<span class="st">'hr'</span>] <span class="op">=</span> hourly_bike_usage[<span class="st">'hr'</span>].astype(<span class="bu">int</span>)</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Melt the DataFrame to long format for plotting casual and registered as separate lines</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>hourly_bike_usage_melted <span class="op">=</span> hourly_bike_usage.melt(</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    id_vars<span class="op">=</span>[<span class="st">'day_of_week'</span>, <span class="st">'hr'</span>],</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    value_vars<span class="op">=</span>[<span class="st">'casual'</span>, <span class="st">'registered'</span>],</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    var_name<span class="op">=</span><span class="st">'user_type'</span>,</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    value_name<span class="op">=</span><span class="st">'total_riders'</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the relplot</span></span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.relplot(</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>hourly_bike_usage_melted,</span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'hr'</span>,</span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">'total_riders'</span>,</span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>    kind<span class="op">=</span><span class="st">'line'</span>,</span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    col<span class="op">=</span><span class="st">'day_of_week'</span>,</span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>    col_order<span class="op">=</span>day_order,</span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>    hue<span class="op">=</span><span class="st">'user_type'</span>,</span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    col_wrap<span class="op">=</span><span class="dv">4</span>,</span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>    height<span class="op">=</span><span class="fl">3.5</span>,</span>
-<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>    aspect<span class="op">=</span><span class="fl">1.2</span>,</span>
-<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>    palette<span class="op">=</span>{<span class="st">'casual'</span>: <span class="st">'green'</span>, <span class="st">'registered'</span>: <span class="st">'blue'</span>}</span>
-<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Set descriptive titles and labels</span></span>
-<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>g.fig.suptitle(<span class="st">'Hourly Bike Usage by Day of Week'</span>, y<span class="op">=</span><span class="fl">1.02</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>g.set_axis_labels(<span class="st">'Hour of Day'</span>, <span class="st">'Number of Riders'</span>)</span>
-<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Adjust x-axis ticks to show all hours clearly</span></span>
-<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> g.axes.flat:</span>
-<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>    ax.set_xticks(<span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="dv">2</span>)) <span class="co"># Show every other hour</span></span>
-<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(axis<span class="op">=</span><span class="st">'x'</span>, rotation<span class="op">=</span><span class="dv">45</span>)</span>
-<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>    ax.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
-<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Improve layout</span></span>
-<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cell-30" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:492}}" data-outputid="b39339b9-3e4e-4e41-9954-fc72eac16d99" data-execution_count="45">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the order of days for consistent plotting</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>day_order <span class="op">=</span> [<span class="st">'Monday'</span>, <span class="st">'Tuesday'</span>, <span class="st">'Wednesday'</span>, <span class="st">'Thursday'</span>, <span class="st">'Friday'</span>, <span class="st">'Saturday'</span>, <span class="st">'Sunday'</span>]</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert 'hr' to int type to remove '.0'</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>hourly_bike_usage[<span class="st">'hr'</span>] <span class="op">=</span> hourly_bike_usage[<span class="st">'hr'</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Melt the DataFrame to long format for plotting casual and registered as separate lines</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>hourly_bike_usage_melted <span class="op">=</span> hourly_bike_usage.melt(</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    id_vars<span class="op">=</span>[<span class="st">'day_of_week'</span>, <span class="st">'hr'</span>],</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    value_vars<span class="op">=</span>[<span class="st">'casual'</span>, <span class="st">'registered'</span>],</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    var_name<span class="op">=</span><span class="st">'user_type'</span>,</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    value_name<span class="op">=</span><span class="st">'total_riders'</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the relplot</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.relplot(</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>hourly_bike_usage_melted,</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'hr'</span>,</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">'total_riders'</span>,</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>    kind<span class="op">=</span><span class="st">'line'</span>,</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>    col<span class="op">=</span><span class="st">'day_of_week'</span>,</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>    col_order<span class="op">=</span>day_order,</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>    hue<span class="op">=</span><span class="st">'user_type'</span>,</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>    col_wrap<span class="op">=</span><span class="dv">4</span>,</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>    height<span class="op">=</span><span class="fl">3.5</span>,</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>    aspect<span class="op">=</span><span class="fl">1.2</span>,</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>    palette<span class="op">=</span>{<span class="st">'casual'</span>: <span class="st">'green'</span>, <span class="st">'registered'</span>: <span class="st">'blue'</span>}</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Set descriptive titles and labels</span></span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>g.fig.suptitle(<span class="st">'Hourly Bike Usage by Day of Week'</span>, y<span class="op">=</span><span class="fl">1.02</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>g.set_axis_labels(<span class="st">'Hour of Day'</span>, <span class="st">'Number of Riders'</span>)</span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Adjust x-axis ticks to show all hours clearly</span></span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> g.axes.flat:</span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>    ax.set_xticks(<span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">24</span>, <span class="dv">2</span>)) <span class="co"># Show every other hour</span></span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(axis<span class="op">=</span><span class="st">'x'</span>, rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>    ax.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Improve layout</span></span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="starter_bikes_files/figure-html/cell-14-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="starter_bikes_files/figure-html/cell-15-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1460,6 +1538,360 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>The observed distinct usage patterns between casual and registered riders and across weekdays/weekends can inform demand-side management strategies, such as dynamic pricing or promotional campaigns tailored to specific user types and times.</li>
 <li>Further analysis could explore the impact of weather conditions, holidays, or special events on these hourly and daily usage trends to provide a more complete picture of demand drivers.</li>
 </ul>
+<div id="cell-33" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="e4300a53-72e2-4c0f-bb21-b886097dd72c" data-execution_count="46">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>bike</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="46">
+<div id="df-9f5abe4f-ddab-41b7-8bf9-b8915b644532" class="colab-df-container">
+    <div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">dteday</th>
+<th data-quarto-table-cell-role="th">hr</th>
+<th data-quarto-table-cell-role="th">casual</th>
+<th data-quarto-table-cell-role="th">registered</th>
+<th data-quarto-table-cell-role="th">temp_c</th>
+<th data-quarto-table-cell-role="th">feels_like_c</th>
+<th data-quarto-table-cell-role="th">hum</th>
+<th data-quarto-table-cell-role="th">windspeed</th>
+<th data-quarto-table-cell-role="th">weathersit</th>
+<th data-quarto-table-cell-role="th">season</th>
+<th data-quarto-table-cell-role="th">holiday</th>
+<th data-quarto-table-cell-role="th">workingday</th>
+<th data-quarto-table-cell-role="th">date</th>
+<th data-quarto-table-cell-role="th">day_of_week</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>2011-01-01</td>
+<td>0.0</td>
+<td>3</td>
+<td>13</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>0.7957</td>
+<td>0.8</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>2011-01-01</td>
+<td>Saturday</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>2011-01-01</td>
+<td>1.0</td>
+<td>8</td>
+<td>30</td>
+<td>1.7</td>
+<td>1.7</td>
+<td>0.8272</td>
+<td>0.8</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>2011-01-01</td>
+<td>Saturday</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>2011-01-01</td>
+<td>2.0</td>
+<td>5</td>
+<td>26</td>
+<td>1.9</td>
+<td>1.9</td>
+<td>0.8157</td>
+<td>1.1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>2011-01-01</td>
+<td>Saturday</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>2011-01-01</td>
+<td>3.0</td>
+<td>3</td>
+<td>9</td>
+<td>2.5</td>
+<td>2.5</td>
+<td>0.7831</td>
+<td>0.8</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>2011-01-01</td>
+<td>Saturday</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>2011-01-01</td>
+<td>4.0</td>
+<td>0</td>
+<td>1</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>0.8075</td>
+<td>1.1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>2011-01-01</td>
+<td>Saturday</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">112470</th>
+<td>2023-10-31</td>
+<td>19.0</td>
+<td>241</td>
+<td>594</td>
+<td>10.2</td>
+<td>10.2</td>
+<td>0.4516</td>
+<td>8.4</td>
+<td>2</td>
+<td>4</td>
+<td>0</td>
+<td>1</td>
+<td>2023-10-31</td>
+<td>Tuesday</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">112471</th>
+<td>2023-10-31</td>
+<td>20.0</td>
+<td>171</td>
+<td>450</td>
+<td>8.9</td>
+<td>7.5</td>
+<td>0.5268</td>
+<td>9.3</td>
+<td>1</td>
+<td>4</td>
+<td>0</td>
+<td>1</td>
+<td>2023-10-31</td>
+<td>Tuesday</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">112472</th>
+<td>2023-10-31</td>
+<td>21.0</td>
+<td>176</td>
+<td>402</td>
+<td>7.7</td>
+<td>6.4</td>
+<td>0.5756</td>
+<td>7.8</td>
+<td>1</td>
+<td>4</td>
+<td>0</td>
+<td>1</td>
+<td>2023-10-31</td>
+<td>Tuesday</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">112473</th>
+<td>2023-10-31</td>
+<td>22.0</td>
+<td>106</td>
+<td>257</td>
+<td>8.0</td>
+<td>8.0</td>
+<td>0.5604</td>
+<td>0.0</td>
+<td>1</td>
+<td>4</td>
+<td>0</td>
+<td>1</td>
+<td>2023-10-31</td>
+<td>Tuesday</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">112474</th>
+<td>2023-10-31</td>
+<td>23.0</td>
+<td>78</td>
+<td>135</td>
+<td>6.5</td>
+<td>6.5</td>
+<td>0.6401</td>
+<td>4.5</td>
+<td>1</td>
+<td>4</td>
+<td>0</td>
+<td>1</td>
+<td>2023-10-31</td>
+<td>Tuesday</td>
+</tr>
+</tbody>
+</table>
+
+<p>112475 rows × 14 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-9f5abe4f-ddab-41b7-8bf9-b8915b644532')" title="Convert this dataframe to an interactive table." style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-9f5abe4f-ddab-41b7-8bf9-b8915b644532 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-9f5abe4f-ddab-41b7-8bf9-b8915b644532');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+  <div id="id_a8a3a32f-4ab0-4ee1-af63-606a971ca4f5">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('bike')" title="Generate code using this dataframe." style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"></path>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_a8a3a32f-4ab0-4ee1-af63-606a971ca4f5 button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('bike');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div>
+</div>
 
 
 </section>
