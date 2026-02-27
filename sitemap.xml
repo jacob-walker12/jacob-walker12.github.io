@@ -1,191 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jacob-walker12.github.io/Full_Stack/project5.html</loc>
-    <lastmod>2026-02-24T22:03:02.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Full_Stack/project4.html</loc>
-    <lastmod>2026-02-24T22:03:02.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Full_Stack/project3.html</loc>
-    <lastmod>2026-02-24T22:03:02.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/notebooks/Exploration_02.html</loc>
-    <lastmod>2026-02-24T22:03:02.739Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/notebooks/Exploration_01.html</loc>
-    <lastmod>2026-02-24T22:03:02.737Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/notebooks/hint_xgboost.html</loc>
-    <lastmod>2026-02-24T22:03:02.742Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/notebooks/Exploration_04.html</loc>
-    <lastmod>2026-02-24T22:03:02.742Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Cleansing_Exploration/project5.html</loc>
-    <lastmod>2026-02-24T22:03:02.726Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Cleansing_Exploration/project4.html</loc>
-    <lastmod>2026-02-24T22:03:02.726Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Cleansing_Exploration/project3.html</loc>
-    <lastmod>2026-02-24T22:03:02.726Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/cleansing.html</loc>
-    <lastmod>2026-02-24T22:03:02.733Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Cleansing_Projects/project1.html</loc>
-    <lastmod>2026-02-24T22:03:02.726Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Cleansing_Projects/project2.html</loc>
-    <lastmod>2026-02-24T22:03:02.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Story_Telling/project5.html</loc>
-    <lastmod>2026-02-24T22:03:02.728Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Story_Telling/project4.html</loc>
-    <lastmod>2026-02-24T22:03:02.728Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Story_Telling/project3.html</loc>
-    <lastmod>2026-02-24T22:03:02.728Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/index.html</loc>
-    <lastmod>2026-02-24T22:03:02.733Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Machine_Learning/project1.html</loc>
-    <lastmod>2026-02-24T22:03:02.728Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Machine_Learning/project2.html</loc>
-    <lastmod>2026-02-24T22:03:02.728Z</lastmod>
-  </url>
-  <url>
     <loc>https://jacob-walker12.github.io/ml.html</loc>
-    <lastmod>2026-02-24T22:03:02.734Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/story_telling.html</loc>
-    <lastmod>2026-02-24T22:03:02.760Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Competition/project5.html</loc>
-    <lastmod>2026-02-24T22:03:02.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Competition/project4.html</loc>
-    <lastmod>2026-02-24T22:03:02.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Competition/project3.html</loc>
-    <lastmod>2026-02-24T22:03:02.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Competition/project2.html</loc>
-    <lastmod>2026-02-24T22:03:02.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Competition/project1.html</loc>
-    <lastmod>2026-02-24T22:03:02.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/competition.html</loc>
-    <lastmod>2026-02-24T22:03:02.733Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/exploration.html</loc>
-    <lastmod>2026-02-24T22:03:02.733Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Machine_Learning/project3.html</loc>
-    <lastmod>2026-02-24T22:03:02.728Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Machine_Learning/project4.html</loc>
-    <lastmod>2026-02-24T22:03:02.728Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Machine_Learning/project5.html</loc>
-    <lastmod>2026-02-24T22:03:02.728Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/resume.html</loc>
-    <lastmod>2026-02-24T22:03:02.760Z</lastmod>
+    <lastmod>2026-02-27T06:25:58.566Z</lastmod>
   </url>
   <url>
     <loc>https://jacob-walker12.github.io/Story_Telling/project2.html</loc>
-    <lastmod>2026-02-24T22:03:02.728Z</lastmod>
+    <lastmod>2026-02-27T06:25:58.562Z</lastmod>
   </url>
   <url>
-    <loc>https://jacob-walker12.github.io/Story_Telling/project1.html</loc>
-    <lastmod>2026-02-24T22:03:02.728Z</lastmod>
+    <loc>https://jacob-walker12.github.io/Story_Telling/project3.html</loc>
+    <lastmod>2026-02-27T06:25:58.562Z</lastmod>
   </url>
   <url>
-    <loc>https://jacob-walker12.github.io/Cleansing_Projects/project3.html</loc>
-    <lastmod>2026-02-24T22:03:02.727Z</lastmod>
+    <loc>https://jacob-walker12.github.io/competition.html</loc>
+    <lastmod>2026-02-27T06:25:58.566Z</lastmod>
   </url>
   <url>
-    <loc>https://jacob-walker12.github.io/Cleansing_Projects/project4.html</loc>
-    <lastmod>2026-02-24T22:03:02.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/Cleansing_Projects/project5.html</loc>
-    <lastmod>2026-02-24T22:03:02.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jacob-walker12.github.io/full_stack.html</loc>
-    <lastmod>2026-02-24T22:03:02.733Z</lastmod>
+    <loc>https://jacob-walker12.github.io/resume.html</loc>
+    <lastmod>2026-02-27T06:25:58.593Z</lastmod>
   </url>
   <url>
     <loc>https://jacob-walker12.github.io/Cleansing_Exploration/project2.html</loc>
-    <lastmod>2026-02-24T22:03:02.726Z</lastmod>
+    <lastmod>2026-02-27T06:25:58.518Z</lastmod>
   </url>
   <url>
-    <loc>https://jacob-walker12.github.io/Cleansing_Exploration/project1.html</loc>
-    <lastmod>2026-02-24T22:03:02.726Z</lastmod>
+    <loc>https://jacob-walker12.github.io/Cleansing_Exploration/project3.html</loc>
+    <lastmod>2026-02-27T06:25:58.518Z</lastmod>
   </url>
   <url>
-    <loc>https://jacob-walker12.github.io/notebooks/starter_housing.html</loc>
-    <lastmod>2026-02-24T22:03:02.760Z</lastmod>
+    <loc>https://jacob-walker12.github.io/Competition/project5.html</loc>
+    <lastmod>2026-02-27T06:25:58.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Competition/project1.html</loc>
+    <lastmod>2026-02-27T06:25:58.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Competition/project4.html</loc>
+    <lastmod>2026-02-27T06:25:58.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/notebooks/hint_xgboost.html</loc>
+    <lastmod>2026-02-27T06:25:58.575Z</lastmod>
   </url>
   <url>
     <loc>https://jacob-walker12.github.io/notebooks/module01-assessment.html</loc>
-    <lastmod>2026-02-24T22:03:02.743Z</lastmod>
+    <lastmod>2026-02-27T06:25:58.576Z</lastmod>
   </url>
   <url>
     <loc>https://jacob-walker12.github.io/notebooks/Exploration_03.html</loc>
-    <lastmod>2026-02-24T22:03:02.741Z</lastmod>
+    <lastmod>2026-02-27T06:25:58.574Z</lastmod>
   </url>
   <url>
     <loc>https://jacob-walker12.github.io/notebooks/starter_bikes.html</loc>
-    <lastmod>2026-02-24T22:03:02.750Z</lastmod>
+    <lastmod>2026-02-27T06:25:58.582Z</lastmod>
   </url>
   <url>
-    <loc>https://jacob-walker12.github.io/notebooks/starter_bank.html</loc>
-    <lastmod>2026-02-24T22:03:02.743Z</lastmod>
+    <loc>https://jacob-walker12.github.io/full_stack.html</loc>
+    <lastmod>2026-02-27T06:25:58.566Z</lastmod>
   </url>
   <url>
-    <loc>https://jacob-walker12.github.io/Full_Stack/project2.html</loc>
-    <lastmod>2026-02-24T22:03:02.727Z</lastmod>
+    <loc>https://jacob-walker12.github.io/Machine_Learning/project2.html</loc>
+    <lastmod>2026-02-27T06:25:58.562Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Machine_Learning/project3.html</loc>
+    <lastmod>2026-02-27T06:25:58.562Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Full_Stack/project5.html</loc>
+    <lastmod>2026-02-27T06:25:58.519Z</lastmod>
   </url>
   <url>
     <loc>https://jacob-walker12.github.io/Full_Stack/project1.html</loc>
-    <lastmod>2026-02-24T22:03:02.727Z</lastmod>
+    <lastmod>2026-02-27T06:25:58.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Full_Stack/project4.html</loc>
+    <lastmod>2026-02-27T06:25:58.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/exploration.html</loc>
+    <lastmod>2026-02-27T06:25:58.566Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Cleansing_Projects/project2.html</loc>
+    <lastmod>2026-02-27T06:25:58.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Cleansing_Projects/project3.html</loc>
+    <lastmod>2026-02-27T06:25:58.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/story_telling.html</loc>
+    <lastmod>2026-02-27T06:25:58.593Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/index.html</loc>
+    <lastmod>2026-02-27T06:25:58.566Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Cleansing_Projects/project4.html</loc>
+    <lastmod>2026-02-27T06:25:58.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Cleansing_Projects/project1.html</loc>
+    <lastmod>2026-02-27T06:25:58.518Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Cleansing_Projects/project5.html</loc>
+    <lastmod>2026-02-27T06:25:58.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/cleansing.html</loc>
+    <lastmod>2026-02-27T06:25:58.566Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Full_Stack/project3.html</loc>
+    <lastmod>2026-02-27T06:25:58.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Full_Stack/project2.html</loc>
+    <lastmod>2026-02-27T06:25:58.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Machine_Learning/project4.html</loc>
+    <lastmod>2026-02-27T06:25:58.562Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Machine_Learning/project1.html</loc>
+    <lastmod>2026-02-27T06:25:58.561Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Machine_Learning/project5.html</loc>
+    <lastmod>2026-02-27T06:25:58.562Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/notebooks/starter_bank.html</loc>
+    <lastmod>2026-02-27T06:25:58.576Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/notebooks/starter_housing.html</loc>
+    <lastmod>2026-02-27T06:25:58.593Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/notebooks/Exploration_02.html</loc>
+    <lastmod>2026-02-27T06:25:58.572Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/notebooks/Exploration_01.html</loc>
+    <lastmod>2026-02-27T06:25:58.570Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/notebooks/Exploration_04.html</loc>
+    <lastmod>2026-02-27T06:25:58.575Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Competition/project3.html</loc>
+    <lastmod>2026-02-27T06:25:58.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Competition/project2.html</loc>
+    <lastmod>2026-02-27T06:25:58.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Cleansing_Exploration/project4.html</loc>
+    <lastmod>2026-02-27T06:25:58.518Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Cleansing_Exploration/project1.html</loc>
+    <lastmod>2026-02-27T06:25:58.518Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Cleansing_Exploration/project5.html</loc>
+    <lastmod>2026-02-27T06:25:58.518Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/MachineLearningTeam4/Module 4 - Neutral Networks/Manolo.html</loc>
+    <lastmod>2026-02-27T06:25:58.561Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Story_Telling/project4.html</loc>
+    <lastmod>2026-02-27T06:25:58.562Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Story_Telling/project1.html</loc>
+    <lastmod>2026-02-27T06:25:58.562Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jacob-walker12.github.io/Story_Telling/project5.html</loc>
+    <lastmod>2026-02-27T06:25:58.562Z</lastmod>
   </url>
 </urlset>
